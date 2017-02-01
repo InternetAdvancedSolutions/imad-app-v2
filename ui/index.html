@@ -2,7 +2,9 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
-        <script>window.onload=time;</script>
+        <script>
+            function time(){document.getElementById("t").innerHTML=Date();}
+            window.onload=time;</script>
     </head>
     <body>
         <div class="center">
@@ -10,6 +12,7 @@
         </div>
         <br>
         <div class="center text-big bold">
+            <h6 align="right" id="t"></h6>
             Hi! I am Ashutosh Kumar Singh
             <h6>from Varanasi, U.P.</h6>
         </div>
