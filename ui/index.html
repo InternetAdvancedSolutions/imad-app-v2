@@ -53,13 +53,18 @@
         
         </div>
         <div id="feedback">
-        <form action ="ui/index.html" method="get">
+        <form action ="ui/index.html" method="get" name="input">
             
             <p id="p1">Share your thoughts and ideas with me :</p>
             <pre>
             <textarea name="remarks" cols="50" rows="10" maxlength="500"></textarea><br>
             <input type="submit" value="Post">
-            <p id="p2"><script>document.getElementById("p2").innerHTML="Thanks ! your post shall be published after verification.";</script></p>
+            <p id="p2">
+            <script>
+            document.getElementById("p2").innerHTML="Thanks ! your post shall be published after verification.";
+            var x=document.forms["input"]["remarks"].value;
+            document.getElementById("p2").innerHTML=x;
+                </script></p>
             </pre>
             
         </form>
