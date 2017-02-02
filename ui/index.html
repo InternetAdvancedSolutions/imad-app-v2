@@ -53,7 +53,7 @@
         
         </div>
         <div id="feedback">
-        <form action ="ui/index.html" method="get" name="input">
+        <form action ="ui/index.html" method="get" name="input" onsubmit="printPost()">
             
             <p id="p1">Share your thoughts and ideas with me :</p>
             <pre>
@@ -62,8 +62,9 @@
             <p id="p2">
             <script>
             document.getElementById("p2").innerHTML="Thanks ! your post shall be published after verification.";
-           // var x=document.forms["input"]["remarks"].value;
-           // document.getElementById("p2").innerHTML=x;
+            function printPost(){
+            var x=document.forms["input"]["remarks"].value;
+            document.getElementById("p2").innerHTML=x;}
             </script>
             </p>
             </pre>
