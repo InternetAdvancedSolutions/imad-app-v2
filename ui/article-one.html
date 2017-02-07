@@ -3,11 +3,13 @@
 <title>Article One|IAS</title>
 <script>
     var counter=0;
+    var button =document.getElementById("b");
+    var span =document.getElementById("p");
     function count(){
         counter=counter+1;
-        document.getElementById("p").innerHTML=counter;
+        span.innerHTML=counter;
     };
-    var button =document.getElementById("b");
+    
     button.onclick=count();
 </script>
 </head>
