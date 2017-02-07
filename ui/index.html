@@ -64,22 +64,21 @@
             'Mobile Computing' , with 'Elite' grade in 2016.
         </div>
         <div id="feedback">
-        <form action ="" method="post">
-            
             <p id="p1">Share your thoughts and ideas with me :</p>
             <pre>
-            <textarea name="remarks" cols="50" rows="10" maxlength="500"></textarea><br>
-            <input type="submit" value="Post">
-            <p id="p2">
+            <textarea id="comments" cols="50" rows="10" maxlength="500"></textarea><br>
+            <button id="submit" >Post</button>
+            <p id="p2"></p>
             <script>
-            document.getElementById("p2").innerHTML="Thanks ! your post shall be published after verification.";
+            var button=document.getElementById("submit");
+            var textarea=document.getElementById("comments");
+            var para=document.getElementById("p");
+            button.onclick=document.getElementById("p2").innerHTML=para.value;
            
             </script>
-            </p>
-            </pre>
             
-        </form>
-        </div>
+            </pre>
+            </div>
         <script type="text/javascript" src="/ui/main.js">
         </script>
     </body>
