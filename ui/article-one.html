@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>Article One|IAS</title>
-<script>
+<!--<script>
     var counter=0;
     var button =document.getElementById("b");
     var span =document.getElementById("p");
@@ -10,7 +10,7 @@
         counter=counter+1;
         span.innerHTML=counter.toString();
     };
-</script>
+</script>-->
 </head>
 <body>
  
@@ -25,6 +25,16 @@ JSON
 </nav><br>
 <div class="footer">
 This button<button type="button" id="b">Counter</button>has been clicked<p id="p">0</p>times.
+<script>
+    var counter=0;
+    var button =document.getElementById("b");
+    var span =document.getElementById("p");
+   
+    button.onclick=function(){
+        counter=counter+1;
+        span.innerHTML=counter.toString();
+    };
+</script>
 </div>
 Thanks for visiting!
 </body>
