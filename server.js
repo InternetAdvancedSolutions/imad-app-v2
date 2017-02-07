@@ -18,8 +18,8 @@ app.get('/ui/madi.png', function (req, res) {
 });
 var counter=1;
 app.get('/ui/article-one.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-  counter=counter+1;
+ // res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+ // counter=counter+1;
   res.send(counter.toString());
 });
 
