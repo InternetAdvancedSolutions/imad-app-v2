@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <head>
 <title>Article One|IAS</title>
+<script>
+    var counter=1;
+    counter(){
+        counter=counter+1;
+        document.grtElementById("p").innerHTML=counter;
+    }
+</script>
 </head>
 <body>
   
 <header>
   <a href="/">Home</a>
-  Article One</header>
+  Article One</header><br>
 <nav>Contents
 JS
 Node JS
 AJAX
 JSON
 </nav>
+<p id="p"></p>
+<button onclick="counter()">Count</button>
 <footer>Thanks for visiting!</footer>
 </body>
 </html>
