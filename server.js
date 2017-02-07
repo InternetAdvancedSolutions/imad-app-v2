@@ -21,11 +21,11 @@ app.get('/ui/SINGH_ASHUTOSH.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'SINGH_ASHUTOSH.jpg'));
 });
 
-var counter=1;
+//var counter=1;
 app.get('/ui/article-one.html', function (req, res) {
  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
- counter=counter+1;
-  res.send(counter.toString());
+ //counter=counter+1;
+ // res.send(counter.toString());
 });
 
 app.get('/ui/article-two.html', function (req, res) {
