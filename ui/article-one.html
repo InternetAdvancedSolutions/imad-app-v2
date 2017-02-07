@@ -2,14 +2,13 @@
 <head>
 <title>Article One|IAS</title>
 <script>
-    var counter=1;
+    var counter=0;
     function counter(){
         counter=counter+1;
-        document.getElementById("p").innerHTML=counter.toString();
-        
-    
+        document.getElementById("p").innerHTML=counter;
+    };
     var button =document.getElementById("b");
-    button.onclick=counter();}
+    button.onclick=counter();
 </script>
 </head>
 <body>
