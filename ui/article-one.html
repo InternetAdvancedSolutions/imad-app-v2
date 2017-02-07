@@ -30,10 +30,11 @@ This button<button type="button" id="b">Counter</button>has been clicked<p id="p
     var button =document.getElementById("b");
     var span =document.getElementById("p");
    
-    button.onclick=function(){
+    function count(){
         counter=counter+1;
         span.innerHTML=counter.toString();
     };
+    button.onclick=count();
 </script>
 </div>
 Thanks for visiting!
