@@ -73,7 +73,8 @@
             var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p");
-            button.onclick=document.getElementById("p2").innerHTML=para.value;
+            button.onclick=function(){
+                para.innerHTML=textarea.value;};
            
             </script>
             
