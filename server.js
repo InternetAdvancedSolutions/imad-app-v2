@@ -24,7 +24,7 @@ app.get('/ui/SINGH_ASHUTOSH.jpg', function (req, res) {
 var counter=1;
 app.get('/ui/article-one.html', function (req, res) {
  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-  counter=counter+1;
+ counter=counter+1;
   res.send(counter.toString());
 });
 
