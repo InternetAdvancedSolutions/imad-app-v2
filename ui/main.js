@@ -1,5 +1,5 @@
 //console.log('Loaded!');
-var button=document.getElementById("homeB");
+/*var button=document.getElementById("homeB");
 
 button.onclick=function(){
     var request= new XMLHttpRequest();
@@ -18,3 +18,4 @@ button.onclick=function(){
     request.open('GET',"server.js/counter",true);
     request.send(null);
 }
+*/
