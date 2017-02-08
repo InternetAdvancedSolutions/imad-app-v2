@@ -1,5 +1,5 @@
 //console.log('Loaded!');
-var button=document.getElementById("homeb");
+var button=document.getElementById("homeB");
 
 button.onclick=function(){
     var request= new XMLHttpRequest();
