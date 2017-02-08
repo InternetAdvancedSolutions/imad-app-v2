@@ -15,6 +15,6 @@ button.onclick=function(){
         }
     };
     
-    request.open('GET',"/ui/server.js/counter",true);
+    request.open('GET',"server.js/counter",true);
     request.send();
 }
