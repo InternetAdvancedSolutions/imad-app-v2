@@ -15,6 +15,6 @@ button.onclick=function(){
         }
     };
     
-    request.open('GET',"https://cloud.imad.hasura.io/code/files/server.js",true);
+    request.open('GET',"/ui/server.js",true);
     request.send();
 }
