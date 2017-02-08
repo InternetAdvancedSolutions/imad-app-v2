@@ -4,8 +4,8 @@ var button=document.getElementById("homeB");
 button.onclick=function(){
     var request= new XMLHttpRequest();
     
-    request.readystatechange=function(){
-        if(request.readystate===4 && request.status===200)
+    request.onreadystatechange=function(){
+        if(request.readystate===request.DONE && request.status===200)
         {var count =request.responseText;
             var span=document.getElementById("sp");
             span.innerHTML=count.toString();
