@@ -15,6 +15,6 @@ button.onclick=function(){
         }
     };
     
-    request.open('GET',"https://cloud.imad.hasura.io/code/files/server.js/counter",true);
+    request.open('GET',"https://cloud.imad.hasura.io/code/files/server.js",true);
     request.send();
 }
