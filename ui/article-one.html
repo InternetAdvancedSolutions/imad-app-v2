@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <head>
 <title>Article One|IAS</title>
-<!--<script>
-    var counter=0;
-    var button =document.getElementById("b");
-    var span =document.getElementById("p");
-   
-    button.onclick=function(){
-        counter=counter+1;
-        span.innerHTML=counter.toString();
-    };
-    It is a FREE FALL execution,therefore things appearing  must be defined before thier use.
-</script>-->
+
 </head>
 <body>
  
 <header>
   <a href="/">Home</a>
-  Article One</header><br>
-<nav>Contents
+  Article One
+ </header>
+ <br>
+<nav>
+Contents
 JS
 Node JS
 AJAX
 JSON
-</nav><br>
+</nav>
+<br>
 <div class="footer">
 This button<button type="button" id="b">Counter</button>has been clicked<p id="p">0</p>times.
 <script>
@@ -31,11 +25,7 @@ This button<button type="button" id="b">Counter</button>has been clicked<p id="p
     var button =document.getElementById("b");
     var para =document.getElementById("p");
    
-    <!--function count(){
-        counter=counter+1;
-        span.innerHTML=counter;
-    };-->
-    button.onclick=function(){
+    button.onclick=function() {
         counter=counter+1;
         para.innerHTML=counter.toString();
     }
