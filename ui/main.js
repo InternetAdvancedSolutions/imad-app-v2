@@ -10,11 +10,11 @@ button.onclick=function(){
            {
              var count =request.responseText;
              var span=document.getElementById("sp");
-             span.innerHTML=count.toString();
+             span.innerHTML=count;
         }
         }
     };
     
     request.open('GET',"server.js/counter",true);
-    request.send();
+    request.send(null);
 }
