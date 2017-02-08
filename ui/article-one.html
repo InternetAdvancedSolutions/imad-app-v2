@@ -31,11 +31,14 @@ This button<button type="button" id="b">Counter</button>has been clicked<p id="p
     var button =document.getElementById("b");
     var span =document.getElementById("p");
    
-    function count(){
+    <!--function count(){
+        counter=counter+1;
+        span.innerHTML=counter;
+    };-->
+    button.onclick=function(){
         counter=counter+1;
         span.innerHTML=counter;
     };
-    button.onclick=count();
 </script>
 </div>
 Thanks for visiting!
