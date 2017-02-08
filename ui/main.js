@@ -1,4 +1,4 @@
-console.log('Loaded!');
+//console.log('Loaded!');
 var button=document.getElementById("homeB");
 
 button.onclick=function(){
