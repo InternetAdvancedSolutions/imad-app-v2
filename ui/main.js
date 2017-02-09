@@ -27,7 +27,7 @@
         }
     };
     
-    request.open('GET',"https://cloud.imad.hasura.io/code/files/server.js",true);
+    request.open('GET',"https://cloud.imad.hasura.io/code/files/server.js/counter",true);
     request.send(null);
    };
    
