@@ -6,22 +6,23 @@
     var request= new XMLHttpRequest();
     
     request.onreadystatechange=function(){
-        if(request.readystate==4)
-        { if(request.status==200)
+        if(request.readystate===request.DONE)
+        { if(request.status===200)
            {
              var counter =request.responseText;
              var span=document.getElementById("sp");
              span.innerHTML=counter.toString();
             }
             else
-            { span=document.getElementById("sp");
-             span.innerHTML="request not ok";
+            { 
+            var    span1=document.getElementById("sp");
+             span1.innerHTML="request not ok";
             }
         }
         else
         {
-            { span=document.getElementById("sp");
-             span.innerHTML="request not done";
+            {var span2=document.getElementById("sp");
+             span2.innerHTML="request not done";
             }
         }
     };
