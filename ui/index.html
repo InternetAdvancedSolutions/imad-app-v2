@@ -7,20 +7,7 @@
             window.onload=time;
         </script>
         
-        <style type="text/css">
-        #logo {background-color:#123456; padding:5px; height:350px;}
-        #feedback {background-color:#123456;}
-        #t {color:white;}
-        #main {background-color:#fdc;}
-        #h {background-color:#fdc;}
-        #h1 {color:white;}
-        #h2 {color:white;}
-        #sub {background-color:white;}
-        #p1 {color:white;}
-        #p2 {color:white;}
-        #links {color:white;}
-        .hyperlinks {color:white;}
-        </style>
+        
     </head>
     <body>
         <div id="logo" class="center" >
@@ -32,38 +19,9 @@
     <pre>
        <a class="hyperlinks" href="ui/article-one.html">Article One</a>   <a class ="hyperlinks" href="ui/article-two.html">Article Two</a>   <a class ="hyperlinks" href="ui/article-three.html">Article Three</a>   <a class ="hyperlinks" href="/counter">Counter Endpoint</a>   <h4 id="h2">This button <button id="homeB"> Click me! </button> has been clicked  <span id="sp">   0   </span> times.</h4>
     </pre>
-   <1-- <script>
-    var button1=document.getElementById("homeB");
-
-    button1.onclick=function(){
-    var request= new XMLHttpRequest();
+  
     
-    request.onreadystatechange=function(){
-        if(request.readystate===request.DONE)
-        { if(request.status===200)
-           {
-             var counter =request.responseText;
-             var span=document.getElementById("sp");
-             span.innerHTML=counter.toString();
-            }
-            else
-            {var span=document.getElementById("sp");
-             span.innerHTML="request not ok";
-            }
-        }
-        else
-        {
-            {var span=document.getElementById("sp");
-             span.innerHTML="request not done";
-            }
-        }
-    };
-    
-    request.open('GET',"https://cloud.imad.hasura.io/code/files/server.js",true);
-    request.send(null);
-   };
-   </script>-->
-    
+  
        </div>
        
         
