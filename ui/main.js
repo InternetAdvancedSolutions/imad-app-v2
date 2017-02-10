@@ -6,7 +6,7 @@
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p2");
             button.onclick=function(){
-                para.innerHTML=textarea.value;}
+                para.innerHTML=textarea.value;};
    // for Ajax data call        
     var button1=document.getElementById("homeB");
 
