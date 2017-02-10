@@ -1,5 +1,6 @@
 //console.log('Loaded!');
-  
+  function time(){document.getElementById("t").innerHTML=Date();}
+            window.onload=time;
     var button1=document.getElementById("homeB");
 
     button1.onclick=
