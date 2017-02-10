@@ -30,25 +30,18 @@
               span3.innerHTML="request object NOT created";
     }
     request.onreadystatechange=function(){
-        if(request.readystate==0)
+        if(request.readystate==0 && request.status==200)
         {  
-            if(request.status===200)
-           {
+           
              var counter =request.responseText;
              var span=document.getElementById("ssp");
              span.innerHTML=counter.toString();
-            }
-            else
-            { 
-              var span1=document.getElementById("a2p1");
-              span1.innerHTML="request not ok";
-            }
         }
         else
         {
-            {var span2=document.getElementById("a2p1");
+            var span2=document.getElementById("a2p1");
              span2.innerHTML="request not done";
-            }
+            
         }
     };
     
