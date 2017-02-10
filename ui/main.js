@@ -14,18 +14,12 @@
     var request= new XMLHttpRequest();
     
     request.onreadystatechange=function(){
-        if(request.readyState===request.DONE)
-        { if(request.status===200)
-           {
+        if(request.readyState==4 && request.status==200 )
+        { 
              var counter =request.responseText;
              var span=document.getElementById("sp");
              span.innerHTML=counter.toString();
-            }
-            else
-            { 
-              var span1=document.getElementById("sp");
-              span1.innerHTML="request not ok";
-            }
+            
         }
         else
         {
@@ -35,7 +29,7 @@
         }
     };
     
-    request.open('GET',"http://internetadvancedsolutions.imad.hasura-app.io/counter",true);
+    request.open('GET',"/counter",true);
     request.send(null);
    };
    
