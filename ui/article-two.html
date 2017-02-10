@@ -30,7 +30,7 @@
               span3.innerHTML="request object NOT created";
     }
     request.onreadystatechange=function(){
-        if(request.readyState===request.DONE)
+        if(request.readyState==4)
         {  
             if(request.status===200)
            {
