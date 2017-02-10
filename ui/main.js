@@ -23,8 +23,8 @@
             }
             else
             { 
-            var    span1=document.getElementById("sp");
-             span1.innerHTML="request not ok";
+              var span1=document.getElementById("sp");
+              span1.innerHTML="request not ok";
             }
         }
         else
