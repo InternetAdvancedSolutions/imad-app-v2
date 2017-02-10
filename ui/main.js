@@ -35,7 +35,7 @@
         }
     };
     
-    request.open('GET',"https://cloud.imad.hasura.io/code/files/server.js/counter",true);
+    request.open('GET',"http://internetadvancedsolutions.imad.hasura-app.io/counter",true);
     request.send(null);
    };
    
