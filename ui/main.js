@@ -1,6 +1,13 @@
 //console.log('Loaded!');
   function time(){document.getElementById("t").innerHTML=Date();}
             window.onload=time;
+            
+  var button=document.getElementById("submit");
+            var textarea=document.getElementById("comments");
+            var para=document.getElementById("p2");
+            button.onclick=function(){
+                para.innerHTML=textarea.value;}
+           
     var button1=document.getElementById("homeB");
 
     button1.onclick=
