@@ -18,6 +18,8 @@
     var button1=document.getElementById("B");
 
     button1.onclick=function(){
+        var span1=document.getElementById("ssp");
+              span1.innerHTML="request not ok";
     var request= new XMlHttpRequest();
     
     request.onreadystatechange=function(){
