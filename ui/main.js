@@ -1,18 +1,16 @@
-console.log('Loaded!');
+  //for date and time
   function time(){document.getElementById("t").innerHTML=Date();}
             window.onload=time;
-            
+  //for textarea  
   var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p2");
             button.onclick=function(){
                 para.innerHTML=textarea.value;}
-           
+   // for Ajax data call        
     var button1=document.getElementById("homeB");
 
-    button1.onclick=
-    
-    function f(){
+    button1.onclick=function(){
     var request= new XMLHttpRequest();
     
     request.onreadystatechange=function(){
