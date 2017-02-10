@@ -1,4 +1,4 @@
-//console.log('Loaded!');
+console.log('Loaded!');
   function time(){document.getElementById("t").innerHTML=Date();}
             window.onload=time;
             
