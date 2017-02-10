@@ -14,7 +14,7 @@
     var request= new XMLHttpRequest();
     
     request.onreadystatechange=function(){
-        if(request.readystate===request.DONE)
+        if(request.readyState===request.DONE)
         { if(request.status===200)
            {
              var counter =request.responseText;
