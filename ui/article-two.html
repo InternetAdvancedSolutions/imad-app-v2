@@ -10,12 +10,12 @@
 <p id="a2p2"></p>
 <h1>Article Two</h1>
 <h3>Test</h3>
-<h4 id="h2">This button <button id="homeB" > Click me! </button> has been clicked  <span id="sp">   0   </span> times.</h4>
+<h4 id="h2">This button <button id="B" > Click me! </button> has been clicked  <span id="ssp">   0   </span> times.</h4>
 <script type="text/javascript">
     document.getElementById('a2p1').innerHTML="hi";
     document.getElementById('a2p2').innerHTML="Ajax";
     // for Ajax data call        
-    var button1=document.getElementById("homeB");
+    var button1=document.getElementById("B");
 
     button1.onclick=function(){
     var request= new XMlHttpRequest();
@@ -25,18 +25,18 @@
         { if(request.status===200)
            {
              var counter =request.responseText;
-             var span=document.getElementById("sp");
+             var span=document.getElementById("ssp");
              span.innerHTML=counter.toString();
             }
             else
             { 
-              var span1=document.getElementById("sp");
+              var span1=document.getElementById("ssp");
               span1.innerHTML="request not ok";
             }
         }
         else
         {
-            {var span2=document.getElementById("sp");
+            {var span2=document.getElementById("ssp");
              span2.innerHTML="request not done";
             }
         }
