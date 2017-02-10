@@ -13,7 +13,7 @@
 <h4 id="h2">This button <button id="B" > Click me! </button> has been clicked  <span id="ssp">   0   </span> times.</h4>
 <script type="text/javascript">
     document.getElementById('a2p1').innerHTML="hi";
-    document.getElementById('a2p2').innerHTML="Ajax";
+   // document.getElementById('a2p2').innerHTML="Ajax";
     // for Ajax data call        
     var button1=document.getElementById("B");
 
@@ -23,7 +23,7 @@
     var request= new XMLHttpRequest();
     
     request.onreadystatechange=function(){
-        if(request.readystate==0)
+        if(request.readyState===0)
         {  var span3=document.getElementById("a2p2");
               span3.innerHTML="request object created sucessfully";
             if(request.status===200)
