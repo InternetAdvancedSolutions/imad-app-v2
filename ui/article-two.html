@@ -20,7 +20,7 @@
     button1.onclick=function(){
         var span3=document.getElementById("ssp");
               span3.innerHTML="request not ok";
-    var request= new XMlHttpRequest();
+    var request= new XMLHttpRequest();
     
     request.onreadystatechange=function(){
         if(request.readystate===request.DONE)
