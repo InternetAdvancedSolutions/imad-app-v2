@@ -14,6 +14,37 @@
 <script type="text/javascript">
     document.getElementById('a2p1').innerHTML="hi";
     document.getElementById('a2p2').innerHTML="Ajax";
+    // for Ajax data call        
+    var button1=document.getElementById("homeB");
+
+    button1.onclick=function(){
+    var request= new XMlHttpRequest();
+    
+    request.onreadystatechange=function(){
+        if(request.readystate===request.DONE)
+        { if(request.status===200)
+           {
+             var counter =request.responseText;
+             var span=document.getElementById("sp");
+             span.innerHTML=counter.toString();
+            }
+            else
+            { 
+              var span1=document.getElementById("sp");
+              span1.innerHTML="request not ok";
+            }
+        }
+        else
+        {
+            {var span2=document.getElementById("sp");
+             span2.innerHTML="request not done";
+            }
+        }
+    };
+    
+    request.open('GET',"http://internetadvancedsolutions.imad.hasura-app.io/counter",true);
+    request.send(null);
+   };
 </script>
     
 
