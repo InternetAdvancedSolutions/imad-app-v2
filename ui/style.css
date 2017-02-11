@@ -32,5 +32,5 @@ body {
         #p1 {color:white;}
         #p2 {color:white;}
         #links {color:white;}
-        .hyperlinks {color:white;}
+        .hyperlinks {color:white; text-decoration:none;}
         
