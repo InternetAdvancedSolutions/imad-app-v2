@@ -34,4 +34,5 @@ body {
         #links {color:white;}
         .hyperlinks {color:white; text-decoration:none;}
         a:hover {text-decoration:underline;} 
+        a:visited {text-decoration:green;}
         
