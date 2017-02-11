@@ -33,4 +33,5 @@ body {
         #p2 {color:white;}
         #links {color:white;}
         .hyperlinks {color:white; text-decoration:none;}
+        a:hover {text-decoration:underline;} 
         
