@@ -16,7 +16,7 @@
             window.onload=time;
         </script>
         <pre>
-       <a class="hyperlinks" href="/ui/article-one.html">Web Apps</a>   <a class ="hyperlinks" href="ui/article-two.html">Database Administration</a>   <a class ="hyperlinks" href="ui/article-three.html">Single Page Apps</a>   <a class ="hyperlinks" href="/counter">Counter Endpoint</a>   <h4 id="h2">Hi guest <button id="homeB" >click here! </button>to know your visitor number.  <span id="sp">   Thanks!   </span> </h4>
+       <a class="hyperlinks" href="/ui/article-one.html">Web Apps</a>   <a class ="hyperlinks" href="ui/article-two.html">Database Administration</a>   <a class ="hyperlinks" href="ui/article-three.html">Single Page Apps</a>   <a class ="hyperlinks" href="/counter">Counter Endpoint</a>   <h4 id="h2">Hi guest <button id="homeB" >click me  </button>to know your visitor number  <span id="sp"> Thanks!   </span> </h4>
         </pre>
         </div>
         <script>
@@ -30,7 +30,7 @@
         { 
              var counter =request.responseText;
              var span=document.getElementById("sp");
-             span.innerHTML="Wow ! You are the"+counter+"th visitor";
+             span.innerHTML="Wow ! You are the "+counter+" th visitor";
             
         }
         
