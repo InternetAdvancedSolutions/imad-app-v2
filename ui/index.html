@@ -3,7 +3,6 @@
     <head>
         <title>Home | IAS</title>
         <link href="/ui/style.css" rel="stylesheet" />
-        <script type="text/javascript" src="/ui/main.js"></script>
     </head>
     <body>
         <div id="logo" class="center" >
@@ -11,42 +10,12 @@
         <hr>
         <h2 id="h1">Internet Advanced Solutions (IAS)</h2>
         <h6 align="center" id="t"></h6>
-        <!--
-        <script>
-        function time(){document.getElementById("t").innerHTML=Date();}
-            window.onload=time;
-        </script>
-        -->
+        
         <pre>
        <a class="hyperlinks" href="/ui/article-one.html">Web Apps</a>   <a class ="hyperlinks" href="ui/article-two.html">Database Administration</a>   <a class ="hyperlinks" href="ui/article-three.html">Single Page Apps</a>   <a class ="hyperlinks" href="/counter">Counter Endpoint</a>   <h4 id="h2">Hi guest <button id="homeB" >click me  </button> to know your visitor number<span id="sp"> Thanks!   </span> </h4>
         </pre>
         </div>
-        <!--
-        <script>
-         var button1=document.getElementById("homeB");
-
-    button1.onclick=function()
-    {
-      var request= new XMLHttpRequest();
-    
-      request.onreadystatechange=function()
-      {
-        if(request.readyState==4 && request.status==200 )
-        { 
-             var counter =request.responseText;
-             var span=document.getElementById("sp");
-             span.innerHTML=" Wow ! Your visitor number is "+counter+" Great !";
-            
-        }
         
-     };
-    
-    request.open('GET',"/counter",true);
-    request.send(null);
-   };
-   
-   </script>
-   -->
         <br>
         <div id="main" class="center text-big bold">
         Hi! I am Ashutosh 
@@ -78,14 +47,7 @@
             <p id="p2"></p>
            </pre>
         </div>
-        <!--<script>
-       var button=document.getElementById("submit");
-            var textarea=document.getElementById("comments");
-            var para=document.getElementById("p2");
-            button.onclick=function(){
-                para.innerHTML=textarea.value;};
-        </script>
-        -->
+       
         <script src="/ui/main.js"></script>
     </body>
 </html>
