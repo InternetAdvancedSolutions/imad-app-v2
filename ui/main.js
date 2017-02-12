@@ -7,7 +7,7 @@
             var para=document.getElementById("p2");
             button.onclick=function(){
                 para.innerHTML=textarea.value;};
-   // for Ajax data call        
+   // for Ajax data call of 'click me' button        
    var button1=document.getElementById("homeB");
 
     button1.onclick=function()
