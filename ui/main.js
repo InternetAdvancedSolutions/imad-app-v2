@@ -8,28 +8,26 @@
             button.onclick=function(){
                 para.innerHTML=textarea.value;};
    // for Ajax data call        
-    var button1=document.getElementById("homeB");
+   var button1=document.getElementById("homeB");
 
-    button1.onclick=function(){
-    var request= new XMLHttpRequest();
+    button1.onclick=function()
+    {
+      var request= new XMLHttpRequest();
     
-    request.onreadystatechange=function(){
+      request.onreadystatechange=function()
+      {
         if(request.readyState==4 && request.status==200 )
         { 
              var counter =request.responseText;
              var span=document.getElementById("sp");
-             span.innerHTML=counter.toString();
+             span.innerHTML=" Wow ! Your visitor number is "+counter+" Great !";
             
         }
-        else
-        {
-            {var span2=document.getElementById("sp");
-             span2.innerHTML="request not done";
-            }
-        }
-    };
+        
+     };
     
     request.open('GET',"/counter",true);
     request.send(null);
    };
+   
    
