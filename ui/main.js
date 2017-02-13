@@ -10,7 +10,8 @@
    // for Ajax data call of 'click me' button        
    var button1=document.getElementById("homeB");
 
-    button1.onclick=function()
+   // button1.onclick=function()
+   window.onload= function()
     {
       var request= new XMLHttpRequest();
     
@@ -20,7 +21,7 @@
         { 
              var counter =request.responseText;
              var span=document.getElementById("sp");
-             span.innerHTML=" Wow ! Your visitor number is "+counter+" Great !";
+             span.innerHTML=" visitor count: "+counter;
             
         }
         
