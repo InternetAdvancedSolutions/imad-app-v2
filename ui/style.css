@@ -28,8 +28,8 @@ body {
 .container {
     max-width:800px;
     margin:auto;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:10px;
+    padding-right:10px;
 }
         #logo {background-color:#123456; padding:5px; height:250px;}
         #feedback {background-color:#123456;}
