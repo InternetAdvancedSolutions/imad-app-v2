@@ -1,6 +1,6 @@
   //for date and time
-  function time(){document.getElementById("t").innerHTML=Date();}
-            window.onload=time;
+ // function time(){document.getElementById("t").innerHTML=Date();}
+           // window.onload=time;
   //for textarea  
   var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
@@ -12,7 +12,7 @@
 
    // button1.onclick=function()
    window.onload= function()
-    {
+    {document.getElementById("t").innerHTML=Date();
       var request= new XMLHttpRequest();
     
       request.onreadystatechange=function()
