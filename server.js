@@ -103,7 +103,7 @@ function createTemplate(data){
         <div id="feedback">
             <p id="p1">Post your Q & As :</p>
             <pre>
-            <textarea id="comments" cols="50" rows="10" maxlength="500"></textarea><br>
+            <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
             <button id="submit" >Post</button>
             <p id="p2"></p>
            </pre>
