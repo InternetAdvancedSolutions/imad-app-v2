@@ -32,6 +32,41 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
+var articles={
+    articleOne:{
+        title:'All about javaScript | IAS',
+        heading:'All about javaScript',
+        content:`
+        <p>
+        This is a forum to learn javaScript by sharing our knowledge.<br>
+        So, please feel free to ask any questions/doubts in javaScript.<br>
+        And give answers to questions which you know.
+        </p>`
+    },
+    
+     articleTwo:{
+        title:'All about HTML and CSSS | IAS',
+        heading:'All about HTML and CSS',
+        content:`
+        <p>
+        This is a forum to learn HTML & CSS by sharing our knowledge.<br>
+        So, please feel free to ask any questions/doubts in HTML & CSS.<br>
+        And give answers to questions which you know.
+        </p>`
+    },
+    
+     articleThree:{
+        title:'All about SQL | IAS',
+        heading:'All about SQL',
+        content:`
+        <p>
+        This is a forum to learn SQL and Data Modellin by sharing our knowledge.<br>
+        So, please feel free to ask any questions/doubts in SQL.<br>
+        And give answers to questions which you know.
+        </p>`
+    }
+};
+
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -52,41 +87,22 @@ function createTemplate(data){
         <table><tr><td>
         <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" aligh="center" ></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
-        <h3 class="center text-big bold">${heading}</h3></td><td><h4 id="h2"><span id="sp"></span> </h4></td></tr>
+        <h3 class="center text-big bold">${heading}</h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
-        <span class="fontcolor1" align="right" id="t"></span> |  <a class="hyperlinks" href="/ui/article-one.html">Webpps</a> |  <a class ="hyperlinks" href="ui/article-two.html">Database MS</a> |  <a class ="hyperlinks" href="ui/article-three.html">Single Page Apps</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
+        <span class="fontcolor1" align="right" id="t"></span> |  <a class="hyperlinks" href="/ui/article-one.html">javaScript</a> |  <a class ="hyperlinks" href="ui/article-two.html">HTML and CSS</a> |  <a class ="hyperlinks" href="ui/article-three.html">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
         </pre>
        </div>
        
         <div id="main" class="center text-big bold">
         Hi! I am Ashutosh 
-        </div>
-        
-        <h4 id="h" class="center">Internet Consultant and App Developer</h4>
-        <div id="sub" class="left">
-        I help startups develop and maintain Webapps, SPAs (single page apps), Websites and Database Management Systems.
-             
-            My fields of expertize are:
-            <ol type="i">
-            <li>C, Embedded C and C++</li>
-            <li>Java (J2EE)</li>
-            <li>HTML and CSS</li>
-            <li>PHP, javaScript and Node JS</li>
-            <li>SQL and Data modelling</li>
-            <li>Android Programming</li>
-            </ol>
-            </div>
-            <div id="d" class="center">
-            
-              A certified programmer from IIT kharagpur and B.Tech from Kanpur.
-            
-            </div>
-            <br>
-            
+        </div id="content">
+        ${content}
+        <div>
+        <br>
         <div id="feedback">
-            <p id="p1">Share your views with me :</p>
+            <p id="p1">Post your Q & As :</p>
             <pre>
             <textarea id="comments" cols="50" rows="10" maxlength="500"></textarea><br>
             <button id="submit" >Post</button>
@@ -101,6 +117,8 @@ function createTemplate(data){
 `;
 return htmltemplate;
 }
+
+
 app.get('/ui/article-one.html', function (req, res) {
  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
  
