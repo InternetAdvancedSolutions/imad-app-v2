@@ -36,6 +36,8 @@ var articles={
     articleOne:{
         title:'All about javaScript | IAS',
         heading:'All about javaScript',
+        textarea_id:'comments1',
+        button_id:'submit1',
         content:`
         <p>
         At this forum you can learn javaScript by sharing our knowledge.<br>
@@ -47,6 +49,8 @@ var articles={
      articleTwo:{
         title:'All about HTML and CSSS | IAS',
         heading:'All about HTML and CSS',
+         textarea_id:'comments2',
+        button_id:'submit2',
         content:`
         <p>
         At this forum you can learn HTML & CSS by sharing our knowledge.<br>
@@ -58,6 +62,8 @@ var articles={
      articleThree:{
         title:'All about SQL | IAS',
         heading:'All about SQL',
+         textarea_id:'comments3',
+        button_id:'submit3',
         content:`
         <p>
         At this forum you can learn SQL and Data Modelling by sharing your knowledge.<br>
@@ -71,6 +77,8 @@ function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
     var content=data.content;
+    var textarea_id=data.textarea_id;
+    var button_id=data.button_id;
     var htmltemplate=`
     
 <!doctype html>
@@ -103,8 +111,8 @@ function createTemplate(data){
         <div id="feedback">
             <p id="p1">Post your Q & As :</p>
             <pre>
-            <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
-            <button id="submit" >Post</button>
+            <textarea id=${textarea_id} cols="100" rows="10" maxlength="500"></textarea><br>
+            <button id=${button_id} >Post</button>
             <p id="p2"></p>
            </pre>
         </div>
