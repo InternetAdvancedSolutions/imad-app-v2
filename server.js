@@ -86,11 +86,11 @@ function createTemplate(data){
         <table><tr><td>
         <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" aligh="center" ></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
-        <h3 class="center text-big bold">${heading}</h3></td></tr>
+        <h3 id ="h2" class ="center text-big bold">${heading}</h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
-        <span class="fontcolor1" align="right" id="t"></span> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
+        <span class="fontcolor1" align="right" id="t"></span> | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
         </pre>
        </div>
        
