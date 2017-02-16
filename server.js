@@ -38,6 +38,7 @@ var articles={
         heading:'All about javaScript',
         textarea_id:'comments1',
         button_id:'submit1',
+        p_id:'p1',
         content:`
         <p>
         At this forum you can learn javaScript by sharing our knowledge.<br>
@@ -51,6 +52,7 @@ var articles={
         heading:'All about HTML and CSS',
          textarea_id:'comments2',
         button_id:'submit2',
+        p_id:'p2',
         content:`
         <p>
         At this forum you can learn HTML & CSS by sharing our knowledge.<br>
@@ -64,6 +66,7 @@ var articles={
         heading:'All about SQL',
          textarea_id:'comments3',
         button_id:'submit3',
+        p_id:'p3',
         content:`
         <p>
         At this forum you can learn SQL and Data Modelling by sharing your knowledge.<br>
@@ -79,6 +82,7 @@ function createTemplate(data){
     var content=data.content;
     var textarea_id=data.textarea_id;
     var button_id=data.button_id;
+    var p_id=data.p_id;
     var htmltemplate=`
     
 <!doctype html>
@@ -113,7 +117,7 @@ function createTemplate(data){
             <pre>
             <textarea id=${textarea_id} cols="100" rows="10" maxlength="500"></textarea><br>
             <button id=${button_id} >Post</button>
-            <p id="p2"></p>
+            <p id=${p_id}></p>
            </pre>
         </div>
        
