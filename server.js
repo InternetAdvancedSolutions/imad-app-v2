@@ -52,7 +52,7 @@ var articles={
         heading:'All about HTML and CSS',
          textarea_id:'comments2',
         button_id:'submit2',
-        p_id:'p2',
+        p_id:'p4',
         content:`
         <p>
         At this forum you can learn HTML & CSS by sharing our knowledge.<br>
