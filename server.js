@@ -38,9 +38,9 @@ var articles={
         heading:'All about javaScript',
         content:`
         <p>
-        This is a forum to learn javaScript by sharing our knowledge.<br>
+        At this forum you can learn javaScript by sharing our knowledge.<br>
         So, please feel free to ask any questions/doubts in javaScript.<br>
-        And give answers to questions which you know.
+        And give answers to questions which you know so that others can benefit.
         </p>`
     },
     
@@ -49,9 +49,9 @@ var articles={
         heading:'All about HTML and CSS',
         content:`
         <p>
-        This is a forum to learn HTML & CSS by sharing our knowledge.<br>
+        At this forum you can learn HTML & CSS by sharing our knowledge.<br>
         So, please feel free to ask any questions/doubts in HTML & CSS.<br>
-        And give answers to questions which you know.
+        And give answers to questions which you know so that others can benefit.
         </p>`
     },
     
@@ -60,9 +60,9 @@ var articles={
         heading:'All about SQL',
         content:`
         <p>
-        This is a forum to learn SQL and Data Modellin by sharing our knowledge.<br>
-        So, please feel free to ask any questions/doubts in SQL.<br>
-        And give answers to questions which you know.
+        At this forum you can learn SQL and Data Modelling by sharing your knowledge.<br>
+        So, please feel free to ask any questions/doubts regarding SQL.<br>
+        And give answers to questions which you know so that others can benefit.
         </p>`
     }
 };
