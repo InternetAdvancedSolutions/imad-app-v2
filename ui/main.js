@@ -11,21 +11,21 @@
    //for textarea  for articleOne page
   var button=document.getElementById("submit1");
             var textarea=document.getElementById("comments1");
-            var para=document.getElementById("p2");
+            var para=document.getElementById("p5");
             button.onclick=function(){
                 para.innerHTML=textarea.value;};
                 
     //for textarea  for articleTwo page
   var button=document.getElementById("submit2");
             var textarea=document.getElementById("comments2");
-            var para=document.getElementById("p2");
+            var para=document.getElementById("p4");
             button.onclick=function(){
                 para.innerHTML=textarea.value;};  
                 
     //for textarea  for articleThree page
   var button=document.getElementById("submit3");
             var textarea=document.getElementById("comments3");
-            var para=document.getElementById("p2");
+            var para=document.getElementById("p3");
             button.onclick=function(){
                 para.innerHTML=textarea.value;};
                 
