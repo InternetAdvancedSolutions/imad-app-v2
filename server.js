@@ -38,7 +38,7 @@ var articles={
         heading:'All about javaScript',
         textarea_id:'comments1',
         button_id:'submit1',
-        p_id:'p1',
+        p_id:'p5',
         content:`
         <p>
         At this forum you can learn javaScript by sharing our knowledge.<br>
