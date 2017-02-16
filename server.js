@@ -86,7 +86,7 @@ function createTemplate(data){
         <table><tr><td>
         <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" aligh="center" ></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
-        <h3 id ="h2" class ="center text-big bold">${heading}</h3></td></tr>
+        <h3 id ="h3" class ="center text-big bold">${heading}</h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
@@ -95,11 +95,11 @@ function createTemplate(data){
        </div>
        
         <div id="main" class="center text-big bold">
-        Hi! I am Ashutosh 
-        </div id="content">
+        Learning by Sharing
+        </div>
+        <div id="content">
         ${content}
-        <div>
-        <br>
+        </div>
         <div id="feedback">
             <p id="p1">Post your Q & As :</p>
             <pre>
