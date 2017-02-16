@@ -91,7 +91,7 @@ function createTemplate(data){
         </table> 
         <hr>
         <pre class="fontcolor1">
-        <span class="fontcolor1" align="right" id="t"></span> |  <a class="hyperlinks" href="/ui/article-one.html">javaScript</a> |  <a class ="hyperlinks" href="ui/article-two.html">HTML and CSS</a> |  <a class ="hyperlinks" href="ui/article-three.html">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
+        <span class="fontcolor1" align="right" id="t"></span> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
         </pre>
        </div>
        
