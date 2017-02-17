@@ -32,7 +32,7 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-var articles={
+var articles= {
     articleOne:{
         title:'All about javaScript | IAS',
         heading:'All about javaScript',
@@ -43,7 +43,7 @@ var articles={
         <p>
         At this forum you can learn javaScript by sharing our knowledge.<br>
         So, please feel free to ask any questions/doubts in javaScript.<br>
-        And give answers to questions which you know so that others can benefit.
+        And give answers to questions  so that others too can benefit.
         </p>`
     },
     
@@ -57,7 +57,7 @@ var articles={
         <p>
         At this forum you can learn HTML & CSS by sharing our knowledge.<br>
         So, please feel free to ask any questions/doubts in HTML & CSS.<br>
-        And give answers to questions which you know so that others can benefit.
+        And give answers to questions  so that others can benefit.
         </p>`
     },
     
@@ -71,7 +71,7 @@ var articles={
         <p>
         At this forum you can learn SQL and Data Modelling by sharing your knowledge.<br>
         So, please feel free to ask any questions/doubts regarding SQL.<br>
-        And give answers to questions which you know so that others can benefit.
+        And give answers to questions  so that others can benefit.
         </p>`
     }
 };
@@ -113,7 +113,7 @@ function createTemplate(data){
         ${content}
         </div>
         <div id="feedback">
-            <p id="p1">Post your Q & As :</p>
+            <p id="p">Post your Q & As :</p>
             <pre>
             <textarea id=${textarea_id} cols="100" rows="10" maxlength="500"></textarea><br>
             <button id=${button_id} >Post</button>
