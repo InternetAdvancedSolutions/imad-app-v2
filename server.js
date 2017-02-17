@@ -117,7 +117,7 @@ app.get('/:articleName',function(req,res){
     res.send(createTemplate(articles[articleName]));
 });
 
-var port = 8081; 
-app.listen(8081, function () {
+var port = 8080; 
+app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
