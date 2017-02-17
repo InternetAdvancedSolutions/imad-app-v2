@@ -9,24 +9,24 @@
                 para.innerHTML=textarea.value;};
                 
    //for textarea  for articleOne page
-  var button=document.getElementById("submit1");
+  var button2=document.getElementById("submit1");
             var textarea=document.getElementById("comments1");
-            var para=document.getElementById("p5");
-            button.onclick=function(){
+            var para=document.getElementById("p2");
+            button2.onclick=function(){
                 para.innerHTML=textarea.value;};
                 
     //for textarea  for articleTwo page
-  var button=document.getElementById("submit2");
+  var button3=document.getElementById("submit2");
             var textarea=document.getElementById("comments2");
-            var para=document.getElementById("p4");
-            button.onclick=function(){
+            var para=document.getElementById("p3");
+            button3.onclick=function(){
                 para.innerHTML=textarea.value;};  
                 
     //for textarea  for articleThree page
-  var button=document.getElementById("submit3");
+  var button4=document.getElementById("submit3");
             var textarea=document.getElementById("comments3");
-            var para=document.getElementById("p3");
-            button.onclick=function(){
+            var para=document.getElementById("p4");
+            button4.onclick=function(){
                 para.innerHTML=textarea.value;};
                 
    // for Ajax data call of home page visit count       
