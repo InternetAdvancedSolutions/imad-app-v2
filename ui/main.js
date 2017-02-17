@@ -1,6 +1,4 @@
-  //for date and time
- // function time(){document.getElementById("t").innerHTML=Date();}
-           // window.onload=time;
+ 
   //for textarea  for home page
   var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
