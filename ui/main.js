@@ -1,4 +1,4 @@
-//console.log("main js loaded!");
+/*console.log("main js loaded!");
   //for textarea  for home page
   var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
@@ -6,7 +6,7 @@
             button.onclick=function(){
                 para.innerHTML=textarea.value;}
                 
-   /*for textarea  for articleOne page
+   for textarea  for articleOne page
   var button2=document.getElementById("submit1");
             var textarea2=document.getElementById("comments1");
             var para2=document.getElementById("p2");
@@ -26,7 +26,7 @@
             var para4=document.getElementById("p4");
             button4.onclick=function(){
                 para4.innerHTML=textarea4.value;};
-       */
+       
        
    // for Ajax data call of home page visit count       
  
@@ -50,4 +50,4 @@
     request.send(null);
    };
    
-   
+   */
