@@ -9,7 +9,7 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-/*
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -116,8 +116,8 @@ app.get('/:articleName',function(req,res){
     var articleName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
-*/
-var port = 8080; 
-app.listen(8080, function () {
+
+var port = 8081; 
+app.listen(8081, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
