@@ -2,7 +2,7 @@ console.log("main js loaded!");
   //for textarea  for home page
   var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
-            var para=document.getElementById("p2");
+            var para=document.getElementById("p");
             button.onclick=function(){
                 para.innerHTML=textarea.value;};
                 
@@ -11,21 +11,21 @@ console.log("main js loaded!");
             var textarea2=document.getElementById("comments1");
             var para2=document.getElementById("p2");
             button2.onclick=function(){
-                para2.innerHTML=textarea.value;};
+                para2.innerHTML=textarea2.value;};
                 
     //for textarea  for articleTwo page
   var button3=document.getElementById("submit2");
             var textarea3=document.getElementById("comments2");
             var para3=document.getElementById("p3");
             button3.onclick=function(){
-                para3.innerHTML=textarea.value;};  
+                para3.innerHTML=textarea3.value;};  
                 
     //for textarea  for articleThree page
   var button4=document.getElementById("submit3");
             var textarea4=document.getElementById("comments3");
             var para4=document.getElementById("p4");
             button4.onclick=function(){
-                para4.innerHTML=textarea.value;};
+                para4.innerHTML=textarea4.value;};
                 
    // for Ajax data call of home page visit count       
  
