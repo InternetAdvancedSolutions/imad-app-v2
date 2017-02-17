@@ -38,7 +38,7 @@ var articles= {
         heading:'All about javaScript',
         textarea_id:'comments1',
         button_id:'submit1',
-        p_id:'p5',
+        p_id:'p2',
         content:`
         <p>
         At this forum you can learn javaScript by sharing our knowledge.<br>
@@ -52,7 +52,7 @@ var articles= {
         heading:'All about HTML and CSS',
          textarea_id:'comments2',
         button_id:'submit2',
-        p_id:'p4',
+        p_id:'p3',
         content:`
         <p>
         At this forum you can learn HTML & CSS by sharing our knowledge.<br>
@@ -66,7 +66,7 @@ var articles= {
         heading:'All about SQL',
          textarea_id:'comments3',
         button_id:'submit3',
-        p_id:'p3',
+        p_id:'p4',
         content:`
         <p>
         At this forum you can learn SQL and Data Modelling by sharing your knowledge.<br>
