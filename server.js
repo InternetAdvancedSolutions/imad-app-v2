@@ -31,7 +31,7 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
-/*
+
 var articles= {
     articleOne:{
         title:'All about javaScript | IAS',
@@ -133,7 +133,7 @@ app.get('/:articleName',function(req,res){
     var articleName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
-*/
+
 var port = 8080; 
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
