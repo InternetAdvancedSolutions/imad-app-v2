@@ -28,9 +28,7 @@ console.log("main js loaded!");
                 para4.innerHTML=textarea.value;};
                 
    // for Ajax data call of home page visit count       
-   var button1=document.getElementById("homeB");
-
-   // button1.onclick=function()
+ 
    window.onload= function()
     {document.getElementById("t").innerHTML=Date();
       var request= new XMLHttpRequest();
