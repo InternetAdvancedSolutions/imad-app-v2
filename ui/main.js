@@ -4,7 +4,7 @@
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
             button.onclick=function(){
-                para.innerHTML=textarea.value;};
+                para.innerHTML=textarea.value;}
                 
    /*for textarea  for articleOne page
   var button2=document.getElementById("submit1");
