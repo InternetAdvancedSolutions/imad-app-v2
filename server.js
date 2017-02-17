@@ -121,7 +121,7 @@ function createTemplate(data){
            </pre>
         </div>
        
-        <script src="/ui/main.js"></script>
+        
     </div>
     </body>
 </html>
