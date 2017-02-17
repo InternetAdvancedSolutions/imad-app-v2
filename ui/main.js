@@ -2,7 +2,7 @@ console.log("main js loaded!");
   //for textarea  for home page
   var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
-            var para=document.getElementById("p");
+            var para=document.getElementById("p1");
             button.onclick=function(){
                 para.innerHTML=textarea.value;};
                 
