@@ -36,9 +36,10 @@ var articles= {
         
         content:`
         <p>
-        At this forum you can learn javaScript by sharing our knowledge.<br>
+        At this forum you can learn javaScript by sharing our knowledge.
         So, please feel free to ask any questions/doubts in javaScript.<br>
-        And give answers to questions  so that others too can benefit.
+        And give answers to questions  so that others can benefit.
+        <hr>
         </p>`
     },
     
@@ -48,9 +49,10 @@ var articles= {
         
         content:`
         <p>
-        At this forum you can learn HTML & CSS by sharing our knowledge.<br>
+        At this forum you can learn HTML & CSS by sharing our knowledge. 
         So, please feel free to ask any questions/doubts in HTML & CSS.<br>
         And give answers to questions  so that others can benefit.
+        <hr>
         </p>`
     },
     
@@ -60,10 +62,12 @@ var articles= {
         
         content:`
         <p>
-        At this forum you can learn SQL and Data Modelling by sharing your knowledge.<br>
+        At this forum you can learn SQL and Data Modeling by sharing your knowledge. 
         So, please feel free to ask any questions/doubts regarding SQL.<br>
         And give answers to questions  so that others can benefit.
-        </p>`
+        </p>
+        <hr>
+        `
     }
 };
 
