@@ -93,17 +93,18 @@ function createTemplate(data){
         <pre class="fontcolor1">
         <span class="fontcolor1" align="right" id="t"></span> | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
         </pre>
-       </div>
+        </div>
        
         <div id="main" class="center text-big bold">
         Learning by Sharing
         </div>
+        
         <div id="content">
-        ${content}
+             ${content}
         </div>
         
-        </div>
-       
+        
+       <script src="/ui/main.js"></script>
         
     </div>
     </body>
