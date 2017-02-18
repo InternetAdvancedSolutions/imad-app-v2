@@ -110,7 +110,7 @@ function createTemplate(data){
          <br>
             
         <div id="feedback">
-            <p id="p">Feel free to drop your thoughts :</p>
+            <p id="p">Ask Questions or give answers here :</p>
             <pre>
             <textarea id="" cols="100" rows="10" maxlength="500"></textarea><br>
             <button id="" >Post</button>
