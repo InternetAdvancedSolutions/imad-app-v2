@@ -49,6 +49,7 @@ body {
         #p5 {color:white;}
         #links {color:white;}
         .hyperlinks {color:white; text-decoration:none;}
+        .hyperlinks1 {color:#000; text-decoration:none;}
         a:hover {text-decoration:underline;} 
         a:visited {text-decoration:green;}
         
