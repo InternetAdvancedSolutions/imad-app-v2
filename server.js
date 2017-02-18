@@ -125,7 +125,7 @@ function createTemplate(data){
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
             button.onclick=function(){
-                para.innerHTML=textarea.value;};
+                para.innerHTML="You posted :"+textarea.value;};
     </script>
     </body>
 </html>
