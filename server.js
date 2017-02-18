@@ -103,6 +103,17 @@ function createTemplate(data){
              ${content}
         </div>
         
+         <br>
+            
+        <div id="feedback">
+            <p id="p">Feel free to drop your thoughts :</p>
+            <pre>
+            <textarea id="" cols="100" rows="10" maxlength="500"></textarea><br>
+            <button id="" >Post</button>
+            <p id=""></p>
+           </pre>
+        </div>
+       
         
        <script src="/ui/main.js"></script>
         
