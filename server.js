@@ -115,7 +115,7 @@ function createTemplate(data){
         </div>
        
         
-       <script src="/ui/main.js"></script>
+      
         
     </div>
     </body>
