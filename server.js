@@ -33,7 +33,7 @@ var articles= {
     articleOne:{
         title:'All about javaScript | IAS',
         heading:'All about javaScript',
-        
+        t:'<span class="fontcolor1" align="right" id="t"></span>' ,
         content:`
         <p>
         At this forum you can learn javaScript by sharing our knowledge.
@@ -46,7 +46,7 @@ var articles= {
      articleTwo:{
         title:'All about HTML and CSSS | IAS',
         heading:'All about HTML and CSS',
-        
+        t:'<span class="fontcolor1" align="right" id="t"></span>' ,
         content:`
         <p>
         At this forum you can learn HTML & CSS by sharing our knowledge. 
@@ -59,7 +59,7 @@ var articles= {
      articleThree:{
         title:'All about SQL | IAS',
         heading:'All about SQL',
-        
+        t:'<span class="fontcolor1" align="right" id="t"></span>' ,
         content:`
         <p>
         At this forum you can learn SQL and Data Modeling by sharing your knowledge. 
@@ -95,7 +95,7 @@ function createTemplate(data){
         </table> 
         <hr>
         <pre class="fontcolor1">
-         <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
+        ${t} | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
         </pre>
         </div>
        
@@ -118,10 +118,8 @@ function createTemplate(data){
            </pre>
         </div>
        
-        
-      
-        
     </div>
+    <script>document.getElementById("t").innerHTML=Date();</script>
     </body>
 </html>
 `;
