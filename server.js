@@ -112,14 +112,21 @@ function createTemplate(data){
         <div id="feedback">
             <p id="p">Ask Q & As  here :</p>
             <pre>
-            <textarea id="" cols="100" rows="10" maxlength="500"></textarea><br>
-            <button id="" >Post</button>
-            <p id=""></p>
+            <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
+            <button id="submit" >Post</button>
+            <p id="p1"></p>
            </pre>
         </div>
        
     </div>
-    <script>document.getElementById("t").innerHTML=Date();</script>
+    <script>
+    document.getElementById("t").innerHTML=Date();
+    var button=document.getElementById("submit");
+            var textarea=document.getElementById("comments");
+            var para=document.getElementById("p1");
+            button.onclick=function(){
+                para.innerHTML=textarea.value;};
+    </script>
     </body>
 </html>
 `;
