@@ -15,7 +15,7 @@ app.use(morgan('combined'));
 
 app.get('/:articleName', function(req,res){
 
-    pool.query("SELECT * FROM article WHERE title=$1", [req.params.articleName]), 
+    pool.query("SELECT * FROM article WHERE title=$1", req.params.articleName), 
     function(err,result)
     {
         
