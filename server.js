@@ -13,7 +13,7 @@ var pool= new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/articles/:articleName', function(req,res){
+app.get('/article/:articleName', function(req,res){
 
     pool.query("SELECT * FROM article WHERE title=$1", [req.params.articleName]), 
     function(err,result)
