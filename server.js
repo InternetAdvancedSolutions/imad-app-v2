@@ -61,7 +61,7 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
-
+/*
 var articles= {
     articleOne:{
         title:'All about javaScript | IAS',
@@ -103,7 +103,7 @@ var articles= {
         `
     }
 };
-
+*/
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -128,7 +128,7 @@ function createTemplate(data){
         </table> 
         <hr>
         <pre class="fontcolor1">
-        ${t} | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
+        <span class="fontcolor1" align="right" id="t"></span> | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
         </pre>
         </div>
        
