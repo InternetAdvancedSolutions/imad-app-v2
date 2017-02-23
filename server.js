@@ -166,10 +166,12 @@ function createTemplate(data){
 return htmltemplate;
 }
 
+/*
 app.get('/:articleName',function(req,res){
     var articleName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
+*/
 
 var port = 8080; 
 app.listen(8080, function () {
