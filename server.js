@@ -151,7 +151,7 @@ app.get('/test-db', function(req,res){
                  res.status(500).send(err.toStringify());
                }
                else{
-                   res.send(JSON.stringify(result));
+                   res.send(JSON.stringify(result.rows));
                }
        /*if(result.rows.length===0)
        {
