@@ -29,7 +29,7 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-
+/*
 var articles= {
     articleOne:{
         title:'All about javaScript | IAS',
@@ -71,7 +71,7 @@ var articles= {
         `
     }
 };
-
+*/
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
