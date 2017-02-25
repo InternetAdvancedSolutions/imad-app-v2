@@ -29,7 +29,7 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-/*
+
 var articles= {
     articleOne:{
         title:'All about javaScript | IAS',
@@ -71,7 +71,7 @@ var articles= {
         `
     }
 };
-*/
+
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -121,7 +121,7 @@ function createTemplate(data){
        
     </div>
     <script>
-    //document.getElementById("t").innerHTML=Date();
+    document.getElementById("t").innerHTML=Date();
     var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
@@ -133,6 +133,10 @@ function createTemplate(data){
 `;
 return htmltemplate;
 }
+app.get('/:articleName', function(req,res){
+    var articleName= req.paramas.articleName;
+    res.send(createTemplate(articles[articleName]));
+});
 
 var config={
     user:'internetadvancedsolutions',
@@ -158,6 +162,8 @@ app.get('/test-db', function(req,res){
 });   //query ends here
     
 });//get ends here
+
+app.get('/:articleName',)
   
   
   
