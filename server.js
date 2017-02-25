@@ -2,42 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool= require('pg').Pool;
-var config={
-    user:'internetadvancedsolutions',
-    database:'internetadvancedsolutions',
-    host:'db.imad.hasura-app.io',
-    port:'5432',
-    password:'process.env.DB_PASSWORD'
-}
-var pool= new Pool(config);
+
 var app = express();
 app.use(morgan('combined'));
-
-app.get('/:articleName', function(req,res){
-
-    pool.query("SELECT * FROM article WHERE title=$1", req.params.articleName), 
-    function(err,result)
-    {
-        
-        if(err){
-                 res.status(500).send(err.toStringify());
-               }
-       else if(result.rows.length===0)
-       {
-           res.status(404).send('Article not found');
-       }
-       
-       else{
-           var articleData= result.rows[0];
-           res.send(createTemplate(articleData));
-           }
-    
-    };
-});   
-  
-  
-  
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -61,6 +28,7 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
+
 /*
 var articles= {
     articleOne:{
@@ -153,7 +121,7 @@ function createTemplate(data){
        
     </div>
     <script>
-    document.getElementById("t").innerHTML=Date();
+    //document.getElementById("t").innerHTML=Date();
     var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
@@ -166,12 +134,40 @@ function createTemplate(data){
 return htmltemplate;
 }
 
-/*
-app.get('/:articleName',function(req,res){
-    var articleName=req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
-});
-*/
+var config={
+    user:'internetadvancedsolutions',
+    database:'internetadvancedsolutions',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:'process.env.DB_PASSWORD'
+}
+var pool= new Pool(config);
+app.get('/:articleName', function(req,res){
+
+    pool.query("SELECT * FROM article WHERE title=$1", req.params.articleName), 
+    function(err,result)
+    {
+        
+        if(err){
+                 res.status(500).send(err.toStringify());
+               }
+       else if(result.rows.length===0)
+       {
+           res.status(404).send('Article not found');
+       }
+       
+       else{
+           var articleData= result.rows[0];
+           res.send(createTemplate(articleData));
+           }
+    
+    };
+});   
+  
+  
+  
+
+
 
 var port = 8080; 
 app.listen(8080, function () {
