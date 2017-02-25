@@ -161,7 +161,9 @@ app.get('/:articleName', function(req,res){
            //}
     }
 
-);   });
+);   //query ends here
+    
+});//get ends here
   
   
   
