@@ -187,7 +187,7 @@ app.get('/:iasName',function(req,res){
     });
 });
 app.get('/:iasName',function(req,res){
-    pool.query("SELECT * FROM article WHERE id="+ req.params.iasName, function(err,result){
+    pool.query("SELECT * FROM article WHERE heading="+ req.params.iasName, function(err,result){
         if(err)
         {
             res.status(500).send(err.toString());
