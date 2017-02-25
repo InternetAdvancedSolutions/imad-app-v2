@@ -107,7 +107,7 @@ app.get('/test-db', function(req,res){
                  res.status(500).send(err.toStringify());
                }
                else{
-                   res.send(JSON.stringify(result.rows));
+                   res.send("Example of a call to PostgreSQL database using node js: "+JSON.stringify(result.rows));
                }
        
 
