@@ -164,8 +164,8 @@ app.get('/test-db', function(req,res){
     
 });//get ends here
 
-app.get('/article/:iasName',function(req,res){
-    pool.query("SELECT * FROM article WHERE title="+ req.params.iasName, function(err,result){
+app.get('/:iasName',function(req,res){
+    pool.query("SELECT * FROM article WHERE title= '"+ req.params.iasName+ "'", function(err,result){
         if(err)
         {
             res.status(500).send(err.toString());
@@ -178,9 +178,9 @@ app.get('/article/:iasName',function(req,res){
                 res.status(404).send('Article not found');
             }
             else
-            {
-                var articlesData=result.rows[0];
-                res.send(createTemplate(articlesData));
+            {   if(title==='IAS | javaScript')
+                {var articlesData=result.rows[0];
+                res.send(createTemplate(articlesData));}
             }
             
         }
