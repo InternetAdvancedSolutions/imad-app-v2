@@ -201,7 +201,7 @@ app.get('/:iasName',function(req,res){
             }
             else
             {
-                var articlesData=result.rows[0];
+                var articlesData=result.rows[1];
                 res.send(createTemplate(articlesData));
             }
             
