@@ -133,6 +133,7 @@ function createTemplate(data){
 `;
 return htmltemplate;
 }
+
 app.get('/:articleName', function(req,res){
     var articleName= req.paramas.articleName;
     res.send(createTemplate(articles[articleName]));
