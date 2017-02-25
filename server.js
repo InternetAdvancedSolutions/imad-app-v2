@@ -139,7 +139,7 @@ var config={
     database:'internetadvancedsolutions',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password:'process.env.DB_PASSWORD'
+    password:process.env.DB_PASSWORD
 }
 var pool= new Pool(config);
 app.get('/:articleName', function(req,res){
