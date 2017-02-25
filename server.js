@@ -29,49 +29,7 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-/*
-var articles= {
-    articleOne:{
-        title:'All about javaScript | IAS',
-        heading:'All about javaScript',
-        t:'<span class="fontcolor1" align="right" id="t"></span>' ,
-        content:`
-        <p>
-        At this forum you can learn javaScript by sharing our knowledge.
-        So, please feel free to ask any questions/doubts in javaScript.<br>
-        And give answers to questions  so that others can benefit.
-        <hr>
-        </p>`
-    },
-    
-     articleTwo:{
-        title:'All about HTML and CSSS | IAS',
-        heading:'All about HTML and CSS',
-        t:'<span class="fontcolor1" align="right" id="t"></span>' ,
-        content:`
-        <p>
-        At this forum you can learn HTML & CSS by sharing our knowledge. 
-        So, please feel free to ask any questions/doubts in HTML & CSS.<br>
-        And give answers to questions  so that others can benefit.
-        <hr>
-        </p>`
-    },
-    
-     articleThree:{
-        title:'All about SQL | IAS',
-        heading:'All about SQL',
-        t:'<span class="fontcolor1" align="right" id="t"></span>' ,
-        content:`
-        <p>
-        At this forum you can learn SQL and Data Modeling by sharing your knowledge. 
-        So, please feel free to ask any questions/doubts regarding SQL.<br>
-        And give answers to questions  so that others can benefit.
-        </p>
-        <hr>
-        `
-    }
-};
-*/
+
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -133,12 +91,7 @@ function createTemplate(data){
 `;
 return htmltemplate;
 }
-/*
-app.get('/:articleName', function(req,res){
-    var articleName= req.paramas.articleName;
-    res.send(createTemplate(articles[articleName]));
-});
-*/
+
 var config={
     user:'internetadvancedsolutions',
     database:'internetadvancedsolutions',
