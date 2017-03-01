@@ -110,6 +110,26 @@ var config={
     password:process.env.DB_PASSWORD
 };
 var pool= new Pool(config);
+
+//function to create a new user
+app.post('create-user',function(req,res){
+   var username=req.body.username;
+   var password=req.body.password;
+   var salt=crypto.getRandomBytes(128).toString('hex');
+   var dbString=hash(password,salt);
+   pool.query('INSERT INTO users(username,password)VALUES($1,$2)',[username,dbString],
+   //callback function
+   function(err,result){
+       if(err){
+           res.status.send(err.toString());
+       }else
+       {
+           res.send('Hi'+username+'Your Registration is Sucessful ! Login to start forum');
+       }
+   });
+});
+
+
 app.get('/test-db', function(req,res){
 
     pool.query("SELECT * FROM test",  function(err,result){
