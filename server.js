@@ -59,7 +59,7 @@ function createTemplate(data){
         <div id="logo" class="center" >
         <table><tr><td>
         <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" aligh="center" ></td>
-        <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
+        <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2><h5 class="fontcolor1">Where Excellance is a habit</h5>
         <h3 id ="h3" class ="center text-big bold">${heading}</h3></td></tr>
         </table> 
         <hr>
