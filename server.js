@@ -2,6 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool= require('pg').Pool;
+var crypto=require('crypto');
+var bodyparser=require('body-parser');
 
 var app = express();
 app.use(morgan('combined'));
@@ -28,7 +30,17 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
+//defining our hash function
+function hash(input,salt){
+    var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    return hashed.toString('hex');
+}
 
+//creating a password hashing end-point
+app.get('/hash/:input', function(req,res){
+    var hashedString=hash(req.params.input,'this ia a random string');
+    res.send(hashedString);
+});
 
 function createTemplate(data){
     var title=data.title;
