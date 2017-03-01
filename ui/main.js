@@ -19,7 +19,7 @@
         { 
              var counter =request.responseText;
              var span=document.getElementById("sp");
-             span.innerHTML=" visitor count: "+counter;
+             span.innerHTML=" score: "+counter;
             
         }
         
