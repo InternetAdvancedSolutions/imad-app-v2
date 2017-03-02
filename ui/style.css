@@ -17,7 +17,7 @@ body {
 }
 
 .img-medium {
-    height: 250px;
+    height: 150px;
     
 }
 
@@ -31,7 +31,7 @@ body {
     padding-left:10px;
     padding-right:10px;
 }
-        #logo {background-color:#123456; padding:5px; height:300px;}
+        #logo {background-color:#123456; padding:5px; height:350px;}
         #feedback {background-color:#123456;}
         #t {color:white;}
         #main {background-color:#fdc;}
