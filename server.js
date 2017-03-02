@@ -200,16 +200,16 @@ app.post('create-user',function(req,res){
 });
 
 
-app.get('/test-db', function(req,res){
+app.get('/:n', function(req,res){
 
-    pool.query("SELECT * FROM course",  function(err,result){
+    pool.query("SELECT * FROM course WHERE id= $1", [req.params.n],  function(err,result){
     
         
         if(err){
                  res.status(500).send(err.toStringify());
                }
                else{
-                  // var data1=JSON.stringify(result);
+                   var data1=JSON.stringify(result);
                    res.send(createTemplate1(result.rows[0]));
                }
        
