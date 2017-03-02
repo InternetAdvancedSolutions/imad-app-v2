@@ -209,7 +209,7 @@ app.get('/test-db', function(req,res){
                  res.status(500).send(err.toStringify());
                }
                else{
-                   var data1=JSON.stringify(result);
+                  // var data1=JSON.stringify(result);
                    res.send(createTemplate1(result[0]));
                }
        
