@@ -210,7 +210,7 @@ app.get('/test-db', function(req,res){
                }
                else{
                   // var data1=JSON.stringify(result);
-                   res.send(createTemplate1(result.row[0]));
+                   res.send(createTemplate1(result.rows[0]));
                }
        
 
