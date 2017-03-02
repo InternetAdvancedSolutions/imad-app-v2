@@ -141,7 +141,7 @@ function createTemplate1(data){
         ${content1}
 		</td></tr>
 		<tr><td>Start Date :</td><td>
-		 ${content2}
+		 ${content2.toString()}
 		 </td></tr>
 	   <tr><td>Fees Rs :</td><td>
 		  ${price}
