@@ -102,12 +102,12 @@ function createTemplate(data){
 return htmltemplate;
 }
 
-function createTemplate1(data){
+function createTemplate1(data1){
     var title1="Tutorials";
-    var heading1=data.subject;
-    var content1=data.duration;
-	var content2=data.start_date;
-	var price=data.fees;
+    var heading1=data1.subject;
+    var content1=data1.duration;
+	var content2=data1.start_date;
+	var price=data1.fees;
 	
     var htmltemplate1=`
     
@@ -200,23 +200,7 @@ app.post('create-user',function(req,res){
 });
 
 
-app.get('/:n', function(req,res){
 
-    pool.query("SELECT * FROM course WHERE id= $1", [req.params.n],  function(err,result){
-    
-        
-        if(err){
-                 res.status(500).send(err.toStringify());
-               }
-               else{
-                   var data1=JSON.stringify(result);
-                   res.send(createTemplate1(result.rows[0]));
-               }
-       
-
-});   //query ends here
-    
-});//get ends here
 
 app.get('/:articleName',function(req,res){
     pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
@@ -243,7 +227,23 @@ app.get('/:articleName',function(req,res){
 
   
   
+app.get('/:n', function(req,res){
 
+    pool.query("SELECT * FROM course WHERE id= $1", [req.params.n],  function(err,result){
+    
+        
+        if(err){
+                 res.status(500).send(err.toStringify());
+               }
+               else{
+                   var data1=JSON.stringify(result);
+                   res.send(createTemplate1(result.rows[0]));
+               }
+       
+
+});   
+    
+});
 
 
 var port = 8080; 
