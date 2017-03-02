@@ -103,18 +103,18 @@ return htmltemplate;
 }
 
 function createTemplate1(data){
-    var title="Tutorials";
-    var heading=data.subject;
+    var title1="Tutorials";
+    var heading1=data.subject;
     var content1=data.duration;
 	var content2=data.start_date;
 	var price=data.fees;
 	
-    var htmltemplate=`
+    var htmltemplate1=`
     
 <!doctype html>
 <html>
     <head>
-        <title>${title}</title>
+        <title>${title1}</title>
         <link href="/ui/style.css" rel="stylesheet" />
         <meta name="viewport" content="width-device-width, initial-scale-1">
     </head>
@@ -168,7 +168,7 @@ function createTemplate1(data){
     </body>
 </html>
 `;
-return htmltemplate;
+return htmltemplate1;
 }
 
 
