@@ -102,6 +102,76 @@ function createTemplate(data){
 return htmltemplate;
 }
 
+function createTemplate1(data){
+    var title="Tutorials";
+    var heading=data.subject;
+    var content1=data.duration;
+	var content2=data.start_date;
+	var price=data.fees;
+	
+    var htmltemplate=`
+    
+<!doctype html>
+<html>
+    <head>
+        <title>${title}</title>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width-device-width, initial-scale-1">
+    </head>
+    <body>
+    <div class="container" >   
+        <div id="logo" class="center" >
+        <table><tr><td>
+        <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" aligh="center" ></td>
+        <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
+        <h3 id ="h3" class ="center text-big bold">${heading}</h3></td></tr>
+        </table> 
+        <hr>
+        <pre class="fontcolor1">
+        | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
+        </pre>
+       </div>
+       
+        <div id="main" class="center text-big bold">
+        Learning by Sharing
+        </div>
+        <div id="content">
+		<table border="2">
+		<tr><td>Model Number :</td><td>
+        ${content1}
+		</td></tr>
+		<tr><td>Company Name :</td><td>
+		 ${content2}
+		 </td></tr>
+	   <tr><td>Price Rs :</td><td>
+		  ${price}
+		  </td></tr>
+		  </table>
+        </div>
+        <div id="feedback">
+            <p id="p">Post your Q & As :</p>
+            <pre>
+            <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
+            <button id="submit" >Post</button>
+            <p id="p1"></p>
+           </pre>
+        </div>
+     </div>
+	 <script>
+	 document.getElementById("t").innerHTML=Date();
+	 var button=document.getElementById("submit");
+            var textarea=document.getElementById("comments");
+            var para=document.getElementById("p1");
+            button.onclick=function(){
+                para.innerHTML="Your post :"+textarea.value;};
+	 </script>
+    </body>
+</html>
+`;
+return htmltemplate;
+}
+
+
 var config={
     user:'internetadvancedsolutions',
     database:'internetadvancedsolutions',
@@ -139,7 +209,8 @@ app.get('/test-db', function(req,res){
                  res.status(500).send(err.toStringify());
                }
                else{
-                   res.send("Example output of a call to PostgreSQL database using node js: "+JSON.stringify(result.rows));
+                   var data1=JSON.stringify(result);
+                   res.send(createTemplate1(results[1]));
                }
        
 
