@@ -137,13 +137,13 @@ function createTemplate1(data){
         </div>
         <div id="content">
 		<table border="2">
-		<tr><td>Model Number :</td><td>
+		<tr><td>Course Duration :</td><td>
         ${content1}
 		</td></tr>
-		<tr><td>Company Name :</td><td>
+		<tr><td>Start Date :</td><td>
 		 ${content2}
 		 </td></tr>
-	   <tr><td>Price Rs :</td><td>
+	   <tr><td>Fees Rs :</td><td>
 		  ${price}
 		  </td></tr>
 		  </table>
