@@ -180,7 +180,7 @@ var config={
     port:'5432',
     password:process.env.DB_PASSWORD
 };
-var pool1= new Pool(config);
+var pool= new Pool(config);
 
 //function to create a new user
 /*
@@ -204,7 +204,7 @@ app.post('create-user',function(req,res){
 */
 
 app.get('/:articleName',function(req,res){
-    pool1.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
+    pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
         if(err)
         {
             res.status(500).send(err.toString());
