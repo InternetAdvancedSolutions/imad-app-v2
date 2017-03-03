@@ -40,7 +40,7 @@ function hash(input,salt){
 //creating a password hashing end-point
 app.get('/hash/:input', function(req,res){
     var hashedString=hash(req.params.input,'this ia a random string');
-    res.send(hashedString);
+    res.send("This is a hash string :"+hashedString);
 });
 
 function createTemplate(data){
