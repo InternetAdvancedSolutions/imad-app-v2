@@ -180,7 +180,7 @@ var config={
     port:'5432',
     password:process.env.DB_PASSWORD
 };
-var pool= new Pool(config);
+var pool1= new Pool(config);
 
 //function to create a new user
 /*
@@ -201,10 +201,10 @@ app.post('create-user',function(req,res){
    });
 });
 
-
+*/
 
 app.get('/:articleName',function(req,res){
-    pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
+    pool1.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
         if(err)
         {
             res.status(500).send(err.toString());
@@ -226,11 +226,11 @@ app.get('/:articleName',function(req,res){
     });
 });
 
-  */
   
+  var pool2= new Pool(config);
 app.get('/table', function(req,res){
 
-    pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
+    pool2.query("SELECT * FROM course WHERE id=1",   function(err,result){
     
 
         if(err){
