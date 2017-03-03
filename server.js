@@ -228,9 +228,9 @@ app.get('/:articleName',function(req,res){
 
   
   
-app.get('/:n', function(req,res){
+app.get('/table', function(req,res){
 
-    pool.query("SELECT * FROM course WHERE id=$1",[req.params.n],   function(err,result){
+    pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
     
         res.send("could not access db");
         if(err){
