@@ -229,7 +229,7 @@ app.get('/:articleName',function(req,res){
   
 app.get('/1', function(req,res){
 
-    pool.query("SELECT * FROM course WHERE subject= $1", [1],  function(err,result){
+    pool.query("SELECT * FROM course WHERE id= $1", [1],  function(err,result){
     
         
         if(err){
