@@ -142,7 +142,7 @@ function createTemplate1(data1){
         ${content1}
 		</td></tr>
 		<tr><td>Start Date :</td><td>
-		 ${content2}
+		 ${content2.toDateString()}
 		 </td></tr>
 	   <tr><td>Fees Rs :</td><td>
 		  ${price}
@@ -201,7 +201,7 @@ app.post('create-user',function(req,res){
    });
 });
 
-*/
+
 
 app.get('/:articleName',function(req,res){
     pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
@@ -227,7 +227,7 @@ app.get('/:articleName',function(req,res){
 });
 
   
-  
+  */
 app.get('/table', function(req,res){
 
     pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
