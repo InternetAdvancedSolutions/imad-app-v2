@@ -7,7 +7,7 @@ var bodyparser=require('body-parser');
 
 var app = express();
 app.use(morgan('combined'));
-app.use('body-parser').json();
+//app.use('body-parser').json();
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
