@@ -226,7 +226,7 @@ app.get('/:articleName',function(req,res){
     });
 });
 
-  
+  */
   
 app.get('/table', function(req,res){
 
