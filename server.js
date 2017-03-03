@@ -125,7 +125,7 @@ function createTemplate1(data1){
         <table><tr><td>
         <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" aligh="center" ></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
-        <h3 id ="h3" class ="center text-big bold">${heading}</h3></td></tr>
+        <h3 id ="h3" class ="center text-big bold">${heading1}</h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
@@ -235,19 +235,19 @@ app.get('/table', function(req,res){
     
 
         if(err){
-                 res.status(500).send("could not access db");
+                 res.status(500).send(err.toString());
                }
                else
         {
             
             if(result.rows.length===0)
             {  
-                res.status(404).send('Article not found');
+                res.status(404).send('Could not access database');
             }
             else
             {   
-                var articlesData=result.rows[0];
-                res.send(createTemplate1(articlesData));
+                var table=result.rows[0];
+                res.send(createTemplate1(table));
             }
             
         }
