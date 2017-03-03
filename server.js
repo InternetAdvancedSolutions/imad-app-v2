@@ -201,7 +201,6 @@ app.post('create-user',function(req,res){
    });
 });
 
-*/
 
 
 app.get('/:articleName',function(req,res){
@@ -227,7 +226,7 @@ app.get('/:articleName',function(req,res){
     });
 });
 
-  
+  */
   
 app.get('/table', function(req,res){
 
