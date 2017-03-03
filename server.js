@@ -227,10 +227,10 @@ app.get('/:articleName',function(req,res){
 });
 
   
-  var pool2= new Pool(config);
+  
 app.get('/table', function(req,res){
 
-    pool2.query("SELECT * FROM course WHERE id=1",   function(err,result){
+    pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
     
 
         if(err){
