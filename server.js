@@ -233,7 +233,7 @@ app.get('/table', function(req,res){
 
     pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
     
-        res.send("could not access db");
+
         if(err){
                  res.status(500).send("could not access db");
                }
