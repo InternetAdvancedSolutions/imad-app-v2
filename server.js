@@ -220,7 +220,7 @@ app.get('/:articleName',function(req,res){
             else
             {   
                 var articleData=result.rows[0];
-                res.send(createTemplate1(articleData));
+                res.send(createTemplate(articleData));
             }
             
         }
@@ -247,7 +247,7 @@ app.get('/table', function(req,res){
             else
             {   
                 var articlesData=result.rows[0];
-                res.send(createTemplate(articlesData));
+                res.send(createTemplate1(articlesData));
             }
             
         }
