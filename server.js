@@ -183,6 +183,7 @@ var config={
 var pool= new Pool(config);
 
 //function to create a new user
+/*
 app.post('create-user',function(req,res){
    var username=req.body.username;
    var password=req.body.password;
@@ -200,7 +201,7 @@ app.post('create-user',function(req,res){
    });
 });
 
-
+*/
 
 
 app.get('/:articleName',function(req,res){
