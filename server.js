@@ -201,7 +201,7 @@ app.post('create-user',function(req,res){
    });
 });
 
-
+*/
 
 app.get('/:articleName',function(req,res){
     pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
@@ -226,7 +226,7 @@ app.get('/:articleName',function(req,res){
     });
 });
 
-  */
+  
   
 app.get('/table', function(req,res){
 
