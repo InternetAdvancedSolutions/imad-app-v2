@@ -233,7 +233,7 @@ app.get('/table', function(req,res){
     
         
         if(err){
-                 res.status(500).send(err.toStringify());
+                 res.status(500).send("could not access db");
                }
                else{
                    var data1=JSON.stringify(result);
