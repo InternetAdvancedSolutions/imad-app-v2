@@ -217,8 +217,8 @@ app.get('/:articleName',function(req,res){
             }
             else
             {   
-                var articlesData=result.rows[0];
-                res.send(createTemplate(articlesData));
+                var articleData=result.rows[0];
+                res.send(createTemplate1(articleData));
             }
             
         }
