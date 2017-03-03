@@ -7,7 +7,7 @@ var bodyparser=require('body-parser');
 
 var app = express();
 app.use(morgan('combined'));
-//app.use('body-parser').JSON();
+app.use('body-parser').json();
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -227,7 +227,7 @@ app.get('/:articleName',function(req,res){
 });
 
   
-  */
+  
 app.get('/table', function(req,res){
 
     pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
