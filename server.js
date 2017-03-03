@@ -227,9 +227,9 @@ app.get('/:articleName',function(req,res){
 
   
   
-app.get('/core', function(req,res){
+app.get('/PHP', function(req,res){
 
-    pool.query("SELECT * FROM course WHERE id= $1", [req.params.core],  function(err,result){
+    pool.query("SELECT * FROM course WHERE subject= $1", [req.params.PHP],  function(err,result){
     
         
         if(err){
