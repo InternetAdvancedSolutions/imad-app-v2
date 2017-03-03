@@ -28,7 +28,7 @@ app.get('/ui/SINGH_ASHUTOSH.jpg', function (req, res) {
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
-    res.send(counter.toString());
+    res.send("The total visits to this site so far is :"+counter.toString());
 });
 //defining our hash function
 function hash(input,salt){
