@@ -231,15 +231,25 @@ app.get('/:n', function(req,res){
 
     pool.query("SELECT * FROM course WHERE id=$1",[req.params.n],   function(err,result){
     
-        
+        res.send("could not access db");
         if(err){
                  res.status(500).send("could not access db");
                }
-               else{
-                   var data1=JSON.stringify(result);
-                   res.send(createTemplate1(result.rows[0]));
-               }
-       
+               else
+        {
+            
+            if(result.rows.length===0)
+            {  
+                res.status(404).send('Article not found');
+            }
+            else
+            {   
+                var articlesData=result.rows[0];
+                res.send(createTemplate(articlesData));
+            }
+            
+        }
+
 
 });   
     
