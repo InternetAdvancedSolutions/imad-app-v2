@@ -10,7 +10,7 @@
    // for Ajax data call of home page visitor count  and date     
  
    window.onload= function()
-    {document.getElementById("t").innerHTML=Date();
+    {document.getElementById("t").innerHTML=Date().toDateString();
       var request= new XMLHttpRequest();
     
       request.onreadystatechange=function()
