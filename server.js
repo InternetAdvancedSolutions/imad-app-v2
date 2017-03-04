@@ -41,13 +41,14 @@ app.get('/counter',function(req,res){
 //defining our hash function
 function hash(input,salt){
     var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
-    return hashed.toString('hex');
+    return ["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
 }
 
 //creating a password hashing end-point
 app.get('/hash/:input', function(req,res){
     var hashedString=hash(req.params.input,'this is a random string');
-    res.send("This is a hash string used to encyrpt words:"+hashedString+'<br>'+"It's a modern-day mathematical invention");
+   // res.send("This is a hash string used to encyrpt words:"+hashedString+'<br>'+"It's a modern//-day mathematical invention");
+   res.send(hashedString);
 });
 
 function createTemplate(data){
