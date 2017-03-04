@@ -40,7 +40,7 @@ function hash(input,salt){
 //creating a password hashing end-point
 app.get('/hash/:input', function(req,res){
     var hashedString=hash(req.params.input,'this ia a random string');
-    res.send("This is a hash string :"+hashedString);
+    res.send("This is a hash string used to encyrpt words:"+hashedString+'<br>'+"It's a modern-day mathematical invention");
 });
 
 function createTemplate(data){
@@ -187,7 +187,7 @@ var pool= new Pool(config);
 app.post('create-user',function(req,res){
    var username=req.body.username;
    var password=req.body.password;
-   var salt=crypto.getRandomBytes(128).toString('hex');
+   var salt=crypto.RandomBytes(128).toString('hex');
    var dbString=hash(password,salt);
    pool.query('INSERT INTO users(username,password)VALUES($1,$2)',[username,dbString],
    //callback function
