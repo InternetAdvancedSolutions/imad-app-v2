@@ -3,11 +3,17 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool= require('pg').Pool;
 var crypto=require('crypto');
-var bodyparser=require('body-parser');
+var bodyParser=require('body-parser');
 
 var app = express();
 app.use(morgan('combined'));
-//app.use(bodyparser.json());
+app.use(bodyParser.json());
+app.use(session(
+    {
+    secret: 'someRandomSecretValue',
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+    }
+));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -39,7 +45,7 @@ function hash(input,salt){
 
 //creating a password hashing end-point
 app.get('/hash/:input', function(req,res){
-    var hashedString=hash(req.params.input,'this ia a random string');
+    var hashedString=hash(req.params.input,'this is a random string');
     res.send("This is a hash string used to encyrpt words:"+hashedString+'<br>'+"It's a modern-day mathematical invention");
 });
 
@@ -183,25 +189,21 @@ var config={
 var pool= new Pool(config);
 
 //function to create a new user
-/*
+
 app.post('create-user',function(req,res){
    var username=req.body.username;
    var password=req.body.password;
    var salt=crypto.RandomBytes(128).toString('hex');
    var dbString=hash(password,salt);
-   pool.query('INSERT INTO users(username,password)VALUES($1,$2)',[username,dbString],
-   //callback function
-   function(err,result){
-       if(err){
-           res.status.send(err.toString());
-       }else
-       {
-           res.send('Hi'+username+'Your Registration is Sucessful ! Login to start forum');
-       }
+ pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', [username, dbString], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send('User successfully created: ' + username);
+      }
    });
 });
 
-*/
 
 app.get('/:articleName',function(req,res){
     pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
