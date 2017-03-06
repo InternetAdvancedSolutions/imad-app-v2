@@ -86,7 +86,7 @@ function createTemplate(data){
         <div id="content">
              ${content}
         </div>
-        <div id="main" class="center text-big bold">
+        <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
         </div>
          <br>
