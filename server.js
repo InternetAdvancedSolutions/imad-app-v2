@@ -87,10 +87,10 @@ function createTemplate(data){
              ${content}
         </div>
         <div id="main" class="center text-big bold">
-        <h2>Knowledge increases by giving...teaching is the best way of learning !</h2>
+        Knowledge increases by giving...teaching is the best way of learning !
         </div>
          <br>
-            
+        <hr>
         <div id="feedback">
             <p id="p">Ask Q & As  here :</p>
             <pre>
