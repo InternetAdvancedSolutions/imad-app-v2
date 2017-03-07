@@ -312,8 +312,8 @@ app.get('/db/table', function(req,res){
             }
             else
             {   
-                var t=result.rows[0];
-                res.send(createTemplate1(t));
+                var ta=result.rows[0];
+                res.send(createTemplate1(ta));
             }
             
           }
