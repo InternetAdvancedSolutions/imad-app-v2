@@ -1,4 +1,4 @@
-var express = require('express');
+var express = require('express');//we import  express in our file and access its  API using variable 'express'
 var morgan = require('morgan');
 var path = require('path');
 var Pool= require('pg').Pool;
@@ -6,7 +6,8 @@ var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
 
-var app = express();
+var app = express();//we use the 'express' variable to create an 'application', and assign it to a variable 'app'
+
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session(
@@ -16,9 +17,15 @@ app.use(session(
     }
 ));
 
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+/*
+app.get(route, callback) - This function tells what to do when a get request at the given route is called. The callback function has 2 parameters, request(req) and response(res). The request object(req) represents the HTTP request and has properties for the request query string, parameters, body, HTTP headers, etc. Similarly, the response object represents the HTTP response that the express app sends when it receives a HTTP request.
+
+res.send() - This function takes an object as input and it sends this to the requesting client.
+*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
