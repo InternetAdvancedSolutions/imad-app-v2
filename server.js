@@ -123,7 +123,7 @@ return htmltemplate;
 }
 
 function createTemplate1(data1){
-    var title1="Courses";
+    var title1="Classroom Courses";
     var heading1=data1.subject;
     var content1=data1.duration;
 	var content2=data1.start_date;
@@ -144,7 +144,7 @@ function createTemplate1(data1){
         <table><tr><td>
         <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
-        <h3 id ="h3" class ="center text-big bold">${heading1}</h3></td></tr>
+        <h3 id ="h3" class ="center text-big bold">Course Name: ${heading1}</h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
