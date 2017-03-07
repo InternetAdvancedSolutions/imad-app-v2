@@ -142,7 +142,7 @@ function createTemplate1(data1){
     <div class="container" >   
         <div id="logo" class="center" >
         <table><tr><td>
-        <!--<img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" >-->Classroom Study Center</td>
+        <!--<img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" >--><h3 class="fontcolor1"> Study Center</h3></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
         <h3 id ="h3" class ="center text-big bold">Course Name: ${heading1}</h3></td></tr>
         </table> 
