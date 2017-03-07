@@ -142,13 +142,13 @@ function createTemplate1(data1){
     <div class="container" >   
         <div id="logo" class="center" >
         <table><tr><td>
-        <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
+        <!--<img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" >--></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
         <h3 id ="h3" class ="center text-big bold">Course Name: ${heading1}</h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
-        | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/counter">Counter</a> <hr> 
+        | <a class ="hyperlinks" href="/">Home</a> |  <a class="hyperlinks" href="/articleOne">javaScript</a> |  <a class ="hyperlinks" href="/articleTwo">HTML and CSS</a> |  <a class ="hyperlinks" href="/articleThree">SQL</a>  |  <a class ="hyperlinks" href="/articleSeven">Classroom Courses</a><hr>
         </pre>
        </div>
        
@@ -168,6 +168,7 @@ function createTemplate1(data1){
 		  </td></tr>
 		  </table>
         </div>
+           <a class ="hyperlinks" href="/articleSeven">back</a><hr>
         <div id="feedback">
             <p id="p">Post your Q & As :</p>
             <pre>
