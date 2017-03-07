@@ -294,8 +294,8 @@ app.get('/:articleName',function(req,res){
 });
 
   
-  /*
-app.get('/table', function(req,res){
+  
+app.get('/db/table', function(req,res){
 
     pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
     
@@ -312,8 +312,8 @@ app.get('/table', function(req,res){
             }
             else
             {   
-                var table=result.rows[0];
-                res.send(createTemplate1(table));
+                var t=result.rows[0];
+                res.send(createTemplate1(t));
             }
             
         }
@@ -322,7 +322,7 @@ app.get('/table', function(req,res){
 });   
     
 });
-*/
+
 
 var port = 8080; 
 app.listen(8080, function () {
