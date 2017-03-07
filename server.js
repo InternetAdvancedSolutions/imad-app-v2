@@ -168,7 +168,7 @@ function createTemplate1(data1){
 		  </td></tr>
 		  </table>
         </div>
-           <a class ="hyperlinks" href="/articleSeven">back</a><hr>
+           <a class ="hyperlinks1" href="/articleSeven">back</a><hr>
         <div id="feedback">
             <p id="p">Post your Q & As :</p>
             <pre>
