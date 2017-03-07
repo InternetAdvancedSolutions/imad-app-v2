@@ -295,7 +295,7 @@ app.get('/:articleName',function(req,res){
 
   
   
-app.get('/db/table', function(req,res){
+app.get('/ui/table', function(req,res){
 
     pool.query("SELECT * FROM course WHERE id=1",   function(err,result){
     
