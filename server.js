@@ -123,7 +123,7 @@ return htmltemplate;
 }
 
 function createTemplate1(data1){
-    var title1="Classroom Courses";
+    var title1="ClassroomCourses | IAS";
     var heading1=data1.subject;
     var content1=data1.duration;
 	var content2=data1.start_date;
