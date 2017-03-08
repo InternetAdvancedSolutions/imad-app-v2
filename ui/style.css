@@ -12,6 +12,10 @@ body {
     font-size: 300%;
 }
 
+.text-medium{
+    font-size:200%;
+}
+
 .bold {
     font-weight: bold;
 }
