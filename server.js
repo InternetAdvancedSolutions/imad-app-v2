@@ -214,10 +214,10 @@ app.post('/rg/create-user',function(req,res){
    var usern=req.body.username;
     console.log(usern);
    var passw=req.body.password;
-   console.log(passw); //console.log(user);
+   console.log(passw); 
    var salt=crypto.randomBytes(128).toString('hex');
    var dbString=hash(passw,salt);
-   console.log(dbString);// console.log(user);
+   console.log(dbString);
  pool.query('INSERT INTO "users" (username, password) VALUES ($1, $2)',[usern,dbString] ,function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
