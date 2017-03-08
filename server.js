@@ -212,6 +212,7 @@ var pool= new Pool(config);
 
 app.post('/rg/create-user',function(req,res){
    var user=req.body.username;
+   console.lod(user);
    var pass=req.body.password;
    var salt=crypto.randomBytes(128).toString('hex');
    var dbString=hash(pass,salt);
@@ -219,7 +220,7 @@ app.post('/rg/create-user',function(req,res){
       if (err) {
           res.status(500).send(err.toString());
       } else {
-          res.send('User successfully created: ' + username);
+          res.send('User successfully created: ' + user);
       }
    });
 });  
