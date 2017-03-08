@@ -241,9 +241,11 @@ app.post('/lg/login', function (req, res) {
           } else {
               // Match the password
               var dbString = result.rows[0].password;
+              console.log("stored hashed password ="+dbString);
               //var salt = dbString.split('$')[2];
                var salt ='this is a random string';
               var hashedPassword = hash(password, salt); // Creating a hash based on the password submitted and the original salt
+               console.log(" hashed password ="+hashedPassword);
               if (hashedPassword === dbString) {
                 
                 // Set the session
