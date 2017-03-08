@@ -144,8 +144,8 @@ function createTemplate1(data1){
         <div id="logo" class="center" >
         <table>
         <tr>
-        <td>
-       <h5 class="fontcolor1"> New</h5></td>
+        
+       <h5 class="fontcolor1"> New</h5>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2></td>
         </tr>
         <tr>
