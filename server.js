@@ -54,10 +54,10 @@ function hash(input,salt){
 }
 
 //creating a password hashing end-point
-app.get('/hash/:input', function(req,res){
+/*app.get('/hash/:input', function(req,res){
     var hashedString=hash(req.params.input,'random');
    res.send(hashedString);
-});
+});*/
 
 
 
