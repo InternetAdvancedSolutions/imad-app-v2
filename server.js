@@ -227,7 +227,7 @@ app.post('/rg/create-user',function(req,res){
    });
 });  
 
-app.post('/rg/login', function (req, res) {
+app.post('/lg/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
    
