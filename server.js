@@ -55,7 +55,7 @@ function hash(input,salt){
 
 //creating a password hashing end-point
 app.get('/hash/:input', function(req,res){
-    var hashedString=hash(req.params.input,'this is a random string');
+    var hashedString=hash(req.params.input,'random');
    res.send(hashedString);
 });
 
@@ -244,7 +244,7 @@ app.post('/lg/login', function (req, res) {
               var dbString = result.rows[0].password;
               console.log("stored hashed password ="+dbString);
               //var salt = dbString.split('$')[2];
-               var salt ='this is a random string';
+               var salt ='random';
               var hashedPassword = hash(password, salt); // Creating a hash based on the password submitted and the original salt
                console.log(" hashed password ="+hashedPassword);
               if (hashedPassword === dbString) {
