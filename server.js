@@ -230,7 +230,8 @@ app.post('/rg/create-user',function(req,res){
 app.post('/lg/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
-   
+   console.log(username);
+   console.log(password);
    pool.query('SELECT * FROM "users" WHERE username = $1', [username], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -246,7 +247,7 @@ app.post('/lg/login', function (req, res) {
               if (hashedPassword === dbString) {
                 
                 // Set the session
-                req.session.auth = {userId: result.rows[0].id};
+                //req.session.auth = {userId: result.rows[0].id};
                 // set cookie with a session id
                 // internally, on the server side, it maps the session id to an object
                 // { auth: {userId }}
