@@ -40,6 +40,10 @@ app.get('/ui/SINGH_ASHUTOSH.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'SINGH_ASHUTOSH.jpg'));
 });
 
+app.get('/db/SINGH_ASHUTOSH.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'SINGH_ASHUTOSH.jpg'));
+});
+
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
