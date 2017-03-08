@@ -143,7 +143,7 @@ function createTemplate1(data1){
         <div id="logo" class="center" >
         <table><tr><td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2></td>
-        <td><h3 id ="h3" class ="center text-medium bold">Course Name: ${heading1}</h3></td></tr>
+        </tr><tr><td><h3 id ="h3" class ="center text-medium bold">Course Name: ${heading1}</h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
