@@ -40,9 +40,6 @@ app.get('/ui/SINGH_ASHUTOSH.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'SINGH_ASHUTOSH.jpg'));
 });
 
-app.get('/db/SINGH_ASHUTOSH.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'db', 'SINGH_ASHUTOSH.jpg'));
-});
 
 var counter=0;
 app.get('/counter',function(req,res){
@@ -148,7 +145,7 @@ function createTemplate1(data1){
         <table>
         <tr>
         <td>
-        <img src="db/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
+       <h5 class="fontcolor1"> New</h5></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2></td>
         </tr>
         <tr>
