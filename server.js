@@ -211,14 +211,14 @@ var pool= new Pool(config);
 //function to create a new user
 
 app.post('/rg/create-user',function(req,res){
-   var user=req.body.username;
+   var usern=req.body.username;
     console.log(user);
-   var pass=req.body.password;
-   console.log(pass); //console.log(user);
+   var passw=req.body.password;
+   console.log(passw); //console.log(user);
    var salt=crypto.randomBytes(128).toString('hex');
-   var dbString=hash(pass,salt);
+   var dbString=hash(passw,salt);
    console.log(dbString);// console.log(user);
- pool.query('INSERT INTO "users" ("username", "password") VALUES ("user", "dbString")', function (err, result) {
+ pool.query('INSERT INTO "users" (username, password) VALUES ($1, $2)',[usern,dbString] ,function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
