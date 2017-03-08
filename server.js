@@ -71,7 +71,7 @@ function createTemplate(data){
     <head>
         <title>${title}</title>
         <link href="/ui/style.css" rel="stylesheet" />
-        <meta name="viewport" content="width-device-width, initial-scale-1">
+        <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
     </head>
     <body>
     <div class="container" >   
@@ -137,7 +137,7 @@ function createTemplate1(data1){
     <head>
         <title>${title1}</title>
         <link href="/ui/style.css" rel="stylesheet" />
-        <meta name="viewport" content="width-device-width, initial-scale-1">
+        <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
     </head>
     <body>
     <div class="container" >   
