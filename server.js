@@ -56,7 +56,6 @@ function hash(input,salt){
 //creating a password hashing end-point
 app.get('/hash/:input', function(req,res){
     var hashedString=hash(req.params.input,'this is a random string');
-   // res.send("This is a hash string used to encyrpt words:"+hashedString+'<br>'+"It's a modern//-day mathematical invention");
    res.send(hashedString);
 });
 
@@ -216,14 +215,14 @@ app.post('/rg/create-user',function(req,res){
    var password=req.body.password;
    var salt=crypto.randomBytes(128).toString('hex');
    var dbString=hash(password,salt);
- pool.query('INSERT INTO users (username, password) VALUES ($1, $2)', [username, dbString], function (err, result) {
+ pool.query('INSERT INTO "users" ("username", "password") VALUES ($1, $2)', [username, dbString], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
           res.send('User successfully created: ' + username);
       }
    });
-});
+});  
 
 app.post('/login', function (req, res) {
    var username = req.body.username;
