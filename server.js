@@ -240,7 +240,8 @@ app.post('/lg/login', function (req, res) {
           } else {
               // Match the password
               var dbString = result.rows[0].password;
-              var salt = dbString.split('$')[2];
+              //var salt = dbString.split('$')[2];
+               var salt ='this is a random string';
               var hashedPassword = hash(password, salt); // Creating a hash based on the password submitted and the original salt
               if (hashedPassword === dbString) {
                 
