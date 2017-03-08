@@ -41,7 +41,7 @@ app.get('/ui/SINGH_ASHUTOSH.jpg', function (req, res) {
 });
 
 app.get('/db/SINGH_ASHUTOSH.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'SINGH_ASHUTOSH.jpg'));
+  res.sendFile(path.join(__dirname, 'db', 'SINGH_ASHUTOSH.jpg'));
 });
 
 var counter=0;
