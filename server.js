@@ -145,8 +145,8 @@ function createTemplate1(data1){
         <table>
         <tr>
         
-       <h5 class="fontcolor1"> New</h5>
-        <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2></td>
+       
+        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2></td>
         </tr>
         <tr>
         <td><h3 id ="h3" class ="center text-medium bold">Course Name: ${heading1}</h3></td>
