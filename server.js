@@ -212,7 +212,7 @@ var pool= new Pool(config);
 
 app.post('/rg/create-user',function(req,res){
    var usern=req.body.username;
-    console.log(user);
+    console.log(usern);
    var passw=req.body.password;
    console.log(passw); //console.log(user);
    var salt=crypto.randomBytes(128).toString('hex');
