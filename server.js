@@ -145,7 +145,8 @@ function createTemplate1(data1){
         <div id="logo" class="center" >
         <table>
         <tr>
-        
+        <td>
+        <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
        
         <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2></td>
         </tr>
