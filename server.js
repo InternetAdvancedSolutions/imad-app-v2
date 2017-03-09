@@ -148,10 +148,7 @@ function createTemplate1(data1){
         <td>
         <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
        
-        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2></td>
-        </tr>
-        <tr>
-        <td><h3 id ="h3" class ="center text-medium bold">Course Name: ${heading1}</h3></td>
+        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2></td><td><h3 id ="h3" class ="center text-medium bold">Course Name: ${heading1}</h3></td>
         </tr>
         </table> 
         <hr>
@@ -214,12 +211,12 @@ var pool= new Pool(config);
 
 app.post('/rg/create-user',function(req,res){
    var usern=req.body.username;
-    console.log(usern);
+    //console.log(usern);
    var passw=req.body.password;
-   console.log(passw); 
+   //console.log(passw); 
    var salt=crypto.randomBytes(128).toString('hex');
    var dbString=hash(passw,salt);
-   console.log(dbString);
+   //console.log(dbString);
  pool.query('INSERT INTO "users" (username, password) VALUES ($1, $2)',[usern,dbString] ,function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -232,8 +229,8 @@ app.post('/rg/create-user',function(req,res){
 app.post('/lg/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
-   console.log(username);
-   console.log(password);
+  // console.log(username);
+  // console.log(password);
    pool.query('SELECT * FROM "users" WHERE username = $1', [username], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -242,13 +239,13 @@ app.post('/lg/login', function (req, res) {
               res.status(403).send('username/password is invalid');
           } else {
               // Match the password
-               console.log("username inputed ="+username);
+             //  console.log("username inputed ="+username);
               var dbString = result.rows[0].password;
-              console.log("stored hashed password ="+dbString);
+             // console.log("stored hashed password ="+dbString);
               //var salt = dbString.split('$')[2];
                var salt ='random';
               var hashedPassword = hash(password, salt); // Creating a hash based on the password submitted and the original salt
-               console.log(" hashed password ="+hashedPassword);
+              // console.log(" hashed password ="+hashedPassword);
               if (hashedPassword === dbString) {
                 
                 // Set the session
