@@ -123,7 +123,7 @@ function createTemplate(data){
 `;
 return htmltemplate;
 }
-/*
+
 function createTemplate1(data1){
     var title1="ClassroomCourses | IAS";
     var heading1=data1.subject;
@@ -194,7 +194,7 @@ function createTemplate1(data1){
 return htmltemplate1;
 }
 
-*/
+
 var config={
     user:'internetadvancedsolutions',
     database:'internetadvancedsolutions',
@@ -218,7 +218,7 @@ app.post('/rg/create-user',function(req,res){
       if (err) {
           res.status(500).send(err.toString());
       } else {
-          res.send('User successfully created: ' + usern);
+          //res.send('User successfully created: ' + usern);
       }
    });
 });  
@@ -238,7 +238,7 @@ app.post('/lg/login', function (req, res) {
               // Match the password
              //  console.log("username inputed ="+username);
              var dbString = result.rows[0].password;
-             // console.log("stored hashed password ="+dbString);
+             console.log("stored hashed password ="+dbString);
               //var salt = dbString.split('$')[2];
                var salt ='random';
               var hashedPassword = hash(password, salt); // Creating a hash based on the password submitted and the original salt
@@ -276,12 +276,12 @@ app.get('/cl/check-login', function (req, res) {
        res.status(400).send('You are not logged in');
    }
 });
-*/
+
 app.get('/lo/logout', function (req, res) {
    delete req.session.auth;
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
-
+*/
 
 app.get('/:articleName',function(req,res){
     pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
