@@ -123,7 +123,7 @@ function createTemplate(data){
 `;
 return htmltemplate;
 }
-
+/*
 function createTemplate1(data1){
     var title1="ClassroomCourses | IAS";
     var heading1=data1.subject;
@@ -194,7 +194,7 @@ function createTemplate1(data1){
 return htmltemplate1;
 }
 
-
+*/
 var config={
     user:'internetadvancedsolutions',
     database:'internetadvancedsolutions',
