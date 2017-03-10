@@ -174,23 +174,20 @@ function createTemplate1(data1){
 		  </table>
         </div>
            <a class ="hyperlinks1" href="/articleSeven">back</a><hr>
-        <div id="feedback">
-            <p id="p">Post your Q & As :</p>
-            <pre>
-            <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
-            <button id="submit" >Post</button>
-            <p id="p1"></p>
+        <div id="feedback" class="fontcolor1">
+            <pre class="text-table">
+            <table   colspan="4">
+                <tr><td>My IT skills</td></tr>
+                <tr><th>Languages            </th><th>Frameworks      </th><th>Front-end              </th><th>Back-end             </th></tr>
+                 <tr><td>C</td><td>Android Studio</td><td>HTML</td><td>Node.js</td></tr>
+                  <tr><td>C++</td><td>Arduino Uno</td><td>CSS</td><td>Express.js</td></tr>
+                   <tr><td>java</td><td>Eclipse IDE</td><td>javaScript</td><td>PHP</td></tr>
+                   <tr><td>Python</td><td>Linux</td><td>Anular JS</td><td>SQL</td></tr>
+                   <tr><td>Sketch</td><td>CodeBlocks</td><td>Bootstrap</td><td>JSP</td></tr>
+                   <tr><td>Embedded C</td><td>XAMPP</td><td>Ajax</td><td>Servlets</td></tr>
+            </table>
            </pre>
         </div>
-     </div>
-	 <script>
-	 document.getElementById("t").innerHTML=Date();
-	 var button=document.getElementById("submit");
-            var textarea=document.getElementById("comments");
-            var para=document.getElementById("p1");
-            button.onclick=function(){
-                para.innerHTML="Your post :"+textarea.value;};
-	 </script>
     </body>
 </html>
 `;
