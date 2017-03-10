@@ -240,7 +240,7 @@ app.post('/lg/login', function (req, res) {
           } else {
               // Match the password
              //  console.log("username inputed ="+username);
-              var dbString = result.rows[0].password;
+             var dbString = result.rows[0].password;
              // console.log("stored hashed password ="+dbString);
               //var salt = dbString.split('$')[2];
                var salt ='random';
@@ -249,7 +249,7 @@ app.post('/lg/login', function (req, res) {
               if (hashedPassword === dbString) {
                 
                 // Set the session
-                req.session.auth = {userId: result.rows[0].id};
+              //  req.session.auth = {userId: result.rows[0].id};
                 // set cookie with a session id
                 // internally, on the server side, it maps the session id to an object
                 // { auth: {userId }}
