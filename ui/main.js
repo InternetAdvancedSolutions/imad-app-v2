@@ -1,11 +1,12 @@
 
        
-       //for textarea  for home page
-  var button=document.getElementById("submit");
+       //for textarea  for home page NO MORE THERE ON PAGE
+ /* var button=document.getElementById("submit");
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
             button.onclick=function(){
                 para.innerHTML="You posted :"+textarea.value;};
+*/
        
    // for Ajax data call of home page visitor count  and date     
  
