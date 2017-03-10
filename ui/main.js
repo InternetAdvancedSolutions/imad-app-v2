@@ -5,7 +5,7 @@
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
             button.onclick=function(){
-                para.innerHTML="You posted :"+textarea.value;}
+                para.innerHTML="You posted :"+textarea.value;};
        
    // for Ajax data call of home page visitor count  and date     
  
