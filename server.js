@@ -4,19 +4,19 @@ var path = require('path');
 var Pool= require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
-var session = require('express-session');
+//var session = require('express-session');
 
 var app = express();//we use the 'express' variable to create an 'application', and assign it to a variable 'app'
 
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-app.use(session(
+/*app.use(session(
     {
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
     }  
 ));
-
+*/
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
