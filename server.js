@@ -84,7 +84,7 @@ function createTemplate(data){
         </table> 
         <hr>
         <pre class="fontcolor1">
-        <a class ="hyperlinks" href="/">Home</a> | <span class="fontcolor1" align="right" id="t"></span> | <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>  <hr> 
+        <a class ="hyperlinks" href="/">Home</a> | <span class="fontcolor1" align="right" id="t"></span>   <hr> 
         </pre>
         </div>
        
@@ -153,7 +153,7 @@ function createTemplate1(data1){
         </table> 
         <hr>
         <pre class="fontcolor1">
-        | <a class ="hyperlinks" href="/">Home</a> | |  <a class ="hyperlinks" href="/articleSeven">Classroom Courses</a><hr>
+        | <a class ="hyperlinks" href="/">Home</a> | <a class ="hyperlinks" href="/articleSeven">Classroom Courses</a><hr>
         </pre>
        </div>
        
