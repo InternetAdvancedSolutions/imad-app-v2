@@ -4,19 +4,19 @@ var path = require('path');
 var Pool= require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
-//var session = require('express-session');
+var session = require('express-session');
 
 var app = express();//we use the 'express' variable to create an 'application', and assign it to a variable 'app'
 
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-/*app.use(session(
+app.use(session(
     {
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
     }  
 ));
-*/
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -208,12 +208,12 @@ var pool= new Pool(config);
 
 app.post('/rg/create-user',function(req,res){
    var usern=req.body.username;
-    //console.log(usern);
+    console.log(usern);
    var passw=req.body.password;
-   //console.log(passw); 
+   console.log(passw); 
    var salt=crypto.randomBytes(128).toString('hex');
    var dbString=hash(passw,salt);
-   //console.log(dbString);
+   console.log(dbString);
  pool.query('INSERT INTO "users" (username, password) VALUES ($1, $2)',[usern,dbString] ,function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -248,14 +248,15 @@ app.post('/lg/login', function (req, res) {
                 // Set the session
                //req.session.auth = {userId: result.rows[0].id};
                 // set cookie with a session id
-                // internally, on the server side, it maps the session id to an object
+                // internally, on the server side, it maps the session id to an //object
                 // { auth: {userId }}
                 
-                res.send('credentials correct!');
+               // res.send('credentials correct!');
                 
-              } else {
-                res.status(403).send('username/password is invalid');
               }
+              //else {
+               // res.status(403).send('username/password is invalid');
+             // }
           }
       }
    });
