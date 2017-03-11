@@ -214,7 +214,7 @@ app.post('/rg/create-user',function(req,res){
       if (err) {
           res.status(500).send(err.toString());
       } else {
-          //res.send('User successfully created: ' + usern);
+          res.send('User successfully created: ' + usern);
       }
    });
 });  
@@ -242,17 +242,17 @@ app.post('/lg/login', function (req, res) {
               if (hashedPassword === dbString) {
                 
                 // Set the session
-               //req.session.auth = {userId: result.rows[0].id};
+               req.session.auth = {userId: result.rows[0].id};
                 // set cookie with a session id
                 // internally, on the server side, it maps the session id to an //object
                 // { auth: {userId }}
                 
-               // res.send('credentials correct!');
+               res.send('credentials correct!');
                 
               }
-              //else {
-               // res.status(403).send('username/password is invalid');
-             // }
+             else {
+                res.status(403).send('username/password is invalid');
+              }
           }
       }
    });
@@ -297,8 +297,8 @@ app.get('/:articleName',function(req,res){
                 var articleData=result.rows[0];
                 res.send(createTemplate(articleData));
             }
-            
-        }
+        }    
+        
     });
 });
 
