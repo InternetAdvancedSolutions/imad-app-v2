@@ -1,4 +1,4 @@
-var express = require('express');//we import  express in our file and access its  API using variable 'express'
+var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool= require('pg').Pool;
@@ -6,7 +6,7 @@ var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
 
-var app = express();//we use the 'express' variable to create an 'application', and assign it to a variable 'app'
+var app = express();
 
 app.use(morgan('combined'));
 app.use(bodyParser.json());
@@ -15,17 +15,13 @@ app.use(session(
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
     }  
-));
+));         
 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-/*
-app.get(route, callback) - This function tells what to do when a get request at the given route is called. The callback function has 2 parameters, request(req) and response(res). The request object(req) represents the HTTP request and has properties for the request query string, parameters, body, HTTP headers, etc. Similarly, the response object represents the HTTP response that the express app sends when it receives a HTTP request.
 
-res.send() - This function takes an object as input and it sends this to the requesting client.
-*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -226,8 +222,8 @@ app.post('/rg/create-user',function(req,res){
 app.post('/lg/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
-  // console.log(username);
-  // console.log(password);
+   console.log(username);
+   console.log(password);
    pool.query('SELECT * FROM "users" WHERE username = $1', [username], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -236,13 +232,13 @@ app.post('/lg/login', function (req, res) {
               res.status(403).send('username/password is invalid');
           } else {
               // Match the password
-             //  console.log("username inputed ="+username);
+              console.log("username inputed ="+username);
              var dbString = result.rows[0].password;
              console.log("stored hashed password ="+dbString);
               //var salt = dbString.split('$')[2];
                var salt ='random';
-              var hashedPassword = hash(password, salt); // Creating a hash based on the password submitted and the original salt
-              // console.log(" hashed password ="+hashedPassword);
+              var hashedPassword = hash(password, salt); 
+              console.log(" hashed password ="+hashedPassword);
               if (hashedPassword === dbString) {
                 
                 // Set the session
@@ -261,7 +257,7 @@ app.post('/lg/login', function (req, res) {
       }
    });
 });
-/*
+
 app.get('/cl/check-login', function (req, res) {
    if (req.session && req.session.auth && req.session.auth.userId) {
        // Load the user object
@@ -281,7 +277,7 @@ app.get('/lo/logout', function (req, res) {
    delete req.session.auth;
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
-*/
+
 
 app.get('/:articleName',function(req,res){
     pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
