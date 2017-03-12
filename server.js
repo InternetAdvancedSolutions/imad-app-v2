@@ -95,7 +95,8 @@ function createTemplate(data){
         Knowledge increases by giving...teaching is the best way of learning !
         </div>
          <br>
-        
+        <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
+
         <div id="feedback">
             <p id="p">Ask Q & As  here :</p>
             <pre>
