@@ -175,7 +175,7 @@ function createTemplate1(data1){
         ${content3}
         <hr>
         </div>
-           <a class ="hyperlinks1" href="/articleSeven">back</a><hr>
+           <a class ="hyperlinks1" href="/">Home</a><hr>
         <div id="feedback" class="fontcolor1">
             <pre class="text-table">
             <table   colspan="4">
