@@ -98,7 +98,7 @@ function createTemplate(data){
         <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
 
         <div id="feedback">
-            <p id="p">Ask Q & As  here :</p>
+            <p id="p">Write your Articles or Q&A:</p>
             <pre>
             <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
             <button id="submit" >Post</button>
@@ -183,10 +183,10 @@ function createTemplate1(data1){
                 <tr><td>My IT skills</td></tr>
                 <tr><th>Languages            </th><th>Frameworks      </th><th>Front-end              </th><th>Back-end             </th></tr>
                  <tr><td>C</td><td>Android Studio</td><td>HTML</td><td>Node.js</td></tr>
-                  <tr><td>C++</td><td>Arduino Uno</td><td>CSS</td><td>Express.js</td></tr>
+                  <tr><td>C++</td><td>Xcode 8</td><td>CSS</td><td>Express.js</td></tr>
                    <tr><td>java</td><td>Eclipse IDE</td><td>javaScript</td><td>PHP</td></tr>
                    <tr><td>Python</td><td>Linux</td><td>Anular JS</td><td>SQL</td></tr>
-                   <tr><td>Sketch</td><td>CodeBlocks</td><td>Bootstrap</td><td>JSP</td></tr>
+                   <tr><td>Sketch</td><td>Arduino IDEs</td><td>Bootstrap</td><td>JSP</td></tr>
                    <tr><td>Embedded C</td><td>XAMPP</td><td>Ajax</td><td>Servlets</td></tr>
             </table>
            </pre>
