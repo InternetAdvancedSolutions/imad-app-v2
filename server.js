@@ -121,10 +121,11 @@ return htmltemplate;
 }
 
 function createTemplate1(data1){
-    var title1="ClassroomCourses | IAS";
+    var title1=data1.title;
     var heading1=data1.subject;
     var content1=data1.duration;
 	var content2=data1.start_date;
+	var content3=data1.content;
 	var price=data1.fees;
 	
     var htmltemplate1=`
@@ -168,6 +169,11 @@ function createTemplate1(data1){
 		  ${price}
 		  </td></tr>
 		  </table>
+        </div>
+        <div>
+        <hr>
+        ${content3}
+        <hr>
         </div>
            <a class ="hyperlinks1" href="/articleSeven">back</a><hr>
         <div id="feedback" class="fontcolor1">
