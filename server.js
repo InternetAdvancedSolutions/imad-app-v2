@@ -151,7 +151,7 @@ function createTemplate1(data1){
         </table> 
         <hr>
         <pre class="fontcolor1">
-        | <a class ="hyperlinks" href="/">Home</a> | <a class ="hyperlinks" href="/db/7">Classroom Courses</a><hr>
+        | <a class ="hyperlinks" href="/">Home</a> | <a class ="hyperlinks" href="/db/6">IAS Code Library</a><hr>
         </pre>
        </div>
        
