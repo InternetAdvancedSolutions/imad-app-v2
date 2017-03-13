@@ -182,7 +182,7 @@ function createTemplate1(data1){
             <table   colspan="4">
                 <tr><td>My IT skills</td></tr>
                 <tr><th>Languages            </th><th>Frameworks      </th><th>Front-end              </th><th>Back-end             </th></tr>
-                 <tr><td>C?C++</td><td>Android Studio</td><td>HTML</td><td>Node.js</td></tr>
+                 <tr><td>C/C++</td><td>Android Studio</td><td>HTML</td><td>Node.js</td></tr>
                   <tr><td>Swift</td><td>Xcode 8</td><td>CSS</td><td>Express.js</td></tr>
                    <tr><td>java</td><td>Eclipse IDE</td><td>javaScript</td><td>PHP</td></tr>
                    <tr><td>Python</td><td>Linux</td><td>Angular JS</td><td>SQL</td></tr>
