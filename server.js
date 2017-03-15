@@ -287,6 +287,23 @@ app.get('/lo/logout', function (req, res) {
 
 
 app.get('/:articleName',function(req,res){
+    
+    if (req.session && req.session.auth && req.session.auth.userId) {
+       // Load the user object
+       pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
+           if (err) {
+              res.status(500).send(err.toString());
+           } else {
+              res.send(result.rows[0].username);    
+           }
+       });
+   } else {
+       res.status(400).send('You are not logged in');
+   }
+});
+
+    
+    /*
     pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
         if(err)
         {
@@ -309,7 +326,7 @@ app.get('/:articleName',function(req,res){
     });
 });
 
-  
+  */
   
 app.get('/db/:n', function(req,res){
 
