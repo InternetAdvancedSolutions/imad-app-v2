@@ -299,7 +299,7 @@ app.get('/:articleName',function(req,res){
            }
        });
    } else {
-       res.status(400).send('You are not logged in');
+       res.status(400).send('You are not logged in....Please go to Login page and sign-in');
    }
 });
 
