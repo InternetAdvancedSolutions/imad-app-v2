@@ -291,7 +291,8 @@ app.get('/:articleName',function(req,res){
     
     if (req.session && req.session.auth && req.session.auth.userId) {
        // Load the user object
-       pool.query('SELECT * FROM "article" WHERE id = $1', [req.session.auth.userId], function (err, result) {
+      // pool.query('SELECT * FROM "article" WHERE id = $1', [req.session.auth//.userId], function (err, result) {
+      pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
            if (err) {
               res.status(500).send(err.toString());
            } else {
