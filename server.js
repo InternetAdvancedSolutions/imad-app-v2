@@ -265,6 +265,7 @@ app.post('/lg/login', function (req, res) {
    });
 });
 
+/*
 app.get('/cl/check-login', function (req, res) {
    if (req.session && req.session.auth && req.session.auth.userId) {
        // Load the user object
@@ -279,7 +280,7 @@ app.get('/cl/check-login', function (req, res) {
        res.status(400).send('You are not logged in');
    }
 });
-
+*/
 app.get('/lo/logout', function (req, res) {
    delete req.session.auth;
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
