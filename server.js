@@ -295,7 +295,10 @@ app.get('/:articleName',function(req,res){
            if (err) {
               res.status(500).send(err.toString());
            } else {
-              res.send(result.rows[0].username);    
+               
+                var articleData=result.rows[0];
+                res.send(createTemplate(articleData)); 
+             // res.send(result.rows[0].username);    
            }
        });
    } else {
