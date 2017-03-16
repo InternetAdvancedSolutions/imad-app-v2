@@ -11,13 +11,13 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
-var idleTimeoutSeconds=5*60;//  1800 for 30 minutes
+//var idleTimeoutSeconds=5*60;//  1800 for 30 minutes
 app.use(session(
     {
     secret: 'someRandomSecretValue',
    // resave:true,
     cookie: { //maxAge: 1000 * 60 * 60 * 24 * 30
-    maxAge:idleTimeoutSeconds * 1000}
+    maxAge:5 * 60 * 1000}
     //rolling:true,
     // resave:true
 
