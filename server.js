@@ -60,14 +60,14 @@ function hash(input,salt){
 
 
 function createTemplate(data){
-    var titles=data.title;
+    var hcode=data.hcode;
     var heading=data.heading;
     var content=data.content;
     var htmltemplate=`
     <!doctype html>
 <html>
     <head>
-        <title>${titles}</title>
+        <title>${hcode}</title>
         <link href="/ui/style.css" rel="stylesheet" />
         <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
     </head>
@@ -293,7 +293,7 @@ app.get('/:articleName',function(req,res){
     if (req.session && req.session.auth && req.session.auth.userId) {
        // Load the user object
       // pool.query('SELECT * FROM "article" WHERE id = $1', [req.session.auth//.userId], function (err, result) {
-      pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
+      pool.query("SELECT * FROM article WHERE hcode= $1", [req.params.articleName], function(err,result){
            if (err) {
               res.status(500).send(err.toString());
            } else {
