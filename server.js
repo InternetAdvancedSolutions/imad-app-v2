@@ -16,7 +16,7 @@ app.use(session(
         saveUninitialized:'false',
         secret: 'someRandomSecretValue',
         rolling:'true',
-        cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+        cookie: { maxAge: 1000 * 60 * 5}
          
     }  
 ));         
