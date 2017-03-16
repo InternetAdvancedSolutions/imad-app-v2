@@ -15,13 +15,10 @@ app.use(bodyParser.json());
 app.use(session(
     {
     secret: 'someRandomSecretValue',
-   // resave:true,
-    cookie: { //maxAge: 1000 * 60 * 60 * 24 * 30
-    maxAge:5 * 60 * 1000}
-    //rolling:true,
-    // resave:true
-
-    //....the rest of your options
+  
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30
+         }
+    
     }  
 ));         
 
