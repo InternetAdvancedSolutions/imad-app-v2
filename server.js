@@ -60,14 +60,14 @@ function hash(input,salt){
 
 
 function createTemplate(data){
-    var title=data.title;
+    var titles=data.title;
     var heading=data.heading;
     var content=data.content;
     var htmltemplate=`
     <!doctype html>
 <html>
     <head>
-        <title>${title}</title>
+        <title>${titles}</title>
         <link href="/ui/style.css" rel="stylesheet" />
         <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
     </head>
