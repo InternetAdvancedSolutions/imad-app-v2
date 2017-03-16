@@ -11,7 +11,7 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
-var idleTimeoutSecounds=2*60;//  1800 for 30 minutes
+var idleTimeoutSeconds=2*60;//  1800 for 30 minutes
 app.use(session(
     {
     secret: 'someRandomSecretValue',
