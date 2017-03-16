@@ -17,8 +17,8 @@ app.use(session(
     secret: 'someRandomSecretValue',
    // resave:true,
     cookie: { //maxAge: 1000 * 60 * 60 * 24 * 30
-    maxAge:idleTimeoutSeconds * 1000},
-    rolling:true,
+    maxAge:idleTimeoutSeconds * 1000}
+    //rolling:true,
     // resave:true
 
     //....the rest of your options
