@@ -12,11 +12,10 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 
 app.use(session(
-    {   resave:'true',
-        saveUninitialized:'false',
+    {   resave:'',
+        saveUninitialized:'',
         secret: 'someRandomSecretValue',
-        rolling:'true',
-        cookie: { maxAge: 1000 * 60 * 10}
+        cookie: { maxAge: 1000 * 60 * 15}//session expires automatically in 15 mins
          
     }  
 ));         
@@ -62,14 +61,14 @@ function hash(input,salt){
 
 
 function createTemplate(data){
-    var hcode=data.hcode;
+    var title=data.title;
     var heading=data.heading;
     var content=data.content;
     var htmltemplate=`
     <!doctype html>
 <html>
     <head>
-        <title>${hcode}</title>
+        <title>${title}</title>
         <link href="/ui/style.css" rel="stylesheet" />
         <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
     </head>
@@ -255,7 +254,7 @@ app.post('/lg/login', function (req, res) {
                req.session.auth = {userId: result.rows[0].id};
                 // set cookie with a session id
                 // internally, on the server side, it maps the session id to an //object
-                // { auth: {userId }}
+                 //{ auth: {userId }}
                 
                res.send('credentials correct!');
                 
@@ -292,11 +291,10 @@ app.get('/lo/logout', function (req, res) {
 
 app.get('/:articleName',function(req,res){
     
-    if (req.session && req.session.auth && req.session.auth.userId
-    ) {
+    if (req.session && req.session.auth && req.session.auth.userId ) {
        // Load the user object
       // pool.query('SELECT * FROM "article" WHERE id = $1', [req.session.auth//.userId], function (err, result) {
-      pool.query("SELECT * FROM article WHERE hcode= $1", [req.params.articleName], function(err,result){
+      pool.query("SELECT * FROM 'article' WHERE hcode= $1", [req.params.articleName], function(err,result){
            if (err) {
               res.status(500).send(err.toString());
            } else {
@@ -305,7 +303,7 @@ app.get('/:articleName',function(req,res){
                 res.send(createTemplate(articleData)); 
              // res.send(result.rows[0].username);    
            }
-       });
+       })
    } else {
        res.status(400).send('You are not logged in....Please go to Login page and sign-in');
    }
