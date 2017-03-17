@@ -12,8 +12,8 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 
 app.use(session(
-    {   resave:'null',
-        saveUninitialized:'null',
+    {   resave:true,
+        saveUninitialized:false,
         secret: 'someRandomSecretValue',
         cookie: { maxAge: 1000 * 60 * 15}//session expires automatically in 15 mins
          
