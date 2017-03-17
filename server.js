@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 app.use(session(
     {   resave:true,
         saveUninitialized:false,
+        rolling:true,
         secret: 'someRandomSecretValue',
         cookie: { maxAge: 1000 * 60 * 15}//session expires automatically in 15 mins
          
