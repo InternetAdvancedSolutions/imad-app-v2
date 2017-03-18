@@ -116,14 +116,15 @@ function createTemplate(data){
     var button=document.getElementById("submit");
             //var textarea=document.getElementById("comments").value;
             var para=document.getElementById("p1");
-            button.onclick=function(){
-               // para.innerHTML="You posted :"+textarea.value;
+            button.onclick=function()
+            {
                var request = new XMLHttpRequest();
                
-                request.onreadystatechange=function(){
+                request.onreadystatechange=function()
+                {
                     if(request.readyState===XMLHttpRequest.DONE)
                     {
-                        if(request.Status===200)
+                        if(request.status===200)
                         {
                           para.innerHTML="Your post submission successful! ";  
                         }
@@ -131,8 +132,8 @@ function createTemplate(data){
                         {
                           para.innerHTML="Oops ! submission failed ";
                         }
-                    }
-                
+                    }else{}
+                }
               var textarea=document.getElementById("comments").value;  
               console.log(textarea);
               request.open('POST','/pa/post',true);
