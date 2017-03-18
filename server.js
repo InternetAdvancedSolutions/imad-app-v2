@@ -114,11 +114,25 @@ function createTemplate(data){
     <script>
     document.getElementById("t").innerHTML=Date();
     var button=document.getElementById("submit");
-            var textarea=document.getElementById("comments");
+            //var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
             button.onclick=function(){
-                para.innerHTML="You posted :"+textarea.value;
-                
+               // para.innerHTML="You posted :"+textarea.value;
+                var request= new XMLHttpRequest();
+                request.onreadystatechange=function(){
+                    if(request.readyState===XMLHttp.Request.DONE){
+                        if(request.Status===200){
+                          para.innerHTML="Your post submission successful! ";  
+                        }else{
+                    para.innerHTML="Oops ! submission failed ";
+                        }
+                    }
+                }
+              var textarea=document.getElementById("comments").value;  
+              console.log(textarea);
+              request.open('POST','/pa/post',true);
+              request.send(JSON.stringify({textarea:textarea}));
+              para.innerHTML="Posting.............";
             };
     </script>
     </body>
