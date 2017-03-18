@@ -127,6 +127,10 @@ function createTemplate(data){
 return htmltemplate;
 }
 
+function posting(){
+    
+}
+
 function createTemplate1(data1){
     var title1=data1.title;
     var heading1=data1.subject;
