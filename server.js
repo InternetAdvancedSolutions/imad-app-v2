@@ -106,7 +106,7 @@ function createTemplate(data){
             <pre>
             <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
             <button id="submit" >Post</button>
-            <p id="p1"></p>
+            <p id="p1"></p><span id="publish"></span>
            </pre>
         </div>
        
@@ -116,6 +116,7 @@ function createTemplate(data){
     var button=document.getElementById("submit");
             //var textarea=document.getElementById("comments").value;
             var para=document.getElementById("p1");
+            var publish=document.getElementById("publish");
             button.onclick=function()
             {
                var request = new XMLHttpRequest();
@@ -126,7 +127,8 @@ function createTemplate(data){
                     {
                         if(request.status===200)
                         {
-                          para.innerHTML="Your post submission successful! ";  
+                          para.innerHTML="Your post submitted successfuly! ";
+                          publish.innerHTML="<a href='/ga/publish' class="hyperlinks">Posted Articles</a>
                         }
                         else
                         {
@@ -415,7 +417,15 @@ app.post('/pa/post',function(req,res){
    });
 });  
 
-
+app.post('/ga/publish/', function(req,res){
+pool.query('SELECT * FROM "posts" ', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      }else{
+       res.send(JSON.stringify(result.rows));   
+      }
+});
+});
 var port = 8080; 
 app.listen(8080, function () {
   console.log(`IAS app listening on port ${port}!`);
