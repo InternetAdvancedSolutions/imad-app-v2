@@ -121,14 +121,18 @@ function createTemplate(data){
                var request = new XMLHttpRequest();
                
                 request.onreadystatechange=function(){
-                    if(request.readyState===XMLHttpRequest.DONE){
-                        if(request.Status===200){
+                    if(request.readyState===XMLHttpRequest.DONE)
+                    {
+                        if(request.Status===200)
+                        {
                           para.innerHTML="Your post submission successful! ";  
-                        }else{
-                    para.innerHTML="Oops ! submission failed ";
+                        }
+                        else
+                        {
+                          para.innerHTML="Oops ! submission failed ";
                         }
                     }
-                }
+                
               var textarea=document.getElementById("comments").value;  
               console.log(textarea);
               request.open('POST','/pa/post',true);
