@@ -132,6 +132,7 @@ function createTemplate(data){
               var textarea=document.getElementById("comments").value;  
               console.log(textarea);
               request.open('POST','/pa/post',true);
+              request.setRequestHeader('Content-Type', 'application/json');
               request.send(JSON.stringify({textarea:textarea}));
               para.innerHTML="Posting.............";
             };
