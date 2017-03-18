@@ -114,13 +114,14 @@ function createTemplate(data){
     <script>
     document.getElementById("t").innerHTML=Date();
     var button=document.getElementById("submit");
-            //var textarea=document.getElementById("comments");
+            var textarea=document.getElementById("comments").value;
             var para=document.getElementById("p1");
             button.onclick=function(){
                // para.innerHTML="You posted :"+textarea.value;
                var request = new XMLHttpRequest();
+               
                 request.onreadystatechange=function(){
-                    if(request.readyState===XMLHttp.Request.DONE){
+                    if(request.readyState===XMLHttpRequest.DONE){
                         if(request.Status===200){
                           para.innerHTML="Your post submission successful! ";  
                         }else{
