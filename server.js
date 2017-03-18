@@ -21,6 +21,16 @@ app.use(session(
     }  
 ));         
 
+var config={
+    user:'internetadvancedsolutions',
+    database:'internetadvancedsolutions',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
+};
+var pool= new Pool(config);
+
+
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
@@ -107,7 +117,9 @@ function createTemplate(data){
             var textarea=document.getElementById("comments");
             var para=document.getElementById("p1");
             button.onclick=function(){
-                para.innerHTML="You posted :"+textarea.value;};
+                para.innerHTML="You posted :"+textarea.value;
+                
+            };
     </script>
     </body>
 </html>
@@ -191,7 +203,7 @@ function createTemplate1(data1){
 return htmltemplate1;
 }
 
-
+/*
 var config={
     user:'internetadvancedsolutions',
     database:'internetadvancedsolutions',
@@ -200,7 +212,7 @@ var config={
     password:process.env.DB_PASSWORD
 };
 var pool= new Pool(config);
-
+*/
 //function to create a new user
 
 app.post('/rg/create-user',function(req,res){
@@ -354,7 +366,7 @@ app.get('/db/:n', function(req,res){
 });   
     
 });
-
+/*
 app.get('/get-articles', function (req, res) {
    // make a select request
    // return a response with the results
@@ -366,7 +378,7 @@ app.get('/get-articles', function (req, res) {
       }
    });
 });
-
+*/
 
 var port = 8080; 
 app.listen(8080, function () {
