@@ -400,7 +400,7 @@ app.post('/pa/post',function(req,res){
    var textarea=req.body.textarea;
     console.log(textarea);
    
- pool.query('INSERT INTO "posts" (textarea) VALUES ($1)',[textarea],function (err, result) {
+   pool.query('INSERT INTO "posts" (textarea) VALUES ($1)',[textarea],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
