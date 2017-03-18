@@ -397,14 +397,14 @@ app.get('/get-articles', function (req, res) {
 */
 
 app.post('/pa/post',function(req,res){
-   var textarea=req.body.textarea;
-    console.log(textarea);
+   var text=req.body.textarea;
+    console.log(text);
    
-   pool.query('INSERT INTO "posts" (textarea) VALUES ($1)',[textarea],function (err, result) {
+   pool.query('INSERT INTO "posts" (textarea) VALUES ($1)',[text],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
-         // res.send("posted");
+          res.send("posted");
       }
    });
 });  
