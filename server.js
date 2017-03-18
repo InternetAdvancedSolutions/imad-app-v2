@@ -118,7 +118,7 @@ function createTemplate(data){
             var para=document.getElementById("p1");
             button.onclick=function(){
                // para.innerHTML="You posted :"+textarea.value;
-                var request= new XMLHttpRequest();
+               var request = new XMLHttpRequest();
                 request.onreadystatechange=function(){
                     if(request.readyState===XMLHttp.Request.DONE){
                         if(request.Status===200){
