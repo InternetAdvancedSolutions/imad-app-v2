@@ -132,7 +132,7 @@ function createTemplate(data){
                         {
                           para.innerHTML="Oops ! submission failed ";
                         }
-                    }else{}
+                    }
                 }
               var textarea=document.getElementById("comments").value;  
               console.log(textarea);
