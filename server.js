@@ -417,7 +417,7 @@ app.post('/pa/post',function(req,res){
    });
 });  
 
-app.post('/ga/publish/', function(req,res){
+app.post('/ga/publish', function(req,res){
 pool.query('SELECT * FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
