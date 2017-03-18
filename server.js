@@ -127,9 +127,6 @@ function createTemplate(data){
 return htmltemplate;
 }
 
-function posting(){
-    
-}
 
 function createTemplate1(data1){
     var title1=data1.title;
@@ -383,6 +380,20 @@ app.get('/get-articles', function (req, res) {
    });
 });
 */
+var thanks ='User successfully created !';
+app.post('/pa/post',function(req,res){
+   var textarea=req.body.textarea;
+    console.log(textarea);
+   
+ pool.query('INSERT INTO "post" (textarea) VALUES ($1)',[textarea],function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(thanks);
+      }
+   });
+});  
+
 
 var port = 8080; 
 app.listen(8080, function () {
