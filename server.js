@@ -107,6 +107,7 @@ function createTemplate(data){
             <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
             <button id="submit" >Post</button>
             <p id="p1"></p><span id="publish"></span>
+            <a href='/ga/publish' class='hyperlinks'>Posted Articles</a>
            </pre>
         </div>
        
@@ -128,7 +129,7 @@ function createTemplate(data){
                         if(request.status===200)
                         {
                           para.innerHTML="Your post submitted successfuly! ";
- publish.innerHTML="<a href='/ga/publish' class='hyperlinks'>"+"Posted Articles"+"</a>";
+ //publish.innerHTML="<a href='/ga/publish' class='hyperlinks'>"+"Posted Articles"+"</a>";
                         }
                         else
                         {
