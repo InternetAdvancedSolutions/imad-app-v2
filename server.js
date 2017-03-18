@@ -21,6 +21,11 @@ app.use(session(
     }  
 ));         
 
+app.get('/ui/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
+});
+/*
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -38,7 +43,7 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/SINGH_ASHUTOSH.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'SINGH_ASHUTOSH.jpg'));
 });
-
+*/
 
 var counter=0;
 app.get('/counter',function(req,res){
