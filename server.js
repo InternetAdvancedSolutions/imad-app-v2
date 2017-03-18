@@ -128,7 +128,7 @@ function createTemplate(data){
                         if(request.status===200)
                         {
                           para.innerHTML="Your post submitted successfuly! ";
-                          publish.innerHTML="<a href='/ga/publish' class="hyperlinks">Posted Articles</a>
+ publish.innerHTML="<a href='/ga/publish' class="hyperlinks">Posted Articles</a>";
                         }
                         else
                         {
