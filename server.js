@@ -114,7 +114,7 @@ function createTemplate(data){
     <script>
     document.getElementById("t").innerHTML=Date();
     var button=document.getElementById("submit");
-            var textarea=document.getElementById("comments").value;
+            //var textarea=document.getElementById("comments").value;
             var para=document.getElementById("p1");
             button.onclick=function(){
                // para.innerHTML="You posted :"+textarea.value;
