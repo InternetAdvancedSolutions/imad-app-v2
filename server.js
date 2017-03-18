@@ -106,7 +106,7 @@ function createTemplate(data){
             <pre>
             <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
             <button id="submit" >Post</button>
-            <p id="p1">
+            <p id="p1"></p>
             <a href='/ga/publish' class='hyperlinks'>Posted Articles</a>
            </pre>
         </div>
