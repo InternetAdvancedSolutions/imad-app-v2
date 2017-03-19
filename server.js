@@ -395,7 +395,7 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
     for(var i=0; i<4;i++)
        {   
            var ar = result.rows[i].topic;
-           var id = result.rows[i].id;
+           var id = i;
        res.send(createArticle(ar,id)); 
        }
       }
@@ -403,7 +403,7 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
 });
 
 app.get('/aa/archive/:ids', function(req,res){
-pool.query('SELECT user_post,id FROM "posts" ', function (err, result) {
+pool.query('SELECT user_post,id FROM "posts" ',[req.params.ids], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
