@@ -57,7 +57,7 @@ function hash(input,salt){
 
 function createArticle(data){
         var article1=data.topic;
-    var htmlarticle=`<a href="/aa/archive" class="fontcolor1">${article1}</h1>`;
+    var htmlarticle=`<a href="/aa/archive/:id" class="fontcolor1">${article1}</h1>`;
         return htmlarticle;
     }
 
@@ -385,23 +385,26 @@ app.post('/pa/post',function(req,res){
 });  
 
 app.get('/ga/publish', function(req,res){
-pool.query('SELECT topic FROM "posts" ', function (err, result) {
+pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
     for(var i=0; i<result.rows.length;i++)
-       {var ar = result.rows[i];
-       res.send(createArticle(ar)); 
+       {   
+           var ar = result.rows[i].id;
+           var id = result.rows[i].topic;
+       res.send(createArticle(ar,id)); 
        }
       }
 });
 });
 
-app.get('/aa/archive', function(req,res){
-pool.query('SELECT user_post FROM "posts" ', function (err, result) {
+app.get('/aa/archive/:id', function(req,res){
+pool.query('SELECT user_post,id FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
+       var id = req.params.id;
        var art = result.rows[0].user_post;
        res.send(art);   
       }
