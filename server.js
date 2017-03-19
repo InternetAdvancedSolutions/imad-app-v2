@@ -104,6 +104,7 @@ function createTemplate(data){
        
          <br>
         <div id="feedback">
+        <br>
         <h2 class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></h2>
             <button id="submit" >Post</button>
             <p id="p1"></p>
