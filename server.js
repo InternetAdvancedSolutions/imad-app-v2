@@ -328,7 +328,7 @@ app.get('/:articleName',function(req,res){
     
     if (req.session && req.session.auth && req.session.auth.userId ) {
        // Load the user object
-      // pool.query('SELECT * FROM "article" WHERE id = $1', [req.session.auth//.userId], function (err, result) {
+      
        pool.query('SELECT * FROM "article" WHERE id= $1', [req.params.articleName], function(err,result){
            if (err) {
               res.status(500).send(err.toString());
@@ -388,30 +388,37 @@ app.post('/pa/post',function(req,res){
 });  
 
 app.get('/ga/publish', function(req,res){
-pool.query('SELECT topic FROM "posts" ', function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      }else
-      {
-         // console.log(result.rows.length);
-          var ar = result.rows[1];
-          var n =1;
-          res.send(createArticle(ar,n)); 
+    
+    
+           pool.query('SELECT topic FROM "posts" ', function (err, result)
+           {
+                if (err) {
+                           res.status(500).send(err.toString());
+                }
+                else
+                {
+                   // console.log(result.rows.length);
+                  var ar = result.rows[1];
+                    var n =1;
+                     res.send(createArticle(ar,n)); 
           
-       /* 
-    for(var i=result.rows.length; i>=0;i--)
-       {   
-           var ar = result.rows[i];
-           var id = i;
-       res.send(createArticle(ar,id)); 
-       }
-     */
-      }
+                  /* 
+                 for(var i=result.rows.length; i>=0;i--)
+                  {   
+                  var ar = result.rows[i];
+                    var id = i;
+                   res.send(createArticle(ar,id)); 
+                    }
+                     */
+                 }
 });
 });
 
 app.get('/aa/archive/:ids', function(req,res){
-pool.query('SELECT user_post FROM "posts" ', function (err, result) {
+  if (req.session && req.session.auth && req.session.auth.userId ) 
+{   
+    
+     pool.query('SELECT user_post FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
@@ -419,7 +426,12 @@ pool.query('SELECT user_post FROM "posts" ', function (err, result) {
        var art = result.rows[ida].user_post;
        res.send(art);   
       }
-});
+       });
+}
+else {
+       res.status(400).send('You are not logged in....Please go to Login page and sign-in');
+   }
+
 });
 
 var port = 8080; 
