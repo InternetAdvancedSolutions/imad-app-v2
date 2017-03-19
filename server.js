@@ -112,7 +112,7 @@ function createTemplate(data){
             <table>
             <tr>
             <td>
-            <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
+            <textarea id="user_post" cols="75" rows="25" maxlength="1000"></textarea><br>
             </td><td><p class="fontcolor1">Archived Posts</p><div id="content"></div><br></td>
             </tr>
             </table>
