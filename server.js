@@ -386,18 +386,19 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
-          console.log(result.rows.length);
-          var ar = result.rows[2];
-          var n =2;
-          res.send(createArticle(ar,n)); 
-         // console.log(result.id.length);
-    /*for(var i=0; i<result.rows.length;i++)
+         // console.log(result.rows.length);
+         // var ar = result.rows[2];
+         // var n =2;
+         // res.send(createArticle(ar,n)); 
+          
+        
+    for(var i=result.rows.length; i>=0;i--)
        {   
            var ar = result.rows[i].topic;
            var id = i;
        res.send(createArticle(ar,id)); 
        }
-     */
+     
       }
 });
 });
