@@ -110,7 +110,7 @@ function createTemplate(data){
         <p class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
-            <table border="2">
+            <table>
             <tr>
             <td colspan="3">     </td><td><textarea id="user_post" cols="75" rows="25" maxlength="1000"></textarea><br>
             </td><td rowspan="2"><div class="fontcolor1">Archived Posts</div><div id="content"></div><br></td>
