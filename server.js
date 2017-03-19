@@ -388,18 +388,18 @@ pool.query('SELECT topic FROM "posts" ', function (err, result) {
       }else
       {
          // console.log(result.rows.length);
-         // var ar = result.rows[2];
-         // var n =2;
-         // res.send(createArticle(ar,n)); 
+          var ar = result.rows[1];
+          var n =1;
+          res.send(createArticle(ar,n)); 
           
-        
+       /* 
     for(var i=result.rows.length; i>=0;i--)
        {   
            var ar = result.rows[i];
            var id = i;
        res.send(createArticle(ar,id)); 
        }
-     
+     */
       }
 });
 });
