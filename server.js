@@ -56,7 +56,7 @@ function hash(input,salt){
 
 
 function createArticle(data){
-        var article1=data.textarea;
+        var article1=data.user_topic;
         var htmlarticle=`<a href="/aa/archive">${article1}</h1>`
         return htmlarticle;
     }
