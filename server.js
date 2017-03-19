@@ -384,7 +384,7 @@ app.post('/pa/post',function(req,res){
 });  
 
 app.get('/ga/publish', function(req,res){
-pool.query('SELECT textarea FROM "posts" ', function (err, result) {
+pool.query('SELECT topic FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
@@ -395,7 +395,7 @@ pool.query('SELECT textarea FROM "posts" ', function (err, result) {
 });
 
 app.get('/aa/archive', function(req,res){
-pool.query('SELECT topic FROM "posts" ', function (err, result) {
+pool.query('SELECT user_post FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
