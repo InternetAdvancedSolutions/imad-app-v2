@@ -154,7 +154,7 @@ function createTemplate(data){
     {    
       var request1= new XMLHttpRequest();
     
-      request.onreadystatechange=function()
+      request1.onreadystatechange=function()
       {
         if(request1.readyState==4 && request.status==200 )
         { 
