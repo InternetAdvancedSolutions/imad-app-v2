@@ -61,8 +61,9 @@ function hash(input,salt){
 });*/
 
 function createArticle(data){
-        var article=data.textarea;
-        return article;
+        var article1=data.textarea;
+        var htmlarticle=`${article1}`
+        return htmlarticle;
     }
 
 function createTemplate(data){
@@ -151,13 +152,13 @@ function createTemplate(data){
             
              window.onload= function()
     {    
-      var request= new XMLHttpRequest();
+      var request1= new XMLHttpRequest();
     
       request.onreadystatechange=function()
       {
-        if(request.readyState==4 && request.status==200 )
+        if(request1.readyState==4 && request.status==200 )
         { 
-             var allarticles =request.responseText;
+             var allarticles =request1.responseText;
              var div=document.getElementById("content");
              div.innerHTML=allarticles;
             
