@@ -450,7 +450,7 @@ pool.query('SELECT textarea FROM "posts" ', function (err, result) {
           res.status(500).send(err.toString());
       }else{
        var ar = result.rows
-       res.send(createArticles(ar));   
+       res.send(createArticle(ar));   
       }
 });
 });
