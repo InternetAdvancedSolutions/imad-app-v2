@@ -330,7 +330,7 @@ app.get('/:articleName',function(req,res){
                 res.send(createTemplate(articleData)); 
              // res.send(result.rows[0].username);    
            }
-       })
+       });
    } else {
        res.status(400).send('You are not logged in....Please go to Login page and sign-in');
    }
