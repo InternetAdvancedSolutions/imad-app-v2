@@ -56,9 +56,15 @@ function hash(input,salt){
 
 
 function createArticle(data,idd){
-        var article1=data.topic;
-        var ids =idd;
-    var htmlarticle=`<a href="/aa/archive/${ids}" class="fontcolor1">${article1}</a>`;
+        //var article1=data.topic;
+        //var ids =idd;
+   // var htmlarticle=`<a href="/aa/archive/${ids}" class="fontcolor1">${article1}</a>`;
+   var htmlarticle=`
+   <a href="/aa/archive/0" class="fontcolor1">what is html?</a><br>
+   <a href="/aa/archive/1" class="fontcolor1">what is xml?</a><br>
+   <a href="/aa/archive/2" class="fontcolor1">what is css?</a><br>
+   <a href="/aa/archive/3" class="fontcolor1">java is language to program computers</a><br>
+   `;
         return htmlarticle;
     }
 
