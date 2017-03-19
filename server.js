@@ -56,7 +56,7 @@ function hash(input,salt){
 
 
 function createArticle(data){
-        var article1=data.user_topic;
+        var article1=data.topic;
         var htmlarticle=`<a href="/aa/archive">${article1}</h1>`
         return htmlarticle;
     }
@@ -400,8 +400,8 @@ pool.query('SELECT user_post FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
-       var art = result.rows[0];
-       res.send(createArticle(art));   
+       var art = result.rows[0].user_post;
+       res.send(art);   
       }
 });
 });
