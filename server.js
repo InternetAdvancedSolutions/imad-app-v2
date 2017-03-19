@@ -387,7 +387,7 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
           res.status(500).send(err.toString());
       }else{
           console.log(result.rows.length);
-          var ar = result.rows[2].topic;
+          var ar = result.rows[2];
           var n =2;
           res.send(createArticle(ar,n)); 
          // console.log(result.id.length);
