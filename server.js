@@ -91,28 +91,29 @@ function createTemplate(data){
     <div id="main" class="center text-big bold">
         Learning by Sharing
         </div>
-        
-        <div id="content">
-             
-             
-        </div>
-        <div id="main" class="center bold">
+    <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
         </div>
         <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
         <hr>
-       
+       <pre>
          <br>
         <div id="feedback">
         <br>
         <h2 class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></h2>
             <button id="submit" >Post</button>
             <p id="p1"></p>
+            <table>
+            <tr>
+            <td>
             <p id="p">Write your Articles or Q&A:</p>
             <pre>
             <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
+            </td><td><div id="content"></div></td>
+            </tr>
+            </table>
             </pre>
-        </div>
+          </div>
        
     </div>
     <script>
