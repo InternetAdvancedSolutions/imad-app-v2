@@ -62,7 +62,7 @@ function hash(input,salt){
 
 function createArticle(data){
         var article1=data.textarea;
-        var htmlarticle=`${article1}`
+        var htmlarticle=`<h1>${article1}</h1>`
         return htmlarticle;
     }
 
@@ -156,7 +156,7 @@ function createTemplate(data){
     
       request1.onreadystatechange=function()
       {
-        if(request1.readyState==4 && request.status==200 )
+        if(request1.readyState==4 && request1.status==200 )
         { 
              var allarticles =request1.responseText;
              var div=document.getElementById("content");
