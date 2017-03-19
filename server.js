@@ -58,7 +58,7 @@ function hash(input,salt){
 function createArticle(data,id){
         var article1=data.topic;
         var ids =id;
-    var htmlarticle=`<a href="/aa/archive/:ids" class="fontcolor1">${article1}</h1>`;
+    var htmlarticle=`<a href="/aa/archive/:${ids}" class="fontcolor1">${article1}</h1>`;
         return htmlarticle;
     }
 
@@ -157,7 +157,7 @@ function createTemplate(data){
         { 
              var allarticles =request1.responseText;
              var div=document.getElementById("content");
-             div.innerHTML=allarticles;
+             div.innerHTML=allarticles+'<br>';
             
         }
         
