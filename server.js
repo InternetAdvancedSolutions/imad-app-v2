@@ -107,7 +107,7 @@ function createTemplate(data){
             <tr>
             <td>
             <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
-            </td><td><p class="fontcolor1">Archived Posts</p><div id="content"></div></td>
+            </td><td><p class="fontcolor1">Archived Posts</p><div id="content"></div><br></td>
             </tr>
             </table>
             </pre>
@@ -157,7 +157,7 @@ function createTemplate(data){
         { 
              var allarticles =request1.responseText;
              var div=document.getElementById("content");
-             div.innerHTML=allarticles+"<br>";
+             div.innerHTML=allarticles;
             
         }
         
