@@ -408,7 +408,7 @@ pool.query('SELECT user_post FROM "posts" ', function (err, result) {
           res.status(500).send(err.toString());
       }else{
        var ida = req.params.ids;
-       var art = result.rows[ida];
+       var art = result.rows[ida].user_post;
        res.send(art);   
       }
 });
