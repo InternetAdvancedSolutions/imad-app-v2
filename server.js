@@ -166,8 +166,8 @@ function createTemplate(data){
         
      };
     
-    request.open('GET',"/ga/publish",true);
-    request.send(null);
+    request1.open('GET',"/ga/publish",true);
+    request1.send(null);
    };
    
             
