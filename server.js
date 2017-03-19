@@ -127,7 +127,7 @@ function createTemplate(data){
                     {
                         if(request.status===200)
                         {
-                          para.innerHTML="Your post submitted successfuly! ";
+                          para.innerHTML="post success! Will be publised shortly ";
  
                         }
                         else
