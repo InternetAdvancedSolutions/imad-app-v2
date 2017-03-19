@@ -54,11 +54,6 @@ function hash(input,salt){
    return(hashed.toString('hex'));
 }
 
-//creating a password hashing end-point
-/*app.get('/hash/:input', function(req,res){
-    var hashedString=hash(req.params.input,'random');
-   res.send(hashedString);
-});*/
 
 function createArticle(data){
         var article1=data.textarea;
@@ -255,16 +250,7 @@ function createTemplate1(data1){
 return htmltemplate1;
 }
 
-/*
-var config={
-    user:'internetadvancedsolutions',
-    database:'internetadvancedsolutions',
-    host:'db.imad.hasura-app.io',
-    port:'5432',
-    password:process.env.DB_PASSWORD
-};
-var pool= new Pool(config);
-*/
+
 //function to create a new user
 
 app.post('/rg/create-user',function(req,res){
@@ -323,22 +309,7 @@ app.post('/lg/login', function (req, res) {
    });
 });
 
-/*
-app.get('/cl/check-login', function (req, res) {
-   if (req.session && req.session.auth && req.session.auth.userId) {
-       // Load the user object
-       pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
-           if (err) {
-              res.status(500).send(err.toString());
-           } else {
-              res.send(result.rows[0].username);    
-           }
-       });
-   } else {
-       res.status(400).send('You are not logged in');
-   }
-});
-*/
+
 app.get('/lo/logout', function (req, res) {
    delete req.session.auth;
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
@@ -366,31 +337,7 @@ app.get('/:articleName',function(req,res){
 });
 
     
-    /*
-    pool.query("SELECT * FROM article WHERE title= $1", [req.params.articleName], function(err,result){
-        if(err)
-        {
-            res.status(500).send(err.toString());
-        }
-        else
-        {
-            
-            if(result.rows.length===0)
-            {  
-                res.status(404).send('Article not found');
-            }
-            else
-            {   
-                var articleData=result.rows[0];
-                res.send(createTemplate(articleData));
-            }
-        }    
-        
-    });
-});
-
-  */
-  
+   
 app.get('/db/:n', function(req,res){
 
     pool.query("SELECT * FROM course WHERE id=$1", [req.params.n],  function(err,result){
@@ -418,19 +365,7 @@ app.get('/db/:n', function(req,res){
 });   
     
 });
-/*
-app.get('/get-articles', function (req, res) {
-   // make a select request
-   // return a response with the results
-   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-});
-*/
+
 
 app.post('/pa/post',function(req,res){
    var text=req.body.textarea;
