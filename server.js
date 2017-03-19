@@ -390,7 +390,7 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
           var ar = result.rows[2].topic;
           res.send(createArticle(ar,2)); 
          // console.log(result.id.length);
-    /*for(var i=0; i<4;i++)
+    /*for(var i=0; i<result.rows.length;i++)
        {   
            var ar = result.rows[i].topic;
            var id = i;
