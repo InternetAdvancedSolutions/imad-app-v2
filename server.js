@@ -370,11 +370,11 @@ app.get('/db/:n', function(req,res){
 
 
 app.post('/pa/post',function(req,res){
-   var text=req.body.textarea;
+   var text=req.body.user_post;
    var topic=req.body.topic;
     console.log(text);
     console.log(topic);
-   pool.query('INSERT INTO "posts" (textarea,topic) VALUES ($1,$2)',[text,topic],function (err, result) {
+   pool.query('INSERT INTO "posts" (user_post,topic) VALUES ($1,$2)',[text,topic],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
