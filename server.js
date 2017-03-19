@@ -98,7 +98,7 @@ function createTemplate(data){
         
         <div id="content">
              
-             ${createArticle(data)}
+             
         </div>
         <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
