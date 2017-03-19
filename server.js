@@ -60,15 +60,18 @@ function hash(input,salt){
    res.send(hashedString);
 });*/
 
-
+function createArticle(data){
+        var article=data.textarea;
+        return article;
+    }
 
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
     var content=data.content;
-    function createArticle(data){
+   /* function createArticle(data){
         var article=data.textarea;
-    }
+    }*/
     var htmltemplate=`
     <!doctype html>
 <html>
@@ -97,7 +100,7 @@ function createTemplate(data){
         
         <div id="content">
              //${content}
-             ${createArticle(data)}
+             //${createArticle(data)}
         </div>
         <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
@@ -147,6 +150,28 @@ function createTemplate(data){
               request.send(JSON.stringify({textarea:textarea}));
               para.innerHTML="Posting.............";
             };
+            
+             window.onload= function()
+    {    
+      var request= new XMLHttpRequest();
+    
+      request.onreadystatechange=function()
+      {
+        if(request.readyState==4 && request.status==200 )
+        { 
+             var allarticles =request.responseText;
+             var div=document.getElementById("content");
+             div.innerHTML=allarticles;
+            
+        }
+        
+     };
+    
+    request.open('GET',"/ga/publish",true);
+    request.send(null);
+   };
+   
+            
     </script>
     </body>
 </html>
