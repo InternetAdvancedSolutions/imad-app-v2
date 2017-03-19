@@ -101,7 +101,7 @@ function createTemplate(data){
         </div>
         <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
         <hr>
-        Create Topic            :<textarea id="topic" cols="100" maxlength="100"></textarea>
+       
          <br>
         <div id="feedback">
         <h2 class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></h2>
