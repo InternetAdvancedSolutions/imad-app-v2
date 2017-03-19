@@ -86,9 +86,9 @@ function createTemplate(data){
         <pre class="fontcolor1">
         <a class ="hyperlinks" href="/">Home</a> | <span class="fontcolor1" align="right" id="t"></span>   <hr> 
         </pre>
-        </div>
+    </div>
        
-        <div id="main" class="center text-big bold">
+    <div id="main" class="center text-big bold">
         Learning by Sharing
         </div>
         
@@ -99,18 +99,16 @@ function createTemplate(data){
         <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
         </div>
-        <hr>
-        Create Topic            :<input id="topic">
-         <br>
         <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
-
+        <hr>
+        Create Topic            :<input id="topic" cols="100" maxlength="100">
+         <br>
         <div id="feedback">
             <p id="p">Write your Articles or Q&A:</p>
             <pre>
             <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
             <button id="submit" >Post</button>
             <p id="p1"></p>
-            <a href='/ga/publish' class='hyperlinks'>Posted Articles</a>
            </pre>
         </div>
        
@@ -139,11 +137,12 @@ function createTemplate(data){
                     }
                 }
               var topic=document.getElementById("topic").value;
-              var textarea=document.getElementById("user_post").value;  
-              console.log(textarea);
+              var user_post=document.getElementById("user_post").value;  
+              console.log(topic);
+              console.log(user_post);
               request.open('POST','/pa/post',true);
               request.setRequestHeader('Content-Type', 'application/json');
-              request.send(JSON.stringify({textarea:textarea, topic:topic}));
+              request.send(JSON.stringify({user_post:user_post, topic:topic}));
               para.innerHTML="Posting.............";
             };
             
@@ -345,23 +344,24 @@ app.get('/db/:n', function(req,res){
     pool.query("SELECT * FROM course WHERE id=$1", [req.params.n],  function(err,result){
     
 
-  if(err){
+  if(err)
+    {
                  res.status(500).send(err.toString());
-          }
-         else
-          {
+    }
+     else
+    {
             
-            if(result.rows.length===0)
-            {  
+                if(result.rows.length===0)
+               {  
                res.status(404).send('Could not access database');
-            }
-            else
-            {   
+               }
+               else
+               {   
                 var ta=result.rows[0];
                 res.send(createTemplate1(ta));
-            }
+               }
             
-          }
+    }
 
 
 });   
