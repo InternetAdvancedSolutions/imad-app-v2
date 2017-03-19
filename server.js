@@ -391,7 +391,7 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
           res.status(500).send(err.toString());
       }else{
           console.log(result.length);
-          console.log(result.id.length);
+         // console.log(result.id.length);
     for(var i=0; i<result.length;i++)
        {   
            var ar = result.rows[i].topic;
