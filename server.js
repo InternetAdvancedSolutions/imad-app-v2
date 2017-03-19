@@ -340,13 +340,9 @@ app.get('/:articleName',function(req,res){
 
     
    
-app.get('/db/:n', function(req,res){
-
-    pool.query("SELECT * FROM course WHERE id=$1", [req.params.n],  function(err,result)
-{
-    
-
-  if(err)
+app.get('/db/:n', function(req,res){pool.query("SELECT * FROM course WHERE id=$1", [req.params.n],  function(err,result)
+ {
+    if(err)
     {
                  res.status(500).send(err.toString());
     }
@@ -391,13 +387,16 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
           res.status(500).send(err.toString());
       }else{
           console.log(result.length);
+          var ar = result.rows[2].topic;
+          res.send(createArticle(ar,2)); 
          // console.log(result.id.length);
-    for(var i=0; i<4;i++)
+    /*for(var i=0; i<4;i++)
        {   
            var ar = result.rows[i].topic;
            var id = i;
        res.send(createArticle(ar,id)); 
        }
+     */
       }
 });
 });
