@@ -58,7 +58,7 @@ function hash(input,salt){
 function createArticle(data,idd){
         var article1=data.topic;
         var ids =idd;
-    var htmlarticle=`<a href="/aa/archive/:${ids}" class="fontcolor1">${article1}</h1>`;
+    var htmlarticle=`<a href="/aa/archive/${ids}" class="fontcolor1">${article1}</h1>`;
         return htmlarticle;
     }
 
@@ -386,7 +386,7 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
-          console.log(result.length);
+          console.log(result.rows.length);
           var ar = result.rows[2].topic;
           res.send(createArticle(ar,2)); 
          // console.log(result.id.length);
