@@ -57,7 +57,7 @@ function hash(input,salt){
 
 function createArticle(data){
         var article1=data.textarea;
-        var htmlarticle=`<h1>${article1}</h1>`
+        var htmlarticle=`<a href="/aa/archive">${article1}</h1>`
         return htmlarticle;
     }
 
@@ -99,13 +99,15 @@ function createTemplate(data){
         <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
         </div>
+        <hr>
+        Create Topic            :<input id="topic">
          <br>
         <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
 
         <div id="feedback">
             <p id="p">Write your Articles or Q&A:</p>
             <pre>
-            <textarea id="comments" cols="100" rows="10" maxlength="500"></textarea><br>
+            <textarea id="user_post" cols="50" rows="50" maxlength="50"></textarea><br>
             <button id="submit" >Post</button>
             <p id="p1"></p>
             <a href='/ga/publish' class='hyperlinks'>Posted Articles</a>
@@ -116,8 +118,7 @@ function createTemplate(data){
     <script>
     document.getElementById("t").innerHTML=Date();
     var button=document.getElementById("submit");
-            //var textarea=document.getElementById("comments").value;
-            var para=document.getElementById("p1");
+    var para=document.getElementById("p1");
             button.onclick=function()
             {
                var request = new XMLHttpRequest();
@@ -137,11 +138,12 @@ function createTemplate(data){
                         }
                     }
                 }
-              var textarea=document.getElementById("comments").value;  
+              var topic=document.getElementById("topic").value;
+              var textarea=document.getElementById("user_post").value;  
               console.log(textarea);
               request.open('POST','/pa/post',true);
               request.setRequestHeader('Content-Type', 'application/json');
-              request.send(JSON.stringify({textarea:textarea}));
+              request.send(JSON.stringify({textarea:textarea, topic:topic}));
               para.innerHTML="Posting.............";
             };
             
@@ -369,9 +371,10 @@ app.get('/db/:n', function(req,res){
 
 app.post('/pa/post',function(req,res){
    var text=req.body.textarea;
+   var topic=req.body.topic;
     console.log(text);
-   
-   pool.query('INSERT INTO "posts" (textarea) VALUES ($1)',[text],function (err, result) {
+    console.log(topic);
+   pool.query('INSERT INTO "posts" (textarea,topic) VALUES ($1,$2)',[text,topic],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
@@ -390,6 +393,18 @@ pool.query('SELECT textarea FROM "posts" ', function (err, result) {
       }
 });
 });
+
+app.get('/aa/archive', function(req,res){
+pool.query('SELECT topic FROM "posts" ', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      }else{
+       var art = result.rows[0];
+       res.send(createArticle(art));   
+      }
+});
+});
+
 var port = 8080; 
 app.listen(8080, function () {
   console.log(`IAS app listening on port ${port}!`);
