@@ -98,8 +98,7 @@ function createTemplate(data){
     <hr>
     <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
     <hr>
-    <br>
-        <div id="feedback">
+        <div id="feedback"><br>
         <p class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
@@ -107,7 +106,7 @@ function createTemplate(data){
             <tr>
             <td>
             <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
-            </td><td><div id="content"></div></td>
+            </td><td><p class="fontcolor1">Archived Posts</p><div id="content"></div></td>
             </tr>
             </table>
             </pre>
