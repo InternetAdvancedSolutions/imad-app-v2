@@ -382,10 +382,11 @@ app.post('/pa/post',function(req,res){
 });  
 
 app.get('/ga/publish', function(req,res){
-pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
+pool.query('SELECT topic FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
-      }else{
+      }else
+      {
          // console.log(result.rows.length);
          // var ar = result.rows[2];
          // var n =2;
