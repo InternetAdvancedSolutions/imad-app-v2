@@ -107,7 +107,7 @@ function createTemplate(data){
         <div id="feedback">
             <p id="p">Write your Articles or Q&A:</p>
             <pre>
-            <textarea id="user_post" cols="50" rows="50" maxlength="50"></textarea><br>
+            <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
             <button id="submit" >Post</button>
             <p id="p1"></p>
             <a href='/ga/publish' class='hyperlinks'>Posted Articles</a>
