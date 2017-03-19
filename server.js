@@ -101,15 +101,15 @@ function createTemplate(data){
         </div>
         <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
         <hr>
-        Create Topic            :<input id="topic" cols="100" maxlength="100">
+        Create Topic            :<textarea id="topic" cols="100" maxlength="100"></textarea>
          <br>
         <div id="feedback">
+            <button id="submit" >Post</button>
+            <p id="p1"></p>
             <p id="p">Write your Articles or Q&A:</p>
             <pre>
             <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
-            <button id="submit" >Post</button>
-            <p id="p1"></p>
-           </pre>
+            </pre>
         </div>
        
     </div>
