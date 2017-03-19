@@ -57,7 +57,7 @@ function hash(input,salt){
 
 function createArticle(data){
         var article1=data.topic;
-        var htmlarticle=`<a href="/aa/archive" class="fontcolor1">${article1}</h1>`
+    var htmlarticle=`<a href="/aa/archive" class="fontcolor1">${article1}</h1>`;
         return htmlarticle;
     }
 
@@ -100,7 +100,7 @@ function createTemplate(data){
     <hr>
     <br>
         <div id="feedback">
-        <h2 class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></h2>
+        <p class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
             <table>
