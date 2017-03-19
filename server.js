@@ -403,12 +403,12 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
 });
 
 app.get('/aa/archive/:ids', function(req,res){
-pool.query('SELECT user_post,id FROM "posts" ',[req.params.ids], function (err, result) {
+pool.query('SELECT user_post FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
        var ida = req.params.ids;
-       var art = result.rows[ida].user_post;
+       var art = result.rows[ida];
        res.send(art);   
       }
 });
