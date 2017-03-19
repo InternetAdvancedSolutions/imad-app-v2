@@ -84,32 +84,30 @@ function createTemplate(data){
         </table> 
         <hr>
         <pre class="fontcolor1">
-        <a class ="hyperlinks" href="/">Home</a> | <span class="fontcolor1" align="right" id="t"></span>   <hr> 
+        <a class ="hyperlinks" href="/">Home</a> | <span class="fontcolor1" align="right" id="t"></span> 
         </pre>
     </div>
        
     <div id="main" class="center text-big bold">
         Learning by Sharing
-        </div>
+    </div>
+    <p></p>
     <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
-        </div>
-        <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
-        <hr>
-       <pre>
-         <br>
+    </div>
+    <hr>
+    <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
+    <hr>
+    <br>
         <div id="feedback">
-        <br>
         <h2 class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></h2>
             <button id="submit" >Post</button>
             <p id="p1"></p>
             <table>
             <tr>
             <td>
-            <p id="p">Write your Articles or Q&A:</p>
-            <pre>
             <textarea id="user_post" cols="75" rows="25" maxlength="50"></textarea><br>
-            </td><td><div id="content"></div></td>
+            </td><td><div id="content" class="fontcolor1"></div></td>
             </tr>
             </table>
             </pre>
