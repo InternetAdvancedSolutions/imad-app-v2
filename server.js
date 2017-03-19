@@ -55,9 +55,10 @@ function hash(input,salt){
 }
 
 
-function createArticle(data){
+function createArticle(data,id){
         var article1=data.topic;
-    var htmlarticle=`<a href="/aa/archive/:id" class="fontcolor1">${article1}</h1>`;
+        var ids =id;
+    var htmlarticle=`<a href="/aa/archive/:ids" class="fontcolor1">${article1}</h1>`;
         return htmlarticle;
     }
 
@@ -399,13 +400,13 @@ pool.query('SELECT topic,id FROM "posts" ', function (err, result) {
 });
 });
 
-app.get('/aa/archive/:id', function(req,res){
+app.get('/aa/archive/:ids', function(req,res){
 pool.query('SELECT user_post,id FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
-       var id = req.params.id;
-       var art = result.rows[0].user_post;
+       var id = req.params.ids;
+       var art = result.rows[id].user_post;
        res.send(art);   
       }
 });
