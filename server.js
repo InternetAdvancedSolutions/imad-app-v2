@@ -114,7 +114,7 @@ function createTemplate(data){
             <tr>
             <td>
             <textarea id="user_post" cols="75" rows="25" maxlength="1000"></textarea><br>
-            </td><td><p class="fontcolor1">Archived Posts</p><div id="content"></div><br></td>
+            </td><td><div class="fontcolor1">Archived Posts</div><div id="content"></div><br></td>
             </tr>
             </table>
             </pre>
@@ -135,7 +135,7 @@ function createTemplate(data){
                     {
                         if(request.status===200)
                         {
-                          para.innerHTML="Your article posted successfuly ! Will be publised shortly... after approval ";
+                          para.innerHTML="Your article posted successfuly !... Will be publised soon... after approval ";
  
                         }
                         else
