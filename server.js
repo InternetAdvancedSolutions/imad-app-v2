@@ -66,6 +66,9 @@ function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
     var content=data.content;
+    function createArticle(data){
+        var article=data.textarea;
+    }
     var htmltemplate=`
     <!doctype html>
 <html>
@@ -93,7 +96,8 @@ function createTemplate(data){
         </div>
         
         <div id="content">
-             ${content}
+             //${content}
+             ${createArticle(data)}
         </div>
         <div id="main" class="center bold">
         Knowledge increases by giving...teaching is the best way of learning !
