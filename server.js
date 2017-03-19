@@ -156,7 +156,7 @@ function createTemplate(data){
         { 
              var allarticles =request1.responseText;
              var div=document.getElementById("content");
-             div.innerHTML=allarticles;
+             div.innerHTML=allarticles+"<br>";
             
         }
         
@@ -389,8 +389,10 @@ pool.query('SELECT topic FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
-       var ar = result.rows[0];
-       res.send(createArticle(ar));   
+    for(var i=0; i<result.rows.length;i++)
+       {var ar = result.rows[i];
+       res.send(createArticle(ar)); 
+       }
       }
 });
 });
