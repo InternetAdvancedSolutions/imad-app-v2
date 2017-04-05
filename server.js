@@ -393,6 +393,7 @@ app.post('/pa/post',function(req,res){
    var posters_name= req.body.username_post;
     console.log(text);
     console.log(topic);
+    console.log(posters_name);
    pool.query('INSERT INTO "posts" (user_post,topic,posters_name) VALUES ($1,$2,$3)',[text,topic,posters_name],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
