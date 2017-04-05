@@ -442,7 +442,7 @@ app.get('/aa/archive/:ids', function(req,res){
        var ida = req.params.ids;
        var art = result.rows[ida].user_post;
        var user= result.rows[ida].posters_name;
-       res.send('<h2>'+"This article was posted by" +user+'</h2>'+'<br>'+'<h3>'+art+'</h3>');   
+       res.send('<h1 >'+"IAS Open Forum"+'</h1>'+'<br>'+'<h2>'+"This article was posted by" +user+'</h2>'+'<br>'+'<h3>'+art+'</h3>');   
       }
        });
 }
