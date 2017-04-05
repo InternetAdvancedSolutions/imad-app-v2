@@ -60,7 +60,8 @@ function createArticle(data,idd){
         //var ids =idd;
    // var htmlarticle=`<a href="/aa/archive/${ids}" class="fontcolor1">${article1}</a>`;
    var htmlarticle=`
-    <a href="/aa/archive/12" class="fontcolor1">google charts</a><br>
+   <a href="/aa/archive/13" class="fontcolor1">Front-end development</a><br>
+   <a href="/aa/archive/12" class="fontcolor1">google charts</a><br>
    <a href="/aa/archive/8" class="fontcolor1">Coding Tips</a><br>
    <a href="/aa/archive/6" class="fontcolor1">cyber means?</a><br>
    <a href="/aa/archive/5" class="fontcolor1">what is 404?</a><br>
