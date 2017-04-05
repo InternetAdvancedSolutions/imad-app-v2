@@ -114,7 +114,7 @@ function createTemplate(data1,data2){
     <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
     <hr>
         <div id="feedback"><br>
-         <p id="user" class="fontcolor1">Dear ${username} Welcome! to IAS forum, please create a topic and write your article below</p>
+         <p id="user" class="fontcolor1">Dear ${username} Welcome to IAS forum !, please create a topic and write your article below</p>
         <p class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
