@@ -434,13 +434,14 @@ app.get('/aa/archive/:ids', function(req,res){
   if (req.session && req.session.auth && req.session.auth.userId ) 
 {   
     
-     pool.query('SELECT user_post FROM "posts" ', function (err, result) {
+     pool.query('SELECT * FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
        var ida = req.params.ids;
        var art = result.rows[ida].user_post;
-       res.send(art);   
+       var user= result.rows[ida].posters_name;
+       res.send('<h2>'+"This article was posted by" +user+'</h2>'+'<br>'+'<h3>'+art+'</h3>');   
       }
        });
 }
