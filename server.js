@@ -113,6 +113,7 @@ function createTemplate(data1,data2){
     <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
     <hr>
         <div id="feedback"><br>
+        <p id="user" class="fontcolor1">${username} please create a topic and write your article below</p>
         <p class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
@@ -345,6 +346,7 @@ app.get('/:articleName',function(req,res){
               res.status(500).send(err.toString());
            } else {
                 var username = req.session.auth.userId;
+                console.log("session in username is" + username);
                 var articleData=result.rows[0];
                // res.send(createTemplate(articleData));
                 res.send(createTemplate(articleData,username));
