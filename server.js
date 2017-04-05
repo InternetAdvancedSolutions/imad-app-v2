@@ -152,7 +152,7 @@ function createTemplate(data1,data2){
                 }
               var topic=document.getElementById("topic").value;
               var user_post=document.getElementById("user_post").value;  
-              var username_post= ${username}; 
+              var username_post= "${username}"; 
               console.log(topic);
               console.log(user_post);
               console.log(username_post);
