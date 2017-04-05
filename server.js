@@ -74,9 +74,10 @@ function createArticle(data,idd){
         return htmlarticle;
     }
 
-function createTemplate(data){
-    var title=data.title;
-    var heading=data.heading;
+function createTemplate(data1,data2){
+    var title=data1.title;
+    var heading=data1.heading;
+    var username= data2;
    // var content=data.content;
      
     var htmltemplate=`
@@ -150,11 +151,14 @@ function createTemplate(data){
                 }
               var topic=document.getElementById("topic").value;
               var user_post=document.getElementById("user_post").value;  
+              var username_post= username; 
               console.log(topic);
               console.log(user_post);
+              console.log(username_post);
               request.open('POST','/pa/post',true);
               request.setRequestHeader('Content-Type', 'application/json');
-              request.send(JSON.stringify({user_post:user_post, topic:topic}));
+              //request.send(JSON.stringify({user_post:user_post, topic:topic}));
+              request.send(JSON.stringify({user_post:user_post, topic:topic, username_post:username_post}));
               para.innerHTML="Posting.............";
             };
             
@@ -286,6 +290,7 @@ app.post('/rg/create-user',function(req,res){
 app.post('/lg/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
+   
    console.log(username);
    console.log(password);
    pool.query('SELECT * FROM "users" WHERE username = $1', [username], function (err, result) {
@@ -306,7 +311,8 @@ app.post('/lg/login', function (req, res) {
               if (hashedPassword === dbString) {
                 
                 // Set the session
-               req.session.auth = {userId: result.rows[0].id};
+               //req.session.auth = {userId: result.rows[0].id};
+                req.session.auth = {userId: result.rows[0].username};
                 // set cookie with a session id
                 // internally, on the server side, it maps the session id to an //object
                  //{ auth: {userId }}
@@ -331,16 +337,17 @@ app.get('/lo/logout', function (req, res) {
 
 app.get('/:articleName',function(req,res){
     
-    if (req.session && req.session.auth && req.session.auth.userId ) {
+        if (req.session && req.session.auth && req.session.auth.userId ) {
        // Load the user object
       
        pool.query('SELECT * FROM "article" WHERE id= $1', [req.params.articleName], function(err,result){
            if (err) {
               res.status(500).send(err.toString());
            } else {
-               
+                var username = req.session.auth.userId;
                 var articleData=result.rows[0];
-                res.send(createTemplate(articleData)); 
+               // res.send(createTemplate(articleData));
+                res.send(createTemplate(articleData,username));
              // res.send(result.rows[0].username);    
            }
        });
@@ -381,9 +388,10 @@ app.get('/db/:n', function(req,res){pool.query("SELECT * FROM course WHERE id=$1
 app.post('/pa/post',function(req,res){
    var text=req.body.user_post;
    var topic=req.body.topic;
+   var posters_name= req.body.username_post;
     console.log(text);
     console.log(topic);
-   pool.query('INSERT INTO "posts" (user_post,topic) VALUES ($1,$2)',[text,topic],function (err, result) {
+   pool.query('INSERT INTO "posts" (user_post,topic,posters_name) VALUES ($1,$2,$3)',[text,topic,posters_name],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
