@@ -86,6 +86,7 @@ function createTemplate(data1,data2){
     <!doctype html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>${title}</title>
         <link href="/ui/style.css" rel="stylesheet" />
         <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
@@ -207,6 +208,7 @@ function createTemplate1(data1){
 <!doctype html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>${title1}</title>
         <link href="/ui/style.css" rel="stylesheet" />
         <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
