@@ -62,8 +62,7 @@ function createArticle(data,idd){
    var htmlarticle=`
    
     <a href="/aa/archive/12" class="fontcolor1">How to program a microcontroller</a><br>
-   <a href="/aa/archive/20" class="fontcolor1">Will you build an app for me</a><br>
-   <a href="/aa/archive/13" class="fontcolor1">Front-end development</a><br>
+      <a href="/aa/archive/13" class="fontcolor1">Front-end development</a><br>
    <a href="/aa/archive/14" class="fontcolor1">google charts</a><br>
    <a href="/aa/archive/8" class="fontcolor1">Coding Tips</a><br>
    <a href="/aa/archive/6" class="fontcolor1">cyber means?</a><br>
