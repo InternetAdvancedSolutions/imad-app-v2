@@ -278,7 +278,8 @@ return htmltemplate1;
 //function to create a new user
 
 app.post('/rg/create-user',function(req,res){
-   var usern=req.body.username;
+   var usern1=req.body.username;
+   var usern= usern1.trim();
     console.log(usern);
    var passw=req.body.password;
    console.log(passw); 
