@@ -448,7 +448,7 @@ app.get('/aa/archive/:ids', function(req,res){
        var art = result.rows[ida].user_post;
        var user= result.rows[ida].posters_name;
        var topic=result.rows[ida].topic;
-       res.send(`'<html>'+'<body>'+'<div bgcolor="#123456">'+ '<h1 fontcolor="white">'+'</div>+"IAS Open Forum"+'</h1>'+'<br>'+ '<h2>' +topic+'</h2>' + '<h3>'+"This article was posted by  " +user+'</h3>'+'<br>'+'<h4>'+art+'</h4>'+'</body>'+ '</html>'`);   
+       res.send('<html>'+'<body>'+'<div bgcolor="#123456">'+ '<h1 fontcolor="white">'+'</div>+"IAS Open Forum"+'</h1>'+'<br>'+ '<h2>' +topic+'</h2>' + '<h3>'+"This article was posted by  " +user+'</h3>'+'<br>'+'<h4>'+art+'</h4>'+'</body>'+ '</html>');   
       }
        });
 }
