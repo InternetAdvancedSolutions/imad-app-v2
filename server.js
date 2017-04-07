@@ -60,6 +60,7 @@ function createArticle(data,idd){
         //var ids =idd;
    // var htmlarticle=`<a href="/aa/archive/${ids}" class="fontcolor1">${article1}</a>`;
    var htmlarticle=`
+    <a href="/aa/archive/13" class="fontcolor1">How to make tea</a><br>
     <a href="/aa/archive/13" class="fontcolor1">How to program a microcontroller</a><br>
    <a href="/aa/archive/0" class="fontcolor1">Will you build an app for me</a><br>
    <a href="/aa/archive/14" class="fontcolor1">Front-end development</a><br>
@@ -445,7 +446,8 @@ app.get('/aa/archive/:ids', function(req,res){
        var ida = req.params.ids;
        var art = result.rows[ida].user_post;
        var user= result.rows[ida].posters_name;
-       res.send('<h1 bgcolor="lightblue">'+"IAS Open Forum"+'</h1>'+'<br>'+'<h2>'+"This article was posted by  " +user+'</h2>'+'<br>'+'<h3>'+art+'</h3>');   
+       var topic=result.rows[ida].topic;
+       res.send('<h1 bgcolor="lightblue">'+"IAS Open Forum"+'</h1>'+'<br>'+ '<h2>' +topic+'</h2>' + '<h3>'+"This article was posted by  " +user+'</h3>'+'<br>'+'<h4>'+art+'</h4>');   
       }
        });
 }
