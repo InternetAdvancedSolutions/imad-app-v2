@@ -164,7 +164,7 @@ function createTemplate(data1,data2){
               request.setRequestHeader('Content-Type', 'application/json');
               //request.send(JSON.stringify({user_post:user_post, topic:topic}));
               request.send(JSON.stringify({user_post:user_post, topic:topic, username_post:username_post}));
-             // para.innerHTML="Posting.............";
+              para.innerHTML="Posting.............";
             };
             
              window.onload= function()
@@ -386,7 +386,7 @@ button.onclick=function()
               request.open('POST','/com/submit-comments',true);
               request.setRequestHeader('Content-Type', 'application/json');
               request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name}));
-              para.innerHTML="submitting you comments.............";
+              para2.innerHTML="submitting you comments.............";
 };
             
     </script>
