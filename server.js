@@ -570,7 +570,7 @@ var lout= `
         </table> 
         <hr>
         <pre class="fontcolor1">
-        <a class ="hyperlinks" href="/">Back to Home</a> 
+        <a class ="hyperlinks" href="/">Back to Home</a>           <a class ="hyperlinks" href="/db/9" align="center">Login again</a><hr>
         </pre>
     </div>
        
