@@ -312,7 +312,7 @@ function createPost(data1,data2,data3,data4){
         </div>
         <pre>
             <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a>                 <a class ="hyperlinks1" href="/">Home</a>
-            <pre>
+        </pre>
         <div id="content">
         <h2>This article is contributed by ${poster}</h2>
 		<h4>
