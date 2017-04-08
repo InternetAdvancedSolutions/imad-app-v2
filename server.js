@@ -272,6 +272,70 @@ function createTemplate1(data1){
 return htmltemplate1;
 }
 
+function createPost(data1,data2,data3){
+    var title1='IAS Forum';
+    var heading1=data3;
+    var content1=data1;
+    var poster=data2;
+	
+	
+    var htmltemplatePost=`
+    
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>${title1}</title>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    </head>
+    <body>
+    <div class="container" >   
+        <div id="logo" class="center" >
+        <table>
+        <tr>
+        <td>
+        <img src="/ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
+       
+        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2><h3 id ="h3" class ="center text-medium bold"> ${heading1}</h3></td>
+        </tr>
+        </table> 
+        <hr>
+        <pre class="fontcolor1">
+        | <a class ="hyperlinks" href="/">Home</a> | <a class ="hyperlinks" href="/db/6">IAS Code Library</a><hr>
+        </pre>
+       </div>
+       
+        <div id="main" class="center text-big bold">
+        Learning by Sharing
+        </div>
+        <div id="content">
+        <h2>This article is contributed by ${poster}</h2>
+		<h4>
+        ${content1}
+		</h4>
+        </div>
+           <a class ="hyperlinks1" href="/">Home</a><hr>
+        <div id="feedback" class="fontcolor1">
+            <pre class="text-table">
+            <table   colspan="4">
+                <tr><td>My IT skills</td></tr>
+                <tr><th>Languages            </th><th>Frameworks      </th><th>Front-end              </th><th>Back-end             </th></tr>
+                 <tr><td>C/C++</td><td>Android Studio</td><td>HTML</td><td>Node.js</td></tr>
+                  <tr><td>Swift</td><td>Xcode 8</td><td>CSS</td><td>Express.js</td></tr>
+                   <tr><td>java</td><td>Eclipse IDE</td><td>javaScript</td><td>PHP</td></tr>
+                   <tr><td>Python</td><td>Linux</td><td>Angular JS</td><td>SQL</td></tr>
+                   <tr><td>Sketch</td><td>Arduino IDE</td><td>Bootstrap</td><td>JSP</td></tr>
+                   <tr><td>Embedded C</td><td>XAMPP</td><td>Ajax</td><td>Servlets</td></tr>
+            </table>
+           </pre>
+        </div>
+    </body>
+</html>
+`;
+return htmltemplatePost;
+}
+
 
 //function to create a new user
 
@@ -447,7 +511,11 @@ app.get('/aa/archive/:ids', function(req,res){
        var art = result.rows[ida].user_post;
        var user= result.rows[ida].posters_name;
        var topic=result.rows[ida].topic;
-       res.send('<html>'+'<head>'+'<title>'+"IAS forum"+'</title>'+'</head>'+'<body bgcolor="lightblue">'+'<p background-color="#123456">'+ '<h1 fontcolor="white">'+"IAS Open Forum"+'</h1>'+'</p>'+ '<h2>' +topic+'</h2>' + '<h3>'+"This article was posted by  " +user+'</h3>'+'<h4>'+art+'</h4>'+'</body>'+ '</html>');   
+       /*res.send('<html>'+'<head>'+'<title>'+"IAS forum"+'</title>'+'</head>'+'<body bgcolor="lightblue">'+'<p background-color="#123456">'+ '<h1 fontcolor="white">'+"IAS Open Forum"+'</h1>'+'</p>'+ '<h2>' +topic+'</h2>' + '<h3>'+"This article was posted by  " +user+'</h3>'+'<h4>'+art+'</h4>'+'</body>'+ '</html>'); 
+       */
+       
+       res.send(createPost(art,user,topic));
+       
       }
        });
 }
