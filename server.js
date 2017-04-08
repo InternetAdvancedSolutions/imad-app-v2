@@ -310,6 +310,9 @@ function createPost(data1,data2,data3,data4){
         <div id="main" class="center text-big bold">
         Learning by Sharing
         </div>
+        <pre>
+            <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a>                 <a class ="hyperlinks1" href="/">Home</a>
+            <pre>
         <div id="content">
         <h2>This article is contributed by ${poster}</h2>
 		<h4>
@@ -333,11 +336,7 @@ function createPost(data1,data2,data3,data4){
             <div id="n">
             <p id="c"></p> 
             <hr>
-            <pre>
-            <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a>                 <a class ="hyperlinks1" href="/">Home</a>
-            <pre>
-            <hr>
-           <div id="feedback" class="fontcolor1">
+            <div id="feedback" class="fontcolor1">
             <pre class="text-table">
             <table   colspan="4">
                 <tr><td>My IT skills</td></tr>
