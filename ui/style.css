@@ -70,12 +70,12 @@ body {
 
   50% {
     opacity: 1;
-    color: blue;
+    color: red;
   }
 
   75% {
    opacity: 0;
-   color: orange;
+   color: red;
  }
 
  100% {
