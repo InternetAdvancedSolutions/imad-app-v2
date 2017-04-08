@@ -272,12 +272,12 @@ function createTemplate1(data1){
 return htmltemplate1;
 }
 
-function createPost(data1,data2,data3){
+function createPost(data1,data2,data3,data4){
     var title1='IAS Forum';
     var heading1=data3;
     var content1=data1;
     var poster=data2;
-    var commenter = req.session.auth.userId;
+    var commenter = data4;
 	
 	
     var htmltemplatePost=`
@@ -545,10 +545,11 @@ app.get('/aa/archive/:ids', function(req,res){
        var art = result.rows[ida].user_post;
        var user= result.rows[ida].posters_name;
        var topic=result.rows[ida].topic;
+       var commenter = req.session.auth.userId;
        /*res.send('<html>'+'<head>'+'<title>'+"IAS forum"+'</title>'+'</head>'+'<body bgcolor="lightblue">'+'<p background-color="#123456">'+ '<h1 fontcolor="white">'+"IAS Open Forum"+'</h1>'+'</p>'+ '<h2>' +topic+'</h2>' + '<h3>'+"This article was posted by  " +user+'</h3>'+'<h4>'+art+'</h4>'+'</body>'+ '</html>'); 
        */
        
-       res.send(createPost(art,user,topic));
+       res.send(createPost(art,user,topic,commenter));
        
       }
        });
