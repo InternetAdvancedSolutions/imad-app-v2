@@ -277,6 +277,7 @@ function createPost(data1,data2,data3){
     var heading1=data3;
     var content1=data1;
     var poster=data2;
+    var commenter = req.session.auth.userId;
 	
 	
     var htmltemplatePost=`
@@ -315,7 +316,7 @@ function createPost(data1,data2,data3){
         ${content1}
 		</h4>
         </div>
-        
+        <hr>
         <div id="comments"><br>
         
         <p>you can write your comments to this article below</p>
@@ -329,7 +330,7 @@ function createPost(data1,data2,data3){
             </table>
             
             <button id="submit" >Submit</button>
-            <p id="c"></p>
+            <p id="c"></p>          by${commenter}
             
             </pre>
           </div>
