@@ -46,7 +46,7 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
+/*
 @keyframes blink {
   from {
     opacity: 1;
@@ -55,6 +55,33 @@ body {
   to {
     opacity: 0.25;
   }
+}
+*/
+@keyframes blink {
+  0% {
+    opacity: 1;
+    color: pink;
+  }
+
+  25% {
+    color: green;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    color: blue;
+  }
+
+  75% {
+   opacity: 0;
+   color: orange;
+ }
+
+ 100% {
+   opacity: 1;
+   color: pink;
+ }
 }
 
         #logo {background-color:#123456; padding:5px; height:250px;}
