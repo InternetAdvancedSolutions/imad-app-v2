@@ -212,7 +212,7 @@ function createTemplate1(data1){
         <meta charset="UTF-8">
         <title>${title1}</title>
         <link href="/ui/style.css" rel="stylesheet" />
-        <link rel="icon" href="ui/SINGH_ASHUTOSH.jpg">
+        <link rel="icon" href="/ui/SINGH_ASHUTOSH.jpg">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     </head>
     <body>
@@ -290,7 +290,7 @@ function createPost(data1,data2,data3,data4){
         <meta charset="UTF-8">
         <title>${title1}</title>
         <link href="/ui/style.css" rel="stylesheet" />
-        <link rel="icon" href="ui/SINGH_ASHUTOSH.jpg">
+        <link rel="icon" href="/ui/SINGH_ASHUTOSH.jpg">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     </head>
     <body>
