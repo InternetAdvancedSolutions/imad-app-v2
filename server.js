@@ -358,27 +358,27 @@ function createPost(data1,data2,data3,data4){
         var button=document.getElementById("submit");
         var para2=document.getElementById("c");
         
-            button.onclick=function()
-            { /*var user_comment = document.getElementById("user_comments");
+button.onclick=function()
+{ /*var user_comment = document.getElementById("user_comments");
               para2.innerHTML ='<span id="blue">'+ " ${commenter}"+'</span>'+'<br>' +user_comment.value; */
              
-              var request = new XMLHttpRequest();
+     var request = new XMLHttpRequest();
                
-                request.onreadystatechange=function()
-                {
+     request.onreadystatechange=function()
+        {
                     if(request.readyState===XMLHttpRequest.DONE)
                     {
                         if(request.status===200)
                         {
-                     var user_comment = document.getElementByI("user_comments");
-              para2.innerHTML ='<span id="blue">'+ " ${commenter}"+'</span>'+'<br>' +user_comment.value; 
+                          var user_comment = document.getElementByI("user_comments");
+                         para2.innerHTML ='<span id="blue">'+ " ${commenter}"+'</span>'+'<br>' + user_comment.value; 
                         }
                         else
                         {
                           para.innerHTML="Oops ! submission failed ";
                         }
                     }
-                }
+        }
               var user_comment = document.getElementById("user_comments");
               var commenter_name= "${commenter}"; 
               console.log(user_comment);
@@ -387,10 +387,7 @@ function createPost(data1,data2,data3,data4){
               request.setRequestHeader('Content-Type', 'application/json');
               request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name}));
               para.innerHTML="submitting you comments.............";
-            };
-            
-             
-            }
+};
             
     </script>
     
