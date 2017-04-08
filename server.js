@@ -315,6 +315,22 @@ function createPost(data1,data2,data3){
         ${content1}
 		</h4>
         </div>
+        
+        <div id="comments"><br>
+         <p id="user" class="fontcolor1">Dear ${username} you can write your comments to this article below</p>
+            
+            <table>
+            <tr>
+            <td colspan="3">     </td>
+            <td><textarea id="user_post" cols="75" rows="10" maxlength="1000"></textarea></td>
+            </tr>
+            </table>
+            
+            <button id="submit" >Post</button>
+            <p id="p1"></p>
+            </pre>
+          </div>
+        
            <a class ="hyperlinks1" href="/">Home</a><hr>
         <div id="feedback" class="fontcolor1">
             <pre class="text-table">
@@ -330,6 +346,66 @@ function createPost(data1,data2,data3){
             </table>
            </pre>
         </div>
+        ?*
+        <script>
+    document.getElementById("t").innerHTML=Date();
+        var button=document.getElementById("submit");
+    var para=document.getElementById("p1");
+            button.onclick=function()
+            {
+               var request = new XMLHttpRequest();
+               
+                request.onreadystatechange=function()
+                {
+                    if(request.readyState===XMLHttpRequest.DONE)
+                    {
+                        if(request.status===200)
+                        {
+                          para.innerHTML="Your article posted successfuly !... Will be publised soon... after approval ";
+ 
+                        }
+                        else
+                        {
+                          para.innerHTML="Oops ! submission failed ";
+                        }
+                    }
+                }
+              var topic=document.getElementById("topic").value;
+              var user_post=document.getElementById("user_post").value;  
+              var username_post= "ias"; 
+              console.log(topic);
+              console.log(user_post);
+              console.log(username_post);
+              request.open('POST','/pa/post',true);
+              request.setRequestHeader('Content-Type', 'application/json');
+              //request.send(JSON.stringify({user_post:user_post, topic:topic}));
+              request.send(JSON.stringify({user_post:user_post, topic:topic, username_post:username_post}));
+              para.innerHTML="Posting.............";
+            };
+            
+             window.onload= function()
+    {    
+      var request1= new XMLHttpRequest();
+    
+      request1.onreadystatechange=function()
+      {
+        if(request1.readyState==4 && request1.status==200 )
+        { 
+             var allarticles =request1.responseText;
+             var div=document.getElementById("content");
+             div.innerHTML=allarticles+'<br>';
+            
+        }
+        
+     };
+    
+    request1.open('GET',"/ga/publish",true);
+    request1.send(null);
+   };
+   
+            
+    </script>
+        */
     </body>
 </html>
 `;
