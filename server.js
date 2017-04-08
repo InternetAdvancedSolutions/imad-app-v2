@@ -539,7 +539,6 @@ app.get('/ga/publish', function(req,res){
 app.get('/aa/archive/:ids', function(req,res){
   if (req.session && req.session.auth && req.session.auth.userId ) 
 {   
-    
      pool.query('SELECT * FROM "posts" ', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -549,12 +548,8 @@ app.get('/aa/archive/:ids', function(req,res){
        var user= result.rows[ida].posters_name;
        var topic=result.rows[ida].topic;
        var commenter = req.session.auth.userId;
-       /*res.send('<html>'+'<head>'+'<title>'+"IAS forum"+'</title>'+'</head>'+'<body bgcolor="lightblue">'+'<p background-color="#123456">'+ '<h1 fontcolor="white">'+"IAS Open Forum"+'</h1>'+'</p>'+ '<h2>' +topic+'</h2>' + '<h3>'+"This article was posted by  " +user+'</h3>'+'<h4>'+art+'</h4>'+'</body>'+ '</html>'); 
-       */
-       
        res.send(createPost(art,user,topic,commenter));
-       
-      }
+       }
        });
 }
 else {
