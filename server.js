@@ -349,7 +349,7 @@ function createPost(data1,data2,data3){
             </table>
            </pre>
         </div>
-        <!--
+        
         <script>
         var button=document.getElementById("submit");
         var para=document.getElementById("p2");
@@ -360,7 +360,7 @@ function createPost(data1,data2,data3){
             }
             
     </script>
-    -->
+    
         
     </body>
 </html>
