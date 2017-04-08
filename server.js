@@ -435,13 +435,6 @@ app.post('/lg/login', function (req, res) {
    });
 });
 
-
-app.get('/lo/logout', function (req, res) {
-   delete req.session.auth;
-   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
-});
-
-
 app.get('/:articleName',function(req,res){
     
         if (req.session && req.session.auth && req.session.auth.userId ) {
@@ -556,6 +549,11 @@ else {
        res.status(400).send('You are not logged in....Please go to Login page and sign-in');
    }
 
+});
+
+app.get('/lo/logout', function (req, res) {
+   delete req.session.auth;
+   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
 var port = 8080; 
