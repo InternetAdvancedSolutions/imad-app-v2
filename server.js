@@ -370,7 +370,7 @@ button.onclick=function()
                     {
                         if(request.status===200)
                         {
-                          var user_comment = document.getElementByI("user_comments");
+                          var user_comment = document.getElementById("user_comments");
                          para2.innerHTML ='<span id="blue">'+ " ${commenter}"+'</span>'+'<br>' + user_comment.value; 
                         }
                         else
