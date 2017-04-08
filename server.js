@@ -333,12 +333,10 @@ function createPost(data1,data2,data3,data4){
             <div id="n">
             <p id="c"></p> 
             <hr>
-            <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
-            </div>
-            </pre>
-          </div>
-        
-           <a class ="hyperlinks1" href="/">Home</a><hr>
+            <pre>
+            <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a>                 <a class ="hyperlinks1" href="/">Home</a>
+            <pre>
+            <hr>
            <div id="feedback" class="fontcolor1">
             <pre class="text-table">
             <table   colspan="4">
