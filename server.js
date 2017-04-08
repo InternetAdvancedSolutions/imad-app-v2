@@ -357,7 +357,7 @@ function createPost(data1,data2,data3,data4){
         
             button.onclick=function()
             { var user_comment = document.getElementById("user_comments");
-              para2.innerHTML = user_comment.value + "  by...."+" ${commenter}"; 
+              para2.innerHTML ='<span id="blue">'+ " ${commenter}"+'</span>'+'<br>' +user_comment.value; 
               console.log(user_comment.value);
             }
             
