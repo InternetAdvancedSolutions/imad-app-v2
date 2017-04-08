@@ -330,7 +330,7 @@ function createPost(data1,data2,data3,data4){
             </table>
             
             <button id="submit" >Submit</button>
-            <p id="c"></p>          by${commenter}
+            <pre><p id="c"></p>         comment by ${commenter}</pre>
             
             </pre>
           </div>
@@ -357,7 +357,7 @@ function createPost(data1,data2,data3,data4){
         
             button.onclick=function()
             { var user_comment = document.getElementById("user_comments");
-              para2.innerHTML = user_comment.value; 
+              para2.innerHTML = user_comment.value + " comment by"+" ${commenter}"; 
               console.log(user_comment.value);
             }
             
