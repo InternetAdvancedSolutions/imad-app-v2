@@ -355,7 +355,7 @@ function createPost(data1,data2,data3){
         var para=document.getElementById("p2");
         
             button.onclick=function()
-            { var user_comments= document.getElementById("user_comments").value();
+            { var user_comments= document.getElementById("user_comments").value;
               para.innerHTML=user_comments; 
             }
             
