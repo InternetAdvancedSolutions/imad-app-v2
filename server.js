@@ -317,7 +317,7 @@ function createPost(data1,data2,data3){
         </div>
         
         <div id="comments"><br>
-        // <p id="user" class="fontcolor1">Dear ${username}
+        
         <p>you can write your comments to this article below</p>
             
             <table>
@@ -347,7 +347,7 @@ function createPost(data1,data2,data3){
             </table>
            </pre>
         </div>
-        /*
+        <!--
         <script>
     document.getElementById("t").innerHTML=Date();
         var button=document.getElementById("submit");
@@ -406,7 +406,8 @@ function createPost(data1,data2,data3){
    
             
     </script>
-        */
+    -->
+        
     </body>
 </html>
 `;
