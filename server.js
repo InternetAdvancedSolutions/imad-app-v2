@@ -550,10 +550,45 @@ else {
    }
 
 });
-
+var lout= `
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Thanks for Visiting</title>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <link rel="icon" href="/ui/SINGH_ASHUTOSH.jpg">
+        <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
+    </head>
+    <body>
+    <div class="container" >   
+        <div id="logo" class="center" >
+        <table><tr><td>
+        <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
+        <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
+        <h3 id ="h3" class ="center text-medium bold">Logged out!  Thanks for visiting</h3></td></tr>
+        </table> 
+        <hr>
+        <pre class="fontcolor1">
+        <a class ="hyperlinks" href="/">Home</a> | <span class="fontcolor1" align="right" id="t"></span> 
+        </pre>
+    </div>
+       
+    <div id="main" class="center text-big bold">
+        Learning by Sharing
+    </div>
+    <p></p>
+    <div id="main" class="center bold">
+        Knowledge increases by giving...teaching is the best way of learning !
+    </div>
+    <hr>
+     </body>
+</html>
+`;
 app.get('/lo/logout', function (req, res) {
    delete req.session.auth;
-   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
+   res.send(lout);
+   /*res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');*/
 });
 
 var port = 8080; 
