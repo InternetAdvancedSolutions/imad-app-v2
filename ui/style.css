@@ -41,12 +41,12 @@ body {
 }
 
 .blink_me {   
-  animation-duration: 3000ms;
+  animation-duration: 1000ms;
   animation-name: blink;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-/*
+
 @keyframes blink {
   from {
     opacity: 1;
@@ -56,7 +56,7 @@ body {
     opacity: 0.25;
   }
 }
-*/
+/*
 @keyframes blink {
   0% {
     opacity: 1;
@@ -83,7 +83,7 @@ body {
    color: white;
  }
 }
-
+*/
         #logo {background-color:#123456; padding:5px; height:250px;}
         #feedback {background-color:#123456;}
         #t {color:white;}
