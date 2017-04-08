@@ -89,7 +89,7 @@ function createTemplate(data1,data2){
         <meta charset="UTF-8">
         <title>${title}</title>
         <link href="/ui/style.css" rel="stylesheet" />
-        <link rel="icon" href="ui/SINGH_ASHUTOSH.jpg">
+        <link rel="icon" href="/ui/SINGH_ASHUTOSH.jpg">
         <!--<meta name="viewport" content="width-device-width, initial-scale-1">-->
     </head>
     <body>
