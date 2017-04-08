@@ -330,7 +330,7 @@ function createPost(data1,data2,data3,data4){
             </table>
             
             <button id="submit" >Submit</button>
-            <pre><p id="c"></p>         comment by ${commenter}</pre>
+            <p id="c"></p> 
             
             </pre>
           </div>
