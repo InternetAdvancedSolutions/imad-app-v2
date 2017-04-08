@@ -329,7 +329,7 @@ function createPost(data1,data2,data3){
             </table>
             
             <button id="submit" >Submit</button>
-            <p id="p2"></p>
+            <span id="p2"></span>
             
             </pre>
           </div>
@@ -352,11 +352,11 @@ function createPost(data1,data2,data3){
         
         <script>
         var button=document.getElementById("submit");
-        var para=document.getElementById("p2");
+        var para2=document.getElementById("p2");
         
             button.onclick=function()
             { var user_comments= document.getElementById("user_comments").value;
-              para.innerHTML=user_comments; 
+              para2.innerHTML=user_comments; 
             }
             
     </script>
