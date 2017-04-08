@@ -346,7 +346,7 @@ function createPost(data1,data2,data3){
             </table>
            </pre>
         </div>
-        ?*
+        /*
         <script>
     document.getElementById("t").innerHTML=Date();
         var button=document.getElementById("submit");
