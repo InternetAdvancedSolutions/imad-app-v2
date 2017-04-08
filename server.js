@@ -564,13 +564,13 @@ var lout= `
     <div class="container" >   
         <div id="logo" class="center" >
         <table><tr><td>
-        <img src="ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
+        <img src="/ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
-        <h3 id ="h3" class ="center text-medium bold">Logged out!  Thanks for visiting</h3></td></tr>
+        <h3 id ="h3" class ="center text-medium bold"><pre>Logged out!      Thanks for visiting</pre></h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
-        <a class ="hyperlinks" href="/">Home</a> | <span class="fontcolor1" align="right" id="t"></span> 
+        <a class ="hyperlinks" href="/">Back to Home</a> 
         </pre>
     </div>
        
