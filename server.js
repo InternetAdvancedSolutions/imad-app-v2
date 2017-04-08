@@ -355,9 +355,9 @@ function createPost(data1,data2,data3){
         var para2=document.getElementById("p2");
         
             button.onclick=function()
-            { var user_comment = document.getElementById("user_comments").value;
-              para2.innerHTML = user_comment; 
-              console.log(user_comment);
+            { var user_comment = document.getElementById("user_comments");
+              para2.innerHTML = user_comment.value; 
+              console.log(user_comment.value);
             }
             
     </script>
