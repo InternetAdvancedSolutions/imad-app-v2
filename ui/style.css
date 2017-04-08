@@ -41,7 +41,7 @@ body {
 }
 
 .blink_me {   
-  animation-duration: 2000ms;
+  animation-duration: 3000ms;
   animation-name: blink;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -64,18 +64,18 @@ body {
   }
 
   25% {
-    color: red;
+    color: green;
     opacity: 0;
   }
 
   50% {
     opacity: 1;
-    color: red;
+    color: green;
   }
 
   75% {
    opacity: 0;
-   color: red;
+   color: green;
  }
 
  100% {
