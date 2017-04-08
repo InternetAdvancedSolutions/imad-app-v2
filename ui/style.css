@@ -60,11 +60,11 @@ body {
 @keyframes blink {
   0% {
     opacity: 1;
-    color: pink;
+    color: white;
   }
 
   25% {
-    color: green;
+    color: red;
     opacity: 0;
   }
 
@@ -80,7 +80,7 @@ body {
 
  100% {
    opacity: 1;
-   color: pink;
+   color: white;
  }
 }
 
