@@ -379,7 +379,7 @@ button.onclick=function()
                         }
                     }
         }
-              var user_comment = document.getElementById("user_comments");
+              var user_comment = document.getElementById("user_comments").value;
               var commenter_name= "${commenter}"; 
               console.log(user_comment);
               console.log(commenter_name);
