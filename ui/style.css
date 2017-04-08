@@ -74,12 +74,12 @@ body {
   }
 
   75% {
-   opacity: 0;
+   opacity: 1;
    color: green;
  }
 
  100% {
-   opacity: 1;
+   opacity: 0;
    color: white;
  }
 }
