@@ -332,6 +332,8 @@ function createPost(data1,data2,data3,data4){
             <button id="submit" >Submit</button>
             <div id="n">
             <p id="c"></p> 
+            <hr>
+            <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
             </div>
             </pre>
           </div>
