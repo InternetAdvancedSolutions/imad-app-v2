@@ -566,7 +566,7 @@ var lout= `
         <table><tr><td>
         <img src="/ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
         <td><h2 id="h1" class="center text-big bold">Internet Advanced Solutions (IAS)</h2>
-        <h3 id ="h3" class ="center text-medium bold"><pre>Logged out!      Thanks for visiting</pre></h3></td></tr>
+        <h3 id ="h3" class ="center text-medium bold"><pre>Logged out!  Thanks for visiting</pre></h3></td></tr>
         </table> 
         <hr>
         <pre class="fontcolor1">
@@ -588,7 +588,7 @@ var lout= `
 app.get('/lo/logout', function (req, res) {
    delete req.session.auth;
    res.send(lout);
-   /*res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');*/
+  
 });
 
 var port = 8080; 
