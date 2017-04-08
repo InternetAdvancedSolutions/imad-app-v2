@@ -359,9 +359,37 @@ function createPost(data1,data2,data3,data4){
         var para2=document.getElementById("c");
         
             button.onclick=function()
-            { var user_comment = document.getElementById("user_comments");
+            { /*var user_comment = document.getElementById("user_comments");
+              para2.innerHTML ='<span id="blue">'+ " ${commenter}"+'</span>'+'<br>' +user_comment.value; */
+             
+              var request = new XMLHttpRequest();
+               
+                request.onreadystatechange=function()
+                {
+                    if(request.readyState===XMLHttpRequest.DONE)
+                    {
+                        if(request.status===200)
+                        {
+                     var user_comment = document.getElementByI("user_comments");
               para2.innerHTML ='<span id="blue">'+ " ${commenter}"+'</span>'+'<br>' +user_comment.value; 
-              console.log(user_comment.value);
+                        }
+                        else
+                        {
+                          para.innerHTML="Oops ! submission failed ";
+                        }
+                    }
+                }
+              var user_comment = document.getElementById("user_comments");
+              var commenter_name= "${commenter}"; 
+              console.log(user_comment);
+              console.log(commenter_name);
+              request.open('POST','/com/submit-comments',true);
+              request.setRequestHeader('Content-Type', 'application/json');
+              request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name}));
+              para.innerHTML="submitting you comments.............";
+            };
+            
+             
             }
             
     </script>
@@ -589,6 +617,32 @@ app.get('/lo/logout', function (req, res) {
    delete req.session.auth;
    res.send(lout);
   
+});
+
+app.post('/com/submit-comments',function(req,res){
+   var comment=req.body.user_comment;
+   var commenter=req.body.commenter_name;
+    console.log(comment);
+    console.log(commenter_name);
+   pool.query('INSERT INTO "comments" (user_comment,user_name) VALUES ($1,$2)',[comment,commenter],function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send("posted");
+      }
+   });
+});  
+
+app.get('/co/get-comments', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT * FROM comments', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
 });
 
 var port = 8080; 
