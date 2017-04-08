@@ -329,7 +329,7 @@ function createPost(data1,data2,data3){
             </table>
             
             <button id="submit" >Submit</button>
-            <span id="p2"></span>
+            <p fontcolor="#000" id="p2"></p>
             
             </pre>
           </div>
