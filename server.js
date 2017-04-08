@@ -352,7 +352,7 @@ function createPost(data1,data2,data3){
         
         <script>
         var button=document.getElementById("submit");
-        var para2=document.getElementById("p2");
+        var para2=document.getElementById("c");
         
             button.onclick=function()
             { var user_comment = document.getElementById("user_comments");
