@@ -317,12 +317,13 @@ function createPost(data1,data2,data3){
         </div>
         
         <div id="comments"><br>
-         <p id="user" class="fontcolor1">Dear ${username} you can write your comments to this article below</p>
+        // <p id="user" class="fontcolor1">Dear ${username}
+        <p>you can write your comments to this article below</p>
             
             <table>
             <tr>
             <td colspan="3">     </td>
-            <td><textarea id="user_post" cols="75" rows="10" maxlength="1000"></textarea></td>
+            <td><textarea id="user_comments" cols="75" rows="10" maxlength="1000"></textarea></td>
             </tr>
             </table>
             
