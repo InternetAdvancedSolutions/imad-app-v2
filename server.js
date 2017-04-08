@@ -311,8 +311,8 @@ function createPost(data1,data2,data3,data4){
         Learning by Sharing
         </div>
         <pre>
-            <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a>                 <a class ="hyperlinks1" href="/">Home</a>
-        </pre>
+           <h4> <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a> </h4>
+         </pre>
         <div id="content">
         <h2>This article is contributed by ${poster}</h2>
 		<h4>
