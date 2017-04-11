@@ -527,7 +527,7 @@ app.post('/pa/post',function(req,res){
       }
    });
 });  
-/*
+
 app.get('/ga/publish', function(req,res){
     
     
@@ -543,7 +543,7 @@ app.get('/ga/publish', function(req,res){
                     var n =1;
                      res.send(createArticle(ar,n)); 
           
-                  
+               /*   
                  for(var i=result.rows.length; i>=0;i--)
                   {   
                   var ar = result.rows[i];
@@ -554,7 +554,7 @@ app.get('/ga/publish', function(req,res){
                  }
 });
 });
-*/
+
 
 app.get('/aa/archive/:ids', function(req,res){
   if (req.session && req.session.auth && req.session.auth.userId ) 
