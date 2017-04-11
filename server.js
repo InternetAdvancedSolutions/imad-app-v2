@@ -596,7 +596,8 @@ app.get('/aa/archive/:ids', function(req,res){
       }else{
      //  var ida = req.params.ids;
        //var art = result.rows[ida].user_post;
-       var art = JSON.stringify(result.rows[0].user_post);
+       //var art = JSON.stringify(result.rows[0].user_post);
+       var art = result.rows[0].user_post;
        //var user= result.rows[ida].posters_name;
        var user= result.rows[0].posters_name;
        //var topic=result.rows[ida].topic;
