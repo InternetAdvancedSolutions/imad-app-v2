@@ -400,7 +400,7 @@ button.onclick=function(){
         if(request1.readyState==4 && request1.status==200 )
         { 
              var allarticles =JSON.parse(request1.responseText);
-             var commentsList;
+             var commentsList=<hr>;
              for(i=0;i<allarticles.length;i++)
              {
                  commentsList += '<span id ="blue">'+allarticles[i].user_name+'</span>'+'<br>'+ allarticles[i].user_comment;
