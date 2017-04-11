@@ -403,7 +403,7 @@ button.onclick=function(){
              var commentsList;
              for(i=0;i<allarticles.length;i++)
              {
-                 commentsList= '<span id ="blue">'+allarticles[i].user_name+'</span>'+'<br>'+ allarticles[i].user_comment;
+                 commentsList += '<span id ="blue">'+allarticles[i].user_name+'</span>'+'<br>'+ allarticles[i].user_comment;
              }
              var para3=document.getElementById("d");
              para3.innerHTML=commentsList;
