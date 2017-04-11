@@ -325,7 +325,7 @@ function createPost(data1,data2,data3,data4,data5){
         <hr>
         <div id="comments"><br>
         
-        <p>you can write your comments to this article below</p>
+        <p>Dear ${commenter} you can write your comments to this article below</p>
             
             <table>
             <tr>
@@ -386,8 +386,8 @@ button.onclick=function()
               console.log(commenter_name);
               request.open('POST','/com/submit-comments',true);
               request.setRequestHeader('Content-Type', 'application/json');
-              request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name}));
-              para2.innerHTML="submitting you comments.............";
+              request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name, post_id:post_id}));
+              para2.innerHTML="submitting your comments.............thanks" +"  ${commenter}";
 };
             
     </script>
