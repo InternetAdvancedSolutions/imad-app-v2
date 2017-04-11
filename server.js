@@ -117,14 +117,14 @@ function createTemplate(data1,data2){
     <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
     <hr>
         <div id="feedback"><br>
-         <p id="user" class="fontcolor1">Dear ${username} Welcome to IAS forum !, please create a topic and write your article below</p>
+         <p id="user" class="fontcolor1">Dear ${username} Welcome to IAS forum !, please  write your article below</p>
         <p class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
             <table>
             <tr>
             <td colspan="3">     </td><td><textarea id="user_post" cols="75" rows="25" maxlength="1000"></textarea><br>
-            </td><td rowspan="2"><div class="fontcolor1">Archived Posts</div><div id="content"></div><br></td>
+            </td><td rowspan="2"><div class="fontcolor1">Published Articles</div><div id="content"></div><br></td>
             </tr>
             </table>
             </pre>
@@ -301,7 +301,7 @@ function createPost(data1,data2,data3,data4,data5){
         <td>
         <img src="/ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
        
-        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2><h3 id ="h3" class ="center text-medium bold">Topic: ${heading1}</h3></h6></td>
+        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2><h3 id ="h3" class ="center text-medium bold">Article: ${heading1}</h3></h6></td>
         </tr>
         </table> 
         <hr>
@@ -625,7 +625,7 @@ app.post('/com/submit-comments',function(req,res){
     console.log(comment);
     console.log(commenter);
     console.log(post_id);
-   pool.query('INSERT INTO "comments" (user_comment,user_name,post_id) VALUES ($1,$2,$3)',[comment,commenter],function (err, result) {
+   pool.query('INSERT INTO "comments" (user_comment,user_name,post_id) VALUES ($1,$2,$3)',[comment,commenter,post_id],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
