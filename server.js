@@ -301,7 +301,7 @@ function createPost(data1,data2,data3,data4,data5){
         <td>
         <img src="/ui/SINGH_ASHUTOSH.jpg" class="img-medium" align="center" ></td>
        
-        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2><h3 id ="h3" class ="center text-medium bold"> ${heading1}</h3><h6 id="h2"> is contributed by ${poster}</h6></td>
+        <td><h2 id="h1" class="center text-big bold" align="center">Internet Advanced Solutions (IAS)</h2><h3 id ="h3" class ="center text-medium bold">Topic: ${heading1}</h3></h6></td>
         </tr>
         </table> 
         <hr>
@@ -383,6 +383,7 @@ button.onclick=function()
               var post_id_ = "${post_id}";
               console.log(user_comment);
               console.log(commenter_name);
+              console.log(post_id_);
               request.open('POST','/com/submit-comments',true);
               request.setRequestHeader('Content-Type', 'application/json');
               request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name, post_id_:post_id_}));
