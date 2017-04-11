@@ -659,7 +659,10 @@ app.post('/com/submit-comments',function(req,res){
 app.get('/co/get-comments', function (req, res) {
    // make a select request
    // return a response with the results
-   pool.query('SELECT * FROM comments', function (err, result) {
+  // pool.query('SELECT * FROM comments', function (err, result) {
+        var post_id= req.body.post_id_;
+         console.log(post_id);
+  pool.query("select * from comments where post_id = $1",[], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
