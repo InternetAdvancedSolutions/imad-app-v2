@@ -119,13 +119,13 @@ function createTemplate(data1,data2){
     <hr>
         <div id="feedback"><br>
          <p id="user" class="fontcolor1">Dear ${username} Welcome to IAS forum !, please  write your article below</p>
-        <p class="fontcolor1">Create Topic :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
+        <p class="fontcolor1">Article Heading :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
             <table>
             <tr>
             <td colspan="3">     </td><td><textarea id="user_post" cols="75" rows="25" maxlength="1000"></textarea><br>
-            </td><td rowspan="2"><div class="fontcolor1">Published Articles</div><div id="content"></div><br></td>
+            </td><td rowspan="2"><div class="fontcolor1">Must read Articles</div><br><div id="content"></div><br></td>
             </tr>
             </table>
             </pre>
@@ -315,7 +315,7 @@ function createPost(data1,data2,data3,data4,data5){
         Learning by Sharing
         </div>
         <pre>
-           <h3> <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a> </h3>
+           <h2> <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a> </h2>
          </pre>
         <div id="content">
         <h2>This article is contributed by ${poster}</h2>
@@ -326,7 +326,7 @@ function createPost(data1,data2,data3,data4,data5){
         <hr>
         <div id="comments"><br>
         
-        <p>Dear ${commenter} you can write your comments to this article below</p>
+        <p>Dear ${commenter} add your comments/remarks/queries to this article here</p>
             
             <table>
             <tr>
