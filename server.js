@@ -61,17 +61,17 @@ function createArticle(data,idd){
    // var htmlarticle=`<a href="/aa/archive/${ids}" class="fontcolor1">${article1}</a>`;
    var htmlarticle=`
    
-    <a href="/aa/archive/12" class="fontcolor1">How to program a microcontroller</a><br>
-      <a href="/aa/archive/13" class="fontcolor1">Front-end development</a><br>
-   <a href="/aa/archive/14" class="fontcolor1">google charts</a><br>
-   <a href="/aa/archive/8" class="fontcolor1">Coding Tips</a><br>
-   <a href="/aa/archive/6" class="fontcolor1">cyber means?</a><br>
-   <a href="/aa/archive/5" class="fontcolor1">what is 404?</a><br>
-   <a href="/aa/archive/7" class="fontcolor1">javaScript</a><br>
-   <a href="/aa/archive/0" class="fontcolor1">what is html?</a><br>
-   <a href="/aa/archive/1" class="fontcolor1">what is xml?</a><br>
-   <a href="/aa/archive/2" class="fontcolor1">what is css?</a><br>
-   <a href="/aa/archive/3" class="fontcolor1">java is language to program computers</a><br>
+    <a href="/aa/archive/29" class="fontcolor1">How to program a microcontroller</a><br>
+      <a href="/aa/archive/26" class="fontcolor1">Front-end development</a><br>
+   <a href="/aa/archive/25" class="fontcolor1">google charts</a><br>
+   <a href="/aa/archive/20" class="fontcolor1">Coding Tips</a><br>
+   <a href="/aa/archive/19" class="fontcolor1">cyber means?</a><br>
+   <a href="/aa/archive/18" class="fontcolor1">what is 404?</a><br>
+   <a href="/aa/archive/21" class="fontcolor1">javaScript</a><br>
+   <a href="/aa/archive/13" class="fontcolor1">what is html?</a><br>
+   <a href="/aa/archive/14" class="fontcolor1">what is xml?</a><br>
+   <a href="/aa/archive/15" class="fontcolor1">what is css?</a><br>
+   <a href="/aa/archive/16" class="fontcolor1">java is language to program computers</a><br>
    `;
         return htmlarticle;
     }
