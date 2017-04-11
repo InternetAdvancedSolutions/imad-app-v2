@@ -406,7 +406,7 @@ button.onclick=function(){
                  commentsList= '<span id ="blue">'+allarticles[i].user_name+'</span>'+'<br>'+ allarticles[i].user_comment;
              }
              var para3=document.getElementById("d");
-             para3.innerHTML=commmentList;
+             para3.innerHTML=commmentsList;
             
         }
         
