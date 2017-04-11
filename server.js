@@ -551,7 +551,7 @@ app.get('/ga/publish', function(req,res){
                    res.send(createArticle(ar,id)); 
                     }
                      
-                 }
+                 }*/
 });
 });
 
