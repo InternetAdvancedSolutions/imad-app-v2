@@ -401,7 +401,7 @@ button.onclick=function(){
         { 
              var allarticles =request1.responseText;
              var commentsList;
-             for(i=0;i<allsrticles.length;i++)
+             for(i=0;i<allarticles.length;i++)
              {
                  commentsList= '<span id ="blue">'+allarticles[i].user_name+'</span>'+'<br>'+ allarticles[i].user_comment;
              }
