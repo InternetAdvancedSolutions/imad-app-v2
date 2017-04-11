@@ -407,8 +407,8 @@ button.onclick=function(){
         
      };
      var post_id_ = ${post_id};
-    request.setRequestHeader('Content-Type', 'application/json');
-    request.send(JSON.stringify({ post_id_:post_id_}));
+    request1.setRequestHeader('Content-Type', 'application/json');
+    request1.send(JSON.stringify({ post_id_:post_id_}));
     request1.open('GET',"/co/get-comments",true);
     request1.send(null);
    };
