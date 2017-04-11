@@ -125,7 +125,7 @@ function createTemplate(data1,data2){
             <table>
             <tr>
             <td colspan="3">     </td><td><textarea id="user_post" cols="75" rows="25" maxlength="1000"></textarea><br>
-            </td><td rowspan="2"><div class="fontcolor1">Must read Articles</div><br><div id="content"></div><br></td>
+            </td><td rowspan="2"><div class="fontcolor1">Most read Articles</div><br><div id="content"></div><br></td>
             </tr>
             </table>
             </pre>
@@ -314,7 +314,7 @@ function createPost(data1,data2,data3,data4,data5){
         <div id="main" class="center text-big bold">
         Learning by Sharing
         </div>
-         This article is contributed by ${poster}</h2>
+         <h2>This article is contributed by <span id="blue">${poster}</apan></h2>
 		<h4>
         ${content1}
 		</h4>
