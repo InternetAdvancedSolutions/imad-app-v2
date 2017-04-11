@@ -399,7 +399,7 @@ button.onclick=function(){
       {
         if(request1.readyState==4 && request1.status==200 )
         { 
-             var allarticles =request1.responseText;
+             var allarticles =JSON.parse(request1.responseText);
              var commentsList;
              for(i=0;i<allarticles.length;i++)
              {
@@ -407,7 +407,7 @@ button.onclick=function(){
              }
              var para3=document.getElementById("d");
             // para3.innerHTML=commentsList;
-            para3.innerHtML=allarticles;
+            para3.innerHTML=allarticles;
             
         }
         
