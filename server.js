@@ -527,7 +527,7 @@ app.post('/pa/post',function(req,res){
       }
    });
 });  
-
+/*
 app.get('/ga/publish', function(req,res){
     
     
@@ -554,7 +554,7 @@ app.get('/ga/publish', function(req,res){
                  }
 });
 });
-
+*/
 app.get('/aa/archive/:ids', function(req,res){
   if (req.session && req.session.auth && req.session.auth.userId ) 
 {   
