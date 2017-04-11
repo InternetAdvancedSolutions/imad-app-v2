@@ -540,8 +540,10 @@ app.get('/db/:n', function(req,res){pool.query("SELECT * FROM course WHERE id=$1
 
 
 app.post('/pa/post',function(req,res){
-   var text=req.body.user_post;
-   var topic=req.body.topic;
+   var text1=req.body.user_post;
+   var topic1=req.body.topic;
+   var text=text1.trim();
+   var topic=topic1.trim();
    var posters_name= req.body.username_post;
     console.log(text);
     console.log(topic);
