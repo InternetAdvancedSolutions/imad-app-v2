@@ -588,11 +588,12 @@ app.get('/ga/publish', function(req,res){
 app.get('/aa/archive/:ids', function(req,res){
   if (req.session && req.session.auth && req.session.auth.userId ) 
 {   
-     pool.query('SELECT * FROM "posts" ', function (err, result) {
+    var match_id= req.params.ids;
+     pool.query('SELECT * FROM "posts" WHERE id=$1',[match_id], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       }else{
-       var ida = req.params.ids;
+     //  var ida = req.params.ids;
        var art = result.rows[ida].user_post;
        var user= result.rows[ida].posters_name;
        var topic=result.rows[ida].topic;
