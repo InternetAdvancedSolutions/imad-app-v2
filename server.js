@@ -400,8 +400,13 @@ button.onclick=function(){
         if(request1.readyState==4 && request1.status==200 )
         { 
              var allarticles =request1.responseText;
+             var commentsList;
+             for(i=0;i<allsrticles.length;i++)
+             {
+                 commentsList= '<span id ="blue">'+allarticles[i].user_name+'</span>'+'<br>'+ allarticles[i].user_comment;
+             }
              var para3=document.getElementById("d");
-             para3.innerHTML=allarticles+'<br>';
+             para3.innerHTML=commmentList;
             
         }
         
