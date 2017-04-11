@@ -623,6 +623,7 @@ app.post('/com/submit-comments',function(req,res){
    var post_id= req.body.post_id_;
     console.log(comment);
     console.log(commenter);
+    console.log(post_id);
    pool.query('INSERT INTO "comments" (user_comment,user_name,post_id) VALUES ($1,$2,$3)',[comment,commenter],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
