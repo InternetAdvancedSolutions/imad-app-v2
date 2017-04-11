@@ -380,7 +380,7 @@ button.onclick=function()
         }
               var user_comment = document.getElementById("user_comments").value;
               var commenter_name= "${commenter}"; 
-              var post_id_ = "${post_id}";
+              var post_id_ = ${post_id};
               console.log(user_comment);
               console.log(commenter_name);
               console.log(post_id_);
