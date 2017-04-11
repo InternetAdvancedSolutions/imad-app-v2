@@ -658,7 +658,7 @@ app.post('/com/submit-comments',function(req,res){
    });
 });  
 
-app.get('/co/get-comments', function (req, res) {
+app.post('/co/get-comments', function (req, res) {
    // make a select request
    // return a response with the results
   // pool.query('SELECT * FROM comments', function (err, result) {
