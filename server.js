@@ -118,7 +118,7 @@ function createTemplate(data1,data2){
     <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a><br>
     <hr>
         <div id="feedback"><br>
-         <p id="user" class="fontcolor1">Dear ${username} Welcome to IAS forum !, please  write your article below</p>
+         <p id="user" class="fontcolor1">Dear ${username} Welcome to IAS forum !, please  post your article below</p>
         <p class="fontcolor1">Article Heading :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
@@ -307,14 +307,13 @@ function createPost(data1,data2,data3,data4,data5){
         </table> 
         <hr>
         <pre class="fontcolor1">
-        | <a class ="hyperlinks" href="/">Home</a> | <a class ="hyperlinks" href="/db/6">IAS Code Library</a><hr>
+        | <a class ="hyperlinks" href="/">Home</a> | <a class ="hyperlinks" href="/db/6">IAS Code Library</a> | <a class="hyperlinks" href="/lo/logout" align="right">Logout</a><hr>
         </pre>
        </div>
        
         <div id="main" class="center text-big bold">
         Learning by Sharing
         </div>
-        <h2> <a class="hyperlinks1" href="/lo/logout" align="right">Logout</a> 
          This article is contributed by ${poster}</h2>
 		<h4>
         ${content1}
