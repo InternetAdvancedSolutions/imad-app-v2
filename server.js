@@ -663,7 +663,7 @@ app.get('/co/get-comments', function (req, res) {
    // return a response with the results
   // pool.query('SELECT * FROM comments', function (err, result) {
         var post_id= req.body.post_id_;
-        var post_id =25;
+        //var post_id =25;
          console.log(post_id);
   pool.query("select * from comments where post_id = $1",[post_id], function (err, result) {
       if (err) {
