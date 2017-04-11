@@ -597,12 +597,12 @@ app.get('/aa/archive/:ids', function(req,res){
        //var art = result.rows[ida].user_post;
        var art = JSON.stringify(result.rows[0].user_post);
        //var user= result.rows[ida].posters_name;
-       var user= result.posters_name;
+       var user= result.rows[0].posters_name;
        //var topic=result.rows[ida].topic;
-       var topic=result.topic;
+       var topic=result.rows[0].topic;
        var commenter = req.session.auth.userId;
        //var post_id = result.rows[ida].id;
-       var post_id = result.id;
+       var post_id = result.rows[0].id;
        res.send(createPost(art,user,topic,commenter,post_id));
        }
        });
