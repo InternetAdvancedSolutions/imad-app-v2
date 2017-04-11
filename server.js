@@ -401,7 +401,7 @@ button.onclick=function(){
         { 
              var allarticles =JSON.parse(request1.responseText);
              var commentsList='<hr>';
-             for(i=0;i<allarticles.length;i++)
+             for(i=allarticles.length-1;i>=0;i--)
              {
                  commentsList += '<p id ="blue">'+ allarticles[i].user_name +'<br>'+ '<span id ="black">' + allarticles[i].user_comment+'</span>'+'</p>';
              }
