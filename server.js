@@ -594,11 +594,15 @@ app.get('/aa/archive/:ids', function(req,res){
           res.status(500).send(err.toString());
       }else{
      //  var ida = req.params.ids;
+       //var art = result.rows[ida].user_post;
        var art = result.rows[ida].user_post;
-       var user= result.rows[ida].posters_name;
-       var topic=result.rows[ida].topic;
+       //var user= result.rows[ida].posters_name;
+       var user= result.posters_name;
+       //var topic=result.rows[ida].topic;
+       var topic=result.topic;
        var commenter = req.session.auth.userId;
-       var post_id = result.rows[ida].id;
+       //var post_id = result.rows[ida].id;
+       var post_id = result.id;
        res.send(createPost(art,user,topic,commenter,post_id));
        }
        });
