@@ -550,8 +550,8 @@ app.get('/ga/publish', function(req,res){
                     var id = i;
                    res.send(createArticle(ar,id)); 
                     }
-                     
-                 }*/
+                   */  
+                 }
 });
 });
 
