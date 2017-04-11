@@ -334,6 +334,7 @@ function createPost(data1,data2,data3,data4,data5){
             <button id="submit" >Submit</button>
             <div id="n">
             <p id="c"></p> 
+            <h3>Message Board</h3>
             <span id="d"></span>
             <hr>
             <div id="feedback" class="fontcolor1">
