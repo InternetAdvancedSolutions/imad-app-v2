@@ -119,12 +119,12 @@ function createTemplate(data1,data2){
     <hr>
         <div id="feedback"><br>
          <p id="user" class="fontcolor1">Dear ${username} Welcome to IAS forum !, please  post your article below</p>
-        <p class="fontcolor1">Article Heading :<textarea id="topic" cols="100" rows="1" maxlength="100"></textarea></p>
+        <p class="fontcolor1">Article Heading :<textarea id="topic" cols="100" rows="1" maxlength="100" autofocus required></textarea></p>
             <button id="submit" >Post</button>
             <p id="p1"></p>
             <table>
             <tr>
-            <td colspan="3">     </td><td><textarea id="user_post" cols="75" rows="25" maxlength="1000"></textarea><br>
+            <td colspan="3">     </td><td><textarea id="user_post" cols="75" rows="25" maxlength="1000" autofocus required></textarea><br>
             </td><td rowspan="2"><div class="fontcolor1">Most read Articles</div><br><div id="content"></div><br></td>
             </tr>
             </table>
@@ -155,8 +155,10 @@ function createTemplate(data1,data2){
                         }
                     }
                 }
-              var topic=document.getElementById("topic").value;
-              var user_post=document.getElementById("user_post").value;  
+              var topic1=document.getElementById("topic").value;
+              var user_post1=document.getElementById("user_post").value; 
+              var topic=topic1.trim();
+              var user_post.trim();
               var username_post= "${username}"; 
               console.log(topic);
               console.log(user_post);
