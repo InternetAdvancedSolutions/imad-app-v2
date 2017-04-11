@@ -124,7 +124,7 @@ function createTemplate(data1,data2){
             <table>
             <tr>
             <td colspan="3">     </td><td><textarea id="user_post" cols="75" rows="25" maxlength="1000" autofocus required></textarea><br>
-            </td><td rowspan="2"><div class="fontcolor1">Most read Articles</div><br><div id="content"></div><br></td>
+            </td><td rowspan="2"><div class="fontcolor1">Most read Articles<br>Go to these articles and ask</div><br><div id="content"></div><br></td>
             </tr>
             </table>
             </pre>
