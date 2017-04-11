@@ -358,7 +358,7 @@ function createPost(data1,data2,data3,data4,data5){
         var button=document.getElementById("submit");
         var para2=document.getElementById("c");
         
-button.onclick=function()
+button.onclick=function(){
 
              
      var request = new XMLHttpRequest();
