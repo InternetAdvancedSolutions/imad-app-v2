@@ -406,7 +406,9 @@ button.onclick=function(){
         }
         
      };
-    
+     var post_id_ = ${post_id};
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify({ post_id_:post_id_}));
     request1.open('GET',"/co/get-comments",true);
     request1.send(null);
    };
@@ -662,7 +664,7 @@ app.get('/co/get-comments', function (req, res) {
   // pool.query('SELECT * FROM comments', function (err, result) {
         var post_id= req.body.post_id_;
          console.log(post_id);
-  pool.query("select * from comments where post_id = $1",[], function (err, result) {
+  pool.query("select * from comments where post_id = $1",[post_id], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
