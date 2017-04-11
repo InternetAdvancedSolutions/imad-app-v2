@@ -154,10 +154,8 @@ function createTemplate(data1,data2){
                         }
                     }
                 }
-              var topic1=document.getElementById("topic").value;
-              var user_post1=document.getElementById("user_post").value; 
-              var topic=topic1.trim();
-              var user_post=user_post1.trim();
+              var topic=document.getElementById("topic").value;
+              var user_post=document.getElementById("user_post").value; 
               var username_post= "${username}"; 
               console.log(topic);
               console.log(user_post);
@@ -540,10 +538,8 @@ app.get('/db/:n', function(req,res){pool.query("SELECT * FROM course WHERE id=$1
 
 
 app.post('/pa/post',function(req,res){
-   var text1=req.body.user_post;
-   var topic1=req.body.topic;
-   var text=text1.trim();
-   var topic=topic1.trim();
+   var text=req.body.user_post;
+   var topic=req.body.topic;
    var posters_name= req.body.username_post;
     console.log(text);
     console.log(topic);
