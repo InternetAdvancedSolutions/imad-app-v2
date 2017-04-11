@@ -385,7 +385,7 @@ button.onclick=function()
               console.log(commenter_name);
               request.open('POST','/com/submit-comments',true);
               request.setRequestHeader('Content-Type', 'application/json');
-              request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name, post_id:post_id}));
+              request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name, post_id_:post_id_}));
               para2.innerHTML="submitting your comments.............thanks" +"  ${commenter}";
 };
             
@@ -620,7 +620,7 @@ app.get('/lo/logout', function (req, res) {
 app.post('/com/submit-comments',function(req,res){
    var comment=req.body.user_comment;
    var commenter=req.body.commenter_name;
-   var post_id= req.body.post_id;
+   var post_id= req.body.post_id_;
     console.log(comment);
     console.log(commenter);
    pool.query('INSERT INTO "comments" (user_comment,user_name,post_id) VALUES ($1,$2,$3)',[comment,commenter],function (err, result) {
