@@ -543,18 +543,19 @@ app.get('/ga/publish', function(req,res){
                     var n =1;
                      res.send(createArticle(ar,n)); 
           
-                  /* 
+                  
                  for(var i=result.rows.length; i>=0;i--)
                   {   
                   var ar = result.rows[i];
                     var id = i;
                    res.send(createArticle(ar,id)); 
                     }
-                     */
+                     
                  }
 });
 });
 */
+
 app.get('/aa/archive/:ids', function(req,res){
   if (req.session && req.session.auth && req.session.auth.userId ) 
 {   
