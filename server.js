@@ -338,6 +338,7 @@ function createPost(data1,data2,data3,data4,data5){
             <button id="submit" >Submit</button>
             <div id="n">
             <p id="c"></p> 
+            <span id="d"></span>
             <hr>
             <div id="feedback" class="fontcolor1">
             <pre class="text-table">
@@ -389,6 +390,26 @@ button.onclick=function(){
               request.send(JSON.stringify({user_comment:user_comment, commenter_name:commenter_name, post_id_:post_id_}));
               para2.innerHTML="submitting your comments.............thanks" +"  ${commenter}";
 };
+       
+        window.onload= function()
+    {    
+      var request1= new XMLHttpRequest();
+    
+      request1.onreadystatechange=function()
+      {
+        if(request1.readyState==4 && request1.status==200 )
+        { 
+             var allarticles =request1.responseText;
+             var para3=document.getElementById("d");
+             para3.innerHTML=allarticles+'<br>';
+            
+        }
+        
+     };
+    
+    request1.open('GET',"/co/get-comments",true);
+    request1.send(null);
+   };
             
     </script>
     
