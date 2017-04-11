@@ -274,13 +274,13 @@ function createTemplate1(data1){
 return htmltemplate1;
 }
 
-function createPost(data1,data2,data3,data4){
+function createPost(data1,data2,data3,data4,data5){
     var title1='IAS Forum';
     var heading1=data3;
     var content1=data1;
     var poster=data2;
     var commenter = data4;
-	
+	var post_id = data5;
 	
     var htmltemplatePost=`
     
@@ -381,6 +381,7 @@ button.onclick=function()
         }
               var user_comment = document.getElementById("user_comments").value;
               var commenter_name= "${commenter}"; 
+              var post_id = "${post_id}";
               console.log(user_comment);
               console.log(commenter_name);
               request.open('POST','/com/submit-comments',true);
@@ -566,7 +567,8 @@ app.get('/aa/archive/:ids', function(req,res){
        var user= result.rows[ida].posters_name;
        var topic=result.rows[ida].topic;
        var commenter = req.session.auth.userId;
-       res.send(createPost(art,user,topic,commenter));
+       var post_id = result.rows[ida].id;
+       res.send(createPost(art,user,topic,commenter,post_id));
        }
        });
 }
@@ -619,9 +621,10 @@ app.get('/lo/logout', function (req, res) {
 app.post('/com/submit-comments',function(req,res){
    var comment=req.body.user_comment;
    var commenter=req.body.commenter_name;
+   var post_id= req.body.post_id;
     console.log(comment);
     console.log(commenter);
-   pool.query('INSERT INTO "comments" (user_comment,user_name) VALUES ($1,$2)',[comment,commenter],function (err, result) {
+   pool.query('INSERT INTO "comments" (user_comment,user_name,post_id) VALUES ($1,$2,$3)',[comment,commenter],function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
