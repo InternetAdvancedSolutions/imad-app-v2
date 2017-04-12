@@ -100,7 +100,9 @@ body {
         #h1 {color:white;}
         #h2 {color:white;}
         #h3 {color:white;}
-        #sub {background-color:white;}
+        #sub {background-color:white;
+            background-image: url("ui/Taj.jpg") ;
+        }
         #p {color:white;}
         #p1 {color:white;}
         #p2 {color:white;}
