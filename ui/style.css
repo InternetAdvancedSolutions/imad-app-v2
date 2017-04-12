@@ -88,7 +88,7 @@ body {
  }
 }       
 */     
-.background { background-image: url("ui/Taj.jpg") ;}
+.background { background-image: url("/ui/Taj.jpg") ;}
         #black {color: black}
         #blue {color: blue}
         #logo {background-color:#123456; padding:5px; height:250px;}
