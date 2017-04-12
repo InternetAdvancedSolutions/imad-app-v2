@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     background-color: white;
     margin-top: 5px;
-    background-image: url("ui/Taj.jpg") ;
+    
      
 }
 
@@ -43,6 +43,9 @@ body {
    
 }
 
+#background {
+     background-image: url("ui/Taj.jpg") ;
+}
 .blink_me {   
   animation-duration: 800ms;
   animation-name: blink;
