@@ -40,7 +40,7 @@ body {
     margin:auto;
     padding-left:10px;
     padding-right:10px;
-    background-image: url("/ui/Taj.jpg") ;
+    
 }
 
 
@@ -87,7 +87,8 @@ body {
    color: white;
  }
 }       
-*/      #black {color: black}
+*/      #background { background-image: url("/ui/Taj.jpg") ;}
+        #black {color: black}
         #blue {color: blue}
         #logo {background-color:#123456; padding:5px; height:250px;}
         #feedback {background-color:#123456;}
