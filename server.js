@@ -237,15 +237,15 @@ function createTemplate1(data1){
         </div>
         <div id="content">
 		<table border="2">
-		<tr><td>Course Duration :</td><td>
+		<tr><td>Course & Duration :                 </td><td>
         ${content1}
-		</td></tr>
-		<tr><td>Start Date :</td><td>
-		 ${content2.toDateString()}
-		 </td></tr>
-	   <tr><td>Fees Rs :</td><td>
-		  ${price}
-		  </td></tr>
+		                                            </td></tr>
+		<tr><td>Start Date :                        </td><td>
+		${content2.toDateString()}
+		                                            </td></tr>
+	   <tr><td>Fees Rs :                            </td><td>
+		${price}
+		                                            </td></tr>
 		  </table>
         </div>
         <div>
