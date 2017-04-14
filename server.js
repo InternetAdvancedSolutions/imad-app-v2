@@ -154,8 +154,10 @@ function createTemplate(data1,data2){
                         }
                     }
                 }
-              var topic=document.getElementById("topic").value;
-              var user_post=document.getElementById("user_post").value; 
+              var topic1=document.getElementById("topic").value;
+              var topic = topic1.trim();
+              var user_post1=document.getElementById("user_post").value; 
+              var user_post = user_post1.trim();
               var username_post= "${username}"; 
               console.log(topic);
               console.log(user_post);
@@ -376,7 +378,8 @@ button.onclick=function(){
                         }
                     }
         }
-              var user_comment = document.getElementById("user_comments").value;
+              var user_comment1 = document.getElementById("user_comments").value;
+              var user_comment = user_comment1.trim();
               var commenter_name= "${commenter}"; 
               var post_id_ = ${post_id};
               console.log(user_comment);
