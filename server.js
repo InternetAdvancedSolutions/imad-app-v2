@@ -463,9 +463,9 @@ app.post('/lg/login', function (req, res) {
               res.status(403).send('username/password is invalid');
           } else {
               // Match the password
-              console.log("username inputed ="+username);
+              console.log("username inputed ="  +username);
              var dbString = result.rows[0].password;
-             console.log("stored hashed password ="+dbString);
+             console.log("stored hashed password ="  +dbString);
               //var salt = dbString.split('$')[2];
                var salt ='random';
               var hashedPassword = hash(password, salt); 
