@@ -469,7 +469,7 @@ app.post('/lg/login', function (req, res) {
               //var salt = dbString.split('$')[2];
                var salt ='random';
               var hashedPassword = hash(password, salt); 
-              console.log(" hashed password ="+hashedPassword);
+              console.log(" hashed password ="  +hashedPassword);
               if (hashedPassword === dbString) {
                 
                 // Set the session
@@ -500,7 +500,7 @@ app.get('/:articleName',function(req,res){
               res.status(500).send(err.toString());
            } else {
                 var username = req.session.auth.userId;
-                console.log("session in username is" + username);
+                console.log(" username in-session is  " + username);
                 var articleData=result.rows[0];
                // res.send(createTemplate(articleData));
                 res.send(createTemplate(articleData,username));
