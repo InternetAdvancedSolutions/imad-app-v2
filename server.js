@@ -649,6 +649,7 @@ var lout= `
 </html>
 `;
 app.get('/lo/logout', function (req, res) {
+    console.log(req.session.auth);
    delete req.session.auth;
    res.send(lout);
   
