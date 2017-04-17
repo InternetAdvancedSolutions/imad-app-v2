@@ -650,6 +650,7 @@ var lout= `
 `;
 app.get('/lo/logout', function (req, res) {
     console.log(req.session.auth);
+    console.log("logged-out " +req.session.auth.userId);
    delete req.session.auth;
    res.send(lout);
   
