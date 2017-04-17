@@ -500,7 +500,7 @@ app.get('/:articleName',function(req,res){
               res.status(500).send(err.toString());
            } else {
                 var username = req.session.auth.userId;
-                console.log(" username in-session is  " + username);
+                console.log(" user in-session is  " + username);
                 var articleData=result.rows[0];
                // res.send(createTemplate(articleData));
                 res.send(createTemplate(articleData,username));
@@ -650,7 +650,7 @@ var lout= `
 `;
 app.get('/lo/logout', function (req, res) {
     console.log(req.session.auth);
-    console.log(req.session.auth.userId+ "logged-out");
+    console.log(req.session.auth.userId+ "  logged-out");
    delete req.session.auth;
    res.send(lout);
   
