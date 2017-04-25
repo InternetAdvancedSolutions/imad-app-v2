@@ -6,7 +6,7 @@ var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
 var fs = require("fs");
-var multer  = require('multer');
+//var multer  = require('multer');
 var app = express();
  
 
@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(multer({ dest: '/ui/'}));
+//app.use(multer({ dest: '/ui/'}));
 
 
 app.use(session(
