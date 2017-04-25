@@ -56,19 +56,17 @@ app.get('/counter',function(req,res){
 
 app.post('/file_upload', function (req, res) {
   
-   var file = __dirname + "/" + req.files.file.name;
-   //console.log(req.files.file.name);
-   //console.log(req.files.file.path);
-   //console.log(req.files.file.type);
+   var file = req.body.file;
    
-   fs.readFile( req.files.file.path, function (err, data) {
+   
+   fs.readFile(file, function (err, data) {
       fs.writeFile(file, data, function (err) {
          if( err ){
             console.log( err );
             }else{
                response = {
                   message:'File uploaded successfully',
-                  filename:req.files.file.name
+                  filename:file
                };
             }
          console.log( response );
