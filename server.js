@@ -5,10 +5,18 @@ var Pool= require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
-
+var fs = require("fs");
+var multer  = require('multer');
 var app = express();
+
+
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(multer({ dest: '/ui/'}));
+
 
 app.use(session(
     {   resave:true,
@@ -45,6 +53,29 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send("Total visits   "+counter.toString());
 });
+
+app.post('/file_upload', function (req, res) {
+   console.log(req.files.file.name);
+   console.log(req.files.file.path);
+   console.log(req.files.file.type);
+   var file = __dirname + "/" + req.files.file.name;
+   
+   fs.readFile( req.files.file.path, function (err, data) {
+      fs.writeFile(file, data, function (err) {
+         if( err ){
+            console.log( err );
+            }else{
+               response = {
+                  message:'File uploaded successfully',
+                  filename:req.files.file.name
+               };
+            }
+         console.log( response );
+         res.end( JSON.stringify( response ) );
+      });
+   });
+})
+
 //defining our hash function
 function hash(input,salt){
      salt='random';
