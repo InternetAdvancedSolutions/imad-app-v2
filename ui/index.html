@@ -14,12 +14,43 @@
         <h3>File Upload:</h3>
       Select a file to upload: <br />
       
-             <input type="file" name="file" size="50" />
+             <input id="uploaded_file" type="file" name="file" size="50" />
          <br />
-         <input type = "submit" value = "Upload File" />
+         <input id="btn_upload" type = "submit" value = "Upload File" /><br>
+         <p id="p"></p>
       <script>
           
-          
+          var button=document.getElementById("btn_upload");
+        var para2=document.getElementById("p");
+        
+button.onclick=function(){
+
+             
+     var request = new XMLHttpRequest();
+               
+     request.onreadystatechange=function()
+        {
+                    if(request.readyState===XMLHttpRequest.DONE)
+                    {
+                        if(request.status===200)
+                        {
+                         
+                         para2.innerHTML ="File upload successful!"; 
+                        }
+                        else
+                        {
+                          para2.innerHTML="Oops ! upload failed ";
+                        }
+                    }
+        }
+              var file = document.getElementById("uploaded_file").value;
+              
+              request.open('POST','/file_upload',true);
+              request.setRequestHeader('Content-Type', 'application/json');
+              request.send(JSON.stringify({file:file}));
+              para2.innerHTML="uploading your file.......";
+};
+       
       </script>
     <!--
     <div class="container" >   
