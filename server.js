@@ -74,7 +74,7 @@ app.post('/file_upload', function (req, res) {
          res.end( JSON.stringify( response ) );
       });
    });
-})
+});
 
 //defining our hash function
 function hash(input,salt){
