@@ -5,6 +5,8 @@ var Pool= require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
+var cookieParser = require('cookie-parser')
+
 var fs = require("fs");
 //var fileUpload = require('express-fileupload');
 //var multer  = require('multer');
@@ -14,6 +16,7 @@ var app = express();
  
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
