@@ -6,7 +6,7 @@ var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
 var fs = require("fs");
-//var fileUpload = require('express-fileupload');
+var fileUpload = require('express-fileupload');
 var multer  = require('multer');
 
 
