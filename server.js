@@ -5,7 +5,7 @@ var Pool= require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
-var cookieParser = require('cookie-parser')
+var cookieParser = require('cookie-parser');
 
 var fs = require("fs");
 //var fileUpload = require('express-fileupload');
