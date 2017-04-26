@@ -16,7 +16,7 @@ var app = express();
  
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-app.use(cookieParser());
+//app.use(cookieParser());
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
