@@ -44,6 +44,15 @@
             padding:20px;
             
         }
+        
+        thead {color:green;}
+        tbody {color:blue;}
+        tfoot {color:red;}
+
+        table, th, td {
+    border: 1px solid black;
+    }
+        
     </style>
     </head>
     <body >
@@ -63,6 +72,31 @@
         
         <div class=article>
         <pre>
+            <table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Other</td>
+      <td>Description</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Games</td>
+      <td>A gamming vortal</td>
+    </tr>
+    <tr>
+      <td>Education</td>
+      <td>An educational vortal</td>
+    </tr>
+  </tbody>
+</table> 
+
         <details>
         <summary>Select from app categories :</summary>
         You can choose any other category of your choice as well.
