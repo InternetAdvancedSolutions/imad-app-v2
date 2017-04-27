@@ -77,12 +77,20 @@
            <option value="news">News</option>
            <option value="communication">Communication</option>
         </select>  <input type="button" value=Submit id=app_category>
+        <output id="submit_message"></output>
         </pre>
         </div>
         </div>
         <div id=footer>
             IMAD Hasura
         </div>
+        <script>
+            var submit_app_category= document.getElementById("select_app_category");
+            submit_app_category.onclick= function(){
+                var submit_message= document.getElementById("submit_message");
+                submit_message.innerHTML="Thanks for the input ";
+            }
+        </script>
     </body>
     
     <!--
