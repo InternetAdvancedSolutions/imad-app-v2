@@ -14,7 +14,7 @@
     {    var d = new Date();
         document.getElementById("t").innerHTML=d.toDateString();
       var request= new XMLHttpRequest();
-    
+      
       request.onreadystatechange=function()
       {
         if(request.readyState==4 && request.status==200 )
@@ -22,6 +22,22 @@
              var counter =request.responseText;
              var span=document.getElementById("sp");
              span.innerHTML=counter;
+            
+        }
+        
+     };
+    
+    request.open('GET',"/counter",true);
+    request.send(null);
+    
+    var request2=new XMLHttpRequest();
+    request2.onreadystatechange=function()
+      {
+        if(request.readyState==4 && request.status==200 )
+        { 
+             var counterSq =request2.responseText;
+             var span2=document.getElementById("spSq");
+             span2.innerHTML=counterSq;
             
         }
         
