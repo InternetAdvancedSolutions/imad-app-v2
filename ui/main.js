@@ -33,7 +33,7 @@
     var request2=new XMLHttpRequest();
     request2.onreadystatechange=function()
       {
-        if(request.readyState==4 && request.status==200 )
+        if(request2.readyState==4 && request2.status==200 )
         { 
              var counterSq =request2.responseText;
              var span2=document.getElementById("spSq");
@@ -43,8 +43,8 @@
         
      };
     
-    request.open('GET',"/counter",true);
-    request.send(null);
+    request2.open('GET',"/counterSquare",true);
+    request2.send(null);
    };
    
    
