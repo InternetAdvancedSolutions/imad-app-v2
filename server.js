@@ -60,6 +60,12 @@ app.get('/counter',function(req,res){
     res.send("Total visits   "+counter.toString());
 });
 
+app.get('/counterSquare',function(req,res){
+    counter=counter+1;
+    counter_sq= counter*counter;
+    res.send("visitSquare   "+counter_sq.toString());
+});
+
 app.post('/file_upload', function (req, res) {
   
    var file = req.body.file;
