@@ -61,7 +61,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/counterSquare',function(req,res){
-    counter=counter+1;
+   // counter=counter+1;
     counter_sq= counter*counter;
     res.send("visitSquare   "+counter_sq.toString());
 });
