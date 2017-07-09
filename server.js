@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool= require('pg').Pool;
+//var Pool= require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
@@ -31,8 +31,10 @@ app.use(session(
         cookie: { maxAge: 1000 * 60 * 15}//session expires automatically in 15 mins
          
     }  
-));         
+));     
 
+
+var Pool= require('pg').Pool;
 var config={
     user:'internetadvancedsolutions',
     database:'internetadvancedsolutions',
